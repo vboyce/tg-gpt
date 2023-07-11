@@ -101,12 +101,48 @@ combined_chat <- one_chat |>
 
 all <- read_csv(here(pre, "pre_all.csv"))
 
-test <- all |> filter(condition=="rotate") |> 
-  filter(numPlayers==5) |> 
-  filter(repNum==1) |> 
+ all |> filter(condition=="rotate") |> 
+  filter(numPlayers==6) |> 
   filter(role=="speaker") |> 
-  select(text) |> write_csv(here(pre,"5_1.csv"))
+  select(text) |> write_csv(here(pre,"rotate_6.csv"))
+ 
+  all |> filter(condition=="rotate") |> 
+  filter(numPlayers==5) |> 
+  filter(role=="speaker") |> 
+  select(text) |> write_csv(here(pre,"rotate_5.csv"))
+  
+   all |> filter(condition=="rotate") |> 
+  filter(numPlayers==4) |> 
+  filter(role=="speaker") |> 
+  select(text) |> write_csv(here(pre,"rotate_4.csv"))
+   
+    all |> filter(condition=="rotate") |> 
+  filter(numPlayers==3) |> 
+  filter(role=="speaker") |> 
+  select(text) |> write_csv(here(pre,"rotate_3.csv"))
+    
+     all |> filter(condition=="rotate") |> 
+  filter(numPlayers==2) |> 
+  filter(role=="speaker") |> 
+  select(text) |> write_csv(here(pre,"rotate_2.csv"))
 ```
+
+## Cost estimation
+```{r}
+all <- read_csv(here(pre, "pre_all.csv"))
+
+all |> filter(role=="speaker") |> mutate(words= str_count(text, "\\W+") + 1) |> group_by(condition) |>  summarize(n=n(), words=sum(words)) |> mutate(cost=n*124/750*.03+words/750*.09)
+  
+
+all |> filter(role=="listener") |> filter(!is.na(text))|> mutate(words= str_count(text, "\\W+") + 1) |> summarize(n=n(), words=sum(words))
+
+```
+For *speaker* utterances, we have about 20K utterances (124 words of prompt/per). The speaker utterances have 277K words in them, so we're looking at 500K words going into the GPT thing. We expect 277K in output tokens. 
+
+Assuming 750 words / 1K token -- the prompts are ~$100. The utterances themselves (in and out) are about $33. 
+
+For *listener* utterances, there are about 7K utterances and 50K words. Assuming the same length prompts, that's around $35 for prompts, and $6 for the in and out. 
+
 
 # GPT interlude
 
