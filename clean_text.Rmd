@@ -125,7 +125,46 @@ all <- read_csv(here(pre, "pre_all.csv"))
   filter(numPlayers==2) |> 
   filter(role=="speaker") |> 
   select(text) |> write_csv(here(pre,"rotate_2.csv"))
+
+     
+# expt 2
+  all |> filter(condition=="no_rotate") |> 
+  filter(role=="speaker") |> 
+  select(text) |> write_csv(here(pre,"no_rotate.csv"))
+          
+all |> filter(condition=="full_feedback") |> 
+  filter(role=="speaker") |> 
+  select(text) |> write_csv(here(pre,"full_feedback.csv"))
+               
+all |> filter(condition=="emoji") |> 
+  filter(role=="speaker") |> 
+  select(text) |> write_csv(here(pre,"emoji.csv"))
+
+# expt 3
+ all |> filter(condition=="2_thin") |> 
+  filter(role=="speaker") |> 
+  select(text) |> write_csv(here(pre,"thin_2.csv"))
+ 
+  all |> filter(condition=="2_thick") |> 
+  filter(role=="speaker") |> 
+  select(text) |> write_csv(here(pre,"thick_2.csv"))
+  
+   all |> filter(condition=="6_thin") |> 
+  filter(role=="speaker") |> 
+  select(text) |> write_csv(here(pre,"thin_6.csv"))
+   
+    all |> filter(condition=="6_thick") |> 
+  filter(role=="speaker") |> 
+  select(text) |> write_csv(here(pre,"thick_6.csv"))
 ```
+[x] rotate
+[ ] no-rotate
+[ ] full feedback
+[ ] emoji
+[ ] 2 thin
+[ ] 2 thick
+[ ] 6 thin
+[ ] 6 thick 
 
 ## Cost estimation
 ```{r}
@@ -143,7 +182,7 @@ Assuming 750 words / 1K token -- the prompts are ~$100. The utterances themselve
 
 For *listener* utterances, there are about 7K utterances and 50K words. Assuming the same length prompts, that's around $35 for prompts, and $6 for the in and out. 
 
-
+Run 6-rotate and confirm cost
 # GPT interlude
 
 # Post regex / post-correct
