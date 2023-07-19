@@ -158,13 +158,13 @@ all |> filter(condition=="emoji") |>
   select(text) |> write_csv(here(pre,"thick_6.csv"))
 ```
 [x] rotate
-[ ] no-rotate
-[ ] full feedback
-[ ] emoji
-[ ] 2 thin
-[ ] 2 thick
-[ ] 6 thin
-[ ] 6 thick 
+[x] no-rotate
+[x] full feedback
+[x] emoji
+[x] 2 thin
+[x] 2 thick
+[x] 6 thin
+[x] 6 thick 
 
 ## Cost estimation
 ```{r}
