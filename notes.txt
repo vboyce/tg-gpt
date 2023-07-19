@@ -1,0 +1,21 @@
+What can we do once this is cleaned up?
+
+* Use for listener only stuff (separate, but noting it here)
+
+* Repeat s-bert stuff -- show that it's *not* (or is?) dependent on levels of hedging/connective tissue (Note, hedging won't be *completely* gone, but could see how much is driven by hedging)
+
+* Classify utterances / phrases on the basis of what they are and look at how this changes over time / relates to performance / relates to stickiness
+	* shape description / body part description / whole person action / holistic (parts might simplify to a part v whole thing -- but also curious about "waiter" versus squats?)
+	* what order these come in -- name then description, or description then name (could look both at whole and at first unit?) Even if content words and length are the same name+description feels like a find then verify that could go faster/be less processing than v.v. but requires the schema be in the speakers head already (is other approach an as they think thing?)
+
+* Related to last, but what kinds of things are sticky and where do end descriptions originate? (theory: once you get holistic labels, those stick, but other stuff doesn't -- which then is the question of how early holistic labels occur?)
+
+* Person specific, cross image idiosyncracies (might be boring, but some people who description schemas where they include facing direction on everything)
+
+* Following Hawkins, could try to dependency parse and look at syntax ?
+
+* Look at dropout of words, appearance of words (cut for content, then lemmatize and look at new/old --> predict that body and shape stuff drops a lot)
+
+* Which things stick as a function of level of universals (maybe words used to describe fewer images w/i the group stick, but what happens cross group? if you use a word and other groups don't is it more or less likely to stick)
+
+** condition differences and performance differences for many of the above ** 

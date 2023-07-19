@@ -97,7 +97,7 @@ combined_chat <- one_chat |>
 
 ```
 
-```{r}
+```{r, include=F}
 
 all <- read_csv(here(pre, "pre_all.csv"))
 
@@ -157,32 +157,9 @@ all |> filter(condition=="emoji") |>
   filter(role=="speaker") |> 
   select(text) |> write_csv(here(pre,"thick_6.csv"))
 ```
-[x] rotate
-[x] no-rotate
-[x] full feedback
-[x] emoji
-[x] 2 thin
-[x] 2 thick
-[x] 6 thin
-[x] 6 thick 
 
-## Cost estimation
-```{r}
-all <- read_csv(here(pre, "pre_all.csv"))
 
-all |> filter(role=="speaker") |> mutate(words= str_count(text, "\\W+") + 1) |> group_by(condition) |>  summarize(n=n(), words=sum(words)) |> mutate(cost=n*124/750*.03+words/750*.09)
-  
 
-all |> filter(role=="listener") |> filter(!is.na(text))|> mutate(words= str_count(text, "\\W+") + 1) |> summarize(n=n(), words=sum(words))
-
-```
-For *speaker* utterances, we have about 20K utterances (124 words of prompt/per). The speaker utterances have 277K words in them, so we're looking at 500K words going into the GPT thing. We expect 277K in output tokens. 
-
-Assuming 750 words / 1K token -- the prompts are ~$100. The utterances themselves (in and out) are about $33. 
-
-For *listener* utterances, there are about 7K utterances and 50K words. Assuming the same length prompts, that's around $35 for prompts, and $6 for the in and out. 
-
-Run 6-rotate and confirm cost
 # GPT interlude
 
 # Post regex / post-correct
@@ -204,7 +181,7 @@ normalize <- function(text){
     str_replace_all("theyre", "they're") |> 
     str_replace_all("dont", "don't") |> 
     str_replace_all("doesnt", "doesn't") |> 
-    str_repalce_all("cant", "can't")
+    str_replace_all("cant", "can't")
 }
 
 read_data <- function(file){
@@ -220,14 +197,28 @@ read_data <- function(file){
 ```
 
 ```{r}
-#foo <- read_data("5_1.csv") |> write_csv("5_1_post.csv")
 
-write_lines(foo$text, "text.txt") 
-write_lines(foo$gpt_out, "gpt.txt")
+read_data("rotate_4.csv") |> write_csv(here("data/final/rotate_4.csv"))
 
-system("wdiff text.txt gpt.txt > foo.txt")
+```
 
-read_lines("foo.txt")|> View()
+```{r}
+
+do_diff <- function(file){
+  read_csv(here("data/final/",file)) |> 
+    mutate(out=map2_chr(text, gpt_out, do_one_diff)) |> 
+    write_csv(here("data/final/", file))
+}
+
+do_one_diff <- function(text, gpt){
+  write_lines(text, "text.txt")
+  write_lines(gpt, "gpt.txt")
+  system("wdiff text.txt gpt.txt > foo.txt")
+  return(read_lines("foo.txt"))
+}
+read_csv(here("data/final/rotate_4.csv")) -> foo
+
+do_diff("rotate_4.csv")
 ```
 
 My favorite regex!
