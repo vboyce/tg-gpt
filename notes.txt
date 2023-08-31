@@ -19,3 +19,6 @@ What can we do once this is cleaned up?
 * Which things stick as a function of level of universals (maybe words used to describe fewer images w/i the group stick, but what happens cross group? if you use a word and other groups don't is it more or less likely to stick)
 
 ** condition differences and performance differences for many of the above ** 
+
+Question about processing: 
+* do we want each "unit"/phrase to be separated and we can examine them separately? maybe? is there a clear cut way to do that? 

@@ -198,7 +198,7 @@ read_data <- function(file){
 
 ```{r}
 
-read_data("rotate_4.csv") |> write_csv(here("data/final/rotate_4.csv"))
+#read_data("rotate_3.csv") |> write_csv(here("data/final/rotate_3.csv"))
 
 ```
 
@@ -216,10 +216,12 @@ do_one_diff <- function(text, gpt){
   system("wdiff text.txt gpt.txt > foo.txt")
   return(read_lines("foo.txt"))
 }
-read_csv(here("data/final/rotate_4.csv")) -> foo
+read_csv(here("data/final/rotate_3.csv")) -> foo
 
-do_diff("rotate_4.csv")
+do_diff("rotate_3.csv")
 ```
+
+Rotate 4 is (mostly) done -- could always use more clean up, but pretty good!
 
 My favorite regex!
 (\[-.[^-]*-\])|(\{\+[^\+]*\+\})

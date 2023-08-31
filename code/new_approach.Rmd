@@ -1,0 +1,114 @@
+---
+title: "Post gpt"
+output: html_notebook
+---
+
+```{r set-up, include=F}
+knitr::opts_chunk$set(echo = FALSE, warning=F, message=F)
+knitr::opts_chunk$set(dev = "png", dev.args = list(type = "cairo-png"))
+options(knitr.table.format = "html")
+library(tidyverse)
+library(jsonlite)
+library(here)
+library(rlang)
+library(lme4)
+library(brms)
+library(rstanarm)
+library(rstan)
+library(viridis)
+rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores())
+theme_set(theme_bw())
+
+ParseJSONColumn <- function(x) {
+  str_c("[ ", str_c(x, collapse = ",", sep=" "), " ]")  %>% 
+    fromJSON(flatten = T)
+}
+
+
+```
+# New approach
+
+## Take filtered chat sample & pre-do it
+```{r}
+
+raw <- read_csv(here("raw_chats/rotate_filtered_chat.csv")) |> filter(numPlayers==4) |> filter(!is.chitchat) |> filter(!is.na(spellchecked)) |>  filter(target=="/experiment/tangram_A.png") |> select(gameId, targetNum, repNum, trialNum, numPlayers, playerId, target, role, countCorrect, spellchecked)
+  
+raw |> select(text=spellchecked) |> write_csv(here("data/test/sample.csv"))
+
+
+```
+
+## Post gpt
+```{r}
+
+fix_thing <- function(text){
+  unlist(strsplit(gsub("[\\[\\]']", "", text, perl = TRUE), ", "))
+}
+
+read_data <- function(file){
+ read_csv(here(file)) |> mutate(gpt_out = map (gpt_out, .f=fix_thing)) |> unnest(gpt_out) |> mutate(is_substring=str_detect(text, fixed(gpt_out, ignore_case=T )))
+}
+
+
+```
+
+```{r}
+post <- read_csv(here("data/test/outsample_gpt3.csv")) |> bind_cols(raw) |> mutate(gpt_out=map(gpt_out, .f=fix_thing)) |> unnest(gpt_out, keep_empty = T) |> 
+mutate(is_substring=str_detect(text, fixed(gpt_out, ignore_case=T ))) |> select(text, gpt_out, is_substring, everything())
+
+
+post_label <- post |> group_by(`...1`, text, role) |> summarize(gpt_out=str_flatten(gpt_out, collapse=" \n\n")) |> write_csv(here("data/test/outsample3_prelabel.csv"))
+```
+
+Everything that wasn't a substring was b/c of weirdnesses around punctuation (on both sides) --> might want to run a spellcheck or handcheck on those (8 out of 278 items / 416 descriptions)
+
+```{r}
+read_csv(here("data/test/outsample3_labelled.csv")) |> group_by(`Parsing grade`) |> tally()
+
+nrow(post_label)
+
+```
+
+
+
+```{r}
+
+nrow(post)
+post |> filter(is.na(is_substring)) |> nrow() # 16 blanks, 10 of which *should* have been labelled (and others should have been tagged by spell check) 
+post |> filter(!is_substring) |> nrow() # 8 although they weren't bad
+
+```
+
+Ungenerously, 224 / 258 were adequate (87 %) 
+Generously,  244 / 258 were adequate (94 %) 
+
+Also missed 10 things that it labelled as blank and shouldn't and 6 were acceptable. So maybe between 84% and 92% acceptable 
+
+Real question is how useful it is down the road
+
+# Closed class labels
+
+can just label body parts and shapes in a closed class way
+```{r}
+body_parts <- c("head", "arm", "leg", "foot", "feet", "shoulder", "hand", "back", "face") # might be problems with back
+
+shapes <- c("triangle", "square", "diamond", "trapezoid", "trapezium", "block", "shape" ) # ? "box"
+
+positional <- c("above", "below", "right", "left", "tilt", "up", "down") # might be problems with the polysemy of right? # ? "level with"
+
+# gpt might be better for dealing with polysemy
+```
+
+```{r}
+
+closed_class <- post |> select(gpt_out)|> mutate(has_body =str_detect(gpt_out, paste(body_parts, collapse = "|")),
+                               has_shape = str_detect(gpt_out, paste(shapes, collapse = "|")),
+                               has_position = str_detect(gpt_out, paste(positional, collapse = "|")))
+
+  
+```
+
+# Number of chunks over time 
+
+
