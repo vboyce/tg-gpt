@@ -87,28 +87,85 @@ Also missed 10 things that it labelled as blank and shouldn't and 6 were accepta
 
 Real question is how useful it is down the road
 
+
+
+# Number of chunks over time 
+
+* not dealing with 0s in a reasonable way! 
+
+```{r}
+
+post |> group_by(gameId, repNum, role) |> tally() |> ggplot(aes(x=repNum, y=n))+geom_smooth(method="glm")+geom_jitter(width=0.2, height=.2)+facet_grid(.~role)
+```
+# Length of chunks over time 
+
+* these haven't been cleaned up so this may be pretty unreliable
+
+```{r}
+
+post |> mutate(words=str_count(gpt_out, "\\S+")) |> group_by(gameId, repNum, role) |> ggplot(aes(x=repNum, y=words))+geom_smooth(method="glm")+geom_jitter(width=0.2, height=.2)+facet_grid(.~role)+coord_cartesian(ylim=c(0,15))
+
+post |> mutate(words=str_count(gpt_out, "\\S+")) |> group_by(gameId, repNum, role) |> summarize(words=sum(words)) |> ggplot(aes(x=repNum, y=words))+geom_smooth(method="glm", formula=y~poly(x,3))+geom_jitter(width=0.2, height=.2)+facet_grid(.~role)+coord_cartesian(ylim=c(0,50))
+```
+
+looks like both number of chunks and lengths of chunks decrease (although second is not super reliable b/c method needs help). As well as (obvious given the last two) numbers of total words in chunks (which is proxy for referential words) 
+
+# Types of chunks over time 
+
+* will need to figure out a *better* tagging system to get something more sophisticated, but we can work with what we have for now
+
 # Closed class labels
 
 can just label body parts and shapes in a closed class way
 ```{r}
-body_parts <- c("head", "arm", "leg", "foot", "feet", "shoulder", "hand", "back", "face") # might be problems with back
+body_parts <- c("head", "arm", "leg", "foot", "feet", "shoulder", "hand", "back", "face", "neck", "body") # might be problems with back
 
 shapes <- c("triangle", "square", "diamond", "trapezoid", "trapezium", "block", "shape" ) # ? "box"
 
 positional <- c("above", "below", "right", "left", "tilt", "up", "down") # might be problems with the polysemy of right? # ? "level with"
 
+zombie <- c("zombie", "bird", "danc", "thrill", "flag", "karate", "crane", "horse", "hippo", "elephant", "angel", "drunk", "rex", "monster", "workman", "bear") # this is just to approximate what gets used 
 # gpt might be better for dealing with polysemy
 ```
 
 ```{r}
 
-closed_class <- post |> select(gpt_out)|> mutate(has_body =str_detect(gpt_out, paste(body_parts, collapse = "|")),
+closed_class <- post |> mutate(gpt_out=str_to_lower(gpt_out),
+                                                 has_body =str_detect(gpt_out, paste(body_parts, collapse = "|")),
                                has_shape = str_detect(gpt_out, paste(shapes, collapse = "|")),
-                               has_position = str_detect(gpt_out, paste(positional, collapse = "|")))
+                               has_position = str_detect(gpt_out, paste(positional, collapse = "|")),
+                               has_holistic = str_detect(gpt_out, paste(zombie, collapse = "|")))
 
   
 ```
 
-# Number of chunks over time 
+Note that these labels are hand-listed with regard to the text used, just trying to get a sense of what we could do here if we figuring out automatic labelling. 
+
+```{r}
+
+closed_class |> group_by(has_body, has_shape, has_position, has_holistic) |> tally() |> arrange(desc(n))
+
+```
+common types are: body, body+position, holistic, position, (none), body+shape, 
+
+```{r}
+
+closed_class |> filter(!is.na(gpt_out))|> group_by(has_body, repNum) |> tally() |> ggplot(aes(x=repNum, y=n, color=has_body))+geom_point()+geom_line()+coord_cartesian(ylim=c(0,100))
 
 
+closed_class |> filter(!is.na(gpt_out))|> group_by(has_position, repNum) |> tally() |> ggplot(aes(x=repNum, y=n, color=has_position))+geom_point()+geom_line()+coord_cartesian(ylim=c(0,100))
+
+closed_class |> filter(!is.na(gpt_out))|> group_by(has_shape, repNum) |> tally() |> ggplot(aes(x=repNum, y=n, color=has_shape))+geom_point()+geom_line()+coord_cartesian(ylim=c(0,100))
+
+closed_class |> filter(!is.na(gpt_out))|> group_by(has_holistic, repNum) |> tally() |> ggplot(aes(x=repNum, y=n, color=has_holistic))+geom_point()+geom_line()+coord_cartesian(ylim=c(0,100))
+
+
+```
+# Try tagging prep 
+
+```{r}
+
+post |> select(gpt_out) |> write_csv(here("data/test/sample_to_tag.csv"))
+
+
+```
