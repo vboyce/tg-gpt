@@ -243,6 +243,17 @@ agreement_table <- agreement %>%
          sens=(`1_1`/(`1_1`+`1_0`)),
          spec=(`0_0`)/(`0_1`+`0_0`))
 
+agreement %>% filter(abstract_v_mod %in% c("0_1","1_0")) %>% View()
+
+agreement %>% filter(body_v_mod %in% c("0_1","1_0")) %>% View()
+
+agreement %>% filter(shape_v_mod %in% c("0_1","1_0")) %>% View()
+
+agreement %>% filter(part_v_mod %in% c("0_1","1_0")) %>% View()
+
+agreement %>% filter(position_v_mod %in% c("0_1","1_0")) %>% View()
+
+
 
 ```
 
@@ -260,6 +271,9 @@ shape -- sensitivity got better, spec went down a lot for overall worse
 
 part -- pretty good actually
 
+consider splitting position into "posture" and the right/left/up/down stuff!
+
+consider removing examples when they aren't helpful? 
 # TODO notes
 
 May want to clean up gpt-isms like replacing ' with / *sigh*

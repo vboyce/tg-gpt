@@ -8,7 +8,7 @@ his head comes past the right side of his body by a bit,1,1,0,0,1
 the only one with a leg out to the left,1,1,0,0,1
 the persons legs are facing the left,1,1,0,0,1
 his head which is shaped almost like the box is facing to the right,1,1,1,0,1
-walking to the left,1,1,0,0,0
+walking to the left,0,1,0,0,0
 a bit like the thriller dance,0,0,0,1,0
 a man walking to the left,0,1,0,0,0
 with a square backpack on,0,0,1,1,1
@@ -29,7 +29,7 @@ we havent selected,0,0,0,0,0
 the one with 2 heads almost,1,0,0,0,1
 dancing man,0,0,0,1,0
 1 foot up,1,1,0,0,1
-1 down,1,1,0,0,1
+1 down,0,1,0,0,1
 2 heads,1,0,0,0,1
 dancing man,0,0,0,1,0
 dancing man,0,0,0,1,0
@@ -236,7 +236,7 @@ two feet facing left,1,1,0,0,1
 looking left,0,1,0,0,1
 with 1 foot,1,0,0,0,1
 about to stomp on the floor,0,0,0,1,0
-person facing left,0,1,0,0,1
+person facing left,0,1,0,0,0
 balancing on one leg,1,1,0,0,1
 square sticking out of neck,1,0,1,0,1
 trapezoid head,1,0,1,0,1
@@ -285,7 +285,7 @@ two feet facing left,1,1,0,0,1
 walking left,0,1,0,0,0
 head on right,1,1,0,0,1
 falling guy,0,0,0,1,0
-walking left,0,1,0,0,1
+walking left,0,1,0,0,0
 head on right,1,1,0,0,1
 two feet pointing to the left,1,1,0,0,1
 falling head,1,0,0,1,1
@@ -343,10 +343,10 @@ slightly tilted,0,1,0,0,0
 handing off the top part,0,0,0,0,0
 facing left,0,1,0,0,0
 head is at the top right,1,1,0,0,1
-monster walking left,0,1,0,0,0
+monster walking left,0,1,0,1,0
 head tilted back,1,1,0,0,1
 one leg raised,1,1,0,0,1
-monster facing left,0,1,0,0,0
+monster facing left,0,1,0,1,0
 one leg raised,1,1,0,0,1
 Diamond on the top right,0,1,0,0,1
 Big arm on the left,1,1,0,0,1
@@ -373,7 +373,7 @@ arms and legs out,1,0,0,0,0
 One leg is up,1,1,0,0,1
 looks like a zombie,0,0,0,1,0
 Diamond to the top right,0,1,1,0,1
-like a sad hippo walking to the left,1,1,0,1,0
+like a sad hippo walking to the left,0,1,0,1,0
 one leg up as if it was mid step,1,1,0,0,1
 "Man looks like he\s doing the ""thriller"" dance",0,0,0,1,0
 his head behind him,1,1,0,0,1
