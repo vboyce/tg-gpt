@@ -1,0 +1,417 @@
+,gpt_out,body,position,shape,abstract,part
+0,facing left,not body,position,not shape,not abstract,whole
+1,head to the right,body,position,not shape,not abstract,part
+2,over his back,body,position,not shape,not abstract,part
+3,leg out to the left,body,position,not shape,not abstract,part
+4,his arms are level with his head,body,position,not shape,not abstract,part
+5,his head comes past the right side of his body by a bit,body,position,not shape,not abstract,part
+6,the only one with a leg out to the left,body,position,not shape,not abstract,part
+7,the persons legs are facing the left,body,position,not shape,not abstract,part
+8,his head which is shaped almost like the box is facing to the right,body,position,shape,not abstract,part
+9,walking to the left,not body,position,not shape,not abstract,whole
+10,a bit like the thriller dance,not body,not position,not shape,not abstract,whole
+11,a man walking to the left,body,position,not shape,not abstract,whole
+12,with a square backpack on,body,position,shape,not abstract,part
+13,triangle on his face,not body,not position,shape,not abstract,part
+14,one leg on floor to the left,body,position,not shape,not abstract,part
+15,one leg left is slightly raised,body,position,shape,not abstract,part
+16,leg lifted to the left,body,position,not shape,not abstract,part
+17,thriller dance,not body,not position,not shape,abstract,whole
+18,thriller,not body,not position,not shape,abstract,whole
+19,a person dancing,body,not position,not shape,abstract,whole
+20,one foot on the floor,body,position,not shape,not abstract,part
+21,another foot is raised,body,position,not shape,not abstract,part
+22,tilted back,body,position,not shape,not abstract,part
+23,made from a square shape,not body,not position,shape,not abstract,part
+24,4 sided shape,not body,not position,shape,not abstract,part
+25,the last one,not body,not position,not shape,not abstract,"I apologize, but I'm not sure what you are referring to as ""the last one."" Could you please provide more context or clarify your question?"
+26,we havent selected,not body,"I apologize for the confusion. Based on the description, ""person about to jump off a cliff,"" it can be classified as a position.","I apologize for the confusion. Based on the description ""monk with big sleeves,"" it does not reference geometric shapes. Therefore, it would be classified as ""not shape.""","I apologize for the confusion. Based on the description ""looking down,"" it is not clear whether it is abstract or not. It could be interpreted as either abstract or not abstract depending on the context.","I apologize for the confusion. Without any context or specific image, it is difficult to determine whether the description is about a part or the whole. Could you please provide more information or clarify your request?"
+27,the one with 2 heads almost,body,not position,not shape,not abstract,whole
+28,dancing man,body,not position,not shape,abstract,whole
+29,1 foot up,body,position,not shape,not abstract,part
+30,1 down,not body,position,not shape,not abstract,part
+31,2 heads,body,position,not shape,not abstract,part
+32,dancing man,body,not position,not shape,abstract,whole
+33,dancing man,body,not position,not shape,abstract,whole
+34,two heads,body,not position,not shape,not abstract,part
+35,dancing man,body,not position,not shape,abstract,whole
+36,dancing man,body,not position,not shape,abstract,whole
+37,zombie with the arms sticking to the left up and out,body,position,not shape,abstract,part
+38,head is to the right tilted back,body,position,not shape,not abstract,part
+39,walking left,not body,position,not shape,not abstract,whole
+40,bird head looking thing,not body,not position,shape,abstract,part
+41,The bird head one,body,not position,shape,not abstract,part
+42,bird head,body,not position,shape,abstract,part
+43,bird face,not body,position,shape,abstract,part
+44,zombie or bird head,body,not position,not shape,abstract,part
+45,bIRD HEAD,body,not position,shape,abstract,part
+46,Similar to the karate kid movie,not body,not position,not shape,not abstract,whole
+47,the crane kick,body,position,not shape,abstract,part
+48,dangly sleeves,body,not position,not shape,not abstract,part
+49,Crane kick again,body,position,not shape,not abstract,part
+50,face is like a beak,body,position,shape,not abstract,part
+51,has a triangle beak face,body,not position,shape,not abstract,part
+52,dangly sleeves,body,not position,not shape,not abstract,part
+53,Dangly sleeves,body,not position,not shape,not abstract,part
+54,up opposite head,body,position,not shape,not abstract,part
+55,Standing on one leg,body,position,not shape,not abstract,part
+56,crane kick,body,position,not shape,not abstract,part
+57,beak face,body,not position,shape,not abstract,part
+58,one leg slightly raised in front,body,position,not shape,not abstract,part
+59,crane kick,body,position,not shape,not abstract,part
+60,crane kick,body,position,not shape,not abstract,part
+61,it looks like it has two legs,body,position,not shape,not abstract,part
+62,where the feet are represented by triangles,body,position,shape,not abstract,part
+63,cube/diamond is towards the top right,not body,position,shape,not abstract,part
+64,attached to the main body by only its point,body,position,shape,not abstract,part
+65,like a creature walking to the left,not body,position,not shape,abstract,whole
+66,with one foot raised,body,position,not shape,not abstract,part
+67,Diamond connected in one spot on its back,not body,position,shape,not abstract,part
+68,Two legs,body,position,not shape,not abstract,part
+69,one is kicking in the air,body,position,not shape,not abstract,part
+70,facing left,not body,position,not shape,not abstract,whole
+71,person kicking one leg out to the left,body,position,not shape,not abstract,part
+72,leg kicking to the left,body,position,not shape,not abstract,part
+73,person kicking leg forward to the left,body,position,not shape,not abstract,part
+74,someone stood up,body,position,not shape,not abstract,whole
+75,feet both pointing left,body,position,not shape,not abstract,part
+76,a square,not body,not position,shape,not abstract,whole
+77,a trapezium,not body,not position,shape,not abstract,whole
+78,at the top,not body,position,not shape,not abstract,part
+79,kind of with arms outstretched,body,position,not shape,not abstract,part
+80,on the left,not body,position,not shape,not abstract,part
+81,one leg in the air,body,position,shape,not abstract,part
+82,with one foot in the air,body,position,not shape,not abstract,part
+83,person standing with diamond head leaning back,body,position,shape,not abstract,whole
+84,arms stretched to the left,body,position,not shape,not abstract,part
+85,one foot up,body,position,not shape,not abstract,part
+86,facing left,not body,position,not shape,not abstract,whole
+87,drunken zombie,not body,not position,not shape,abstract,whole
+88,a horse about to gallop,not body,position,not shape,abstract,whole
+89,Facing the left,not body,position,not shape,not abstract,whole
+90,both feet are visible,body,position,not shape,not abstract,part
+91,One foot on the floor,body,position,not shape,not abstract,part
+92,one raised up to the left,body,position,not shape,not abstract,part
+93,drunken zombie pose,body,position,not shape,abstract,whole
+94,facing left,not body,position,not shape,not abstract,whole
+95,with head tipping back towards the right,body,position,not shape,not abstract,part
+96,one leg in the air,body,position,shape,not abstract,part
+97,Drunk zombie,not body,not position,not shape,abstract,whole
+98,with leg slightly in the air,body,position,not shape,not abstract,part
+99,pointing left,body,position,not shape,not abstract,part
+100,drunken zombie,not body,not position,not shape,abstract,whole
+101,looks like a person with two legs,body,not position,not shape,not abstract,whole
+102,one is up,not body,position,not shape,not abstract,part
+103,one down,not body,position,not shape,not abstract,part
+104,kicking to the left,body,position,not shape,not abstract,part
+105,head falling off,body,not position,not shape,not abstract,part
+106,two legs,body,position,not shape,not abstract,part
+107,1 on the floor,not body,position,not shape,not abstract,part
+108,the other kicking to the left,body,position,not shape,not abstract,part
+109,head is off centre,body,position,not shape,not abstract,part
+110,both legs showing,body,position,not shape,not abstract,part
+111,one kicking left,body,position,not shape,not abstract,part
+112,diamond coming out of right side of head,body,position,shape,not abstract,part
+113,standing facing left,body,position,not shape,not abstract,whole
+114,on one foot,body,position,not shape,not abstract,part
+115,head falling off,body,not position,not shape,not abstract,part
+116,a person kicking one foot in front of them,body,position,not shape,not abstract,part
+117,Their head looks like it has a beak,body,not position,not shape,not abstract,part
+118,a box over their right shoulder,body,position,shape,not abstract,part
+119,looking like a person carrying another person over their shoulder,body,position,not shape,not abstract,whole
+120,michael jackson thriller dance,not body,position,not shape,not abstract,whole
+121,facing left,not body,position,not shape,not abstract,whole
+122,one leg,body,position,not shape,not abstract,part
+123,foot on the ground,body,position,not shape,not abstract,part
+124,the other lifting up,body,position,not shape,not abstract,part
+125,lifting forward,body,position,not shape,not abstract,part
+126,man facing left,not body,position,not shape,not abstract,whole
+127,kicking with diamond on right side,body,position,shape,not abstract,part
+128,head,body,not position,not shape,not abstract,part
+129,thriller dance,not body,not position,not shape,abstract,whole
+130,thriller,not body,not position,not shape,abstract,whole
+131,one leg planted,body,position,not shape,not abstract,part
+132,other up,not body,not position,not shape,not abstract,part
+133,thrill of night,not body,not position,not shape,not abstract,whole
+134,The person\s head is off his NECK,body,position,not shape,not abstract,part
+135,It is hanging from the neck,body,not position,not shape,not abstract,part
+136,pointed to the RIGHT of his body,body,position,not shape,not abstract,part
+137,hands and legs are at the opposite side of his head,body,position,not shape,not abstract,part
+138,kicking upwards,body,position,not shape,not abstract,part
+139,on the left side,not body,position,not shape,not abstract,part
+140,positioned to the LEFT of his body,body,position,not shape,not abstract,part
+141,pointed mid-air,body,position,shape,not abstract,part
+142,set firmly against the ground,not body,position,not shape,not abstract,part
+143,one foot is on the ground,body,position,not shape,not abstract,part
+144,the other on the in the air,not body,position,not shape,not abstract,part
+145,pointed to the left,not body,position,not shape,not abstract,part
+146,his head pointed backwards,body,position,not shape,not abstract,part
+147,arm on left right,body,position,not shape,not abstract,part
+148,heads on right side,body,position,not shape,not abstract,part
+149,hands on the left,body,position,not shape,not abstract,part
+150,both legs on left,body,position,not shape,not abstract,part
+151,one leg floating on the air,body,position,not shape,not abstract,part
+152,nothing but the head is on right side,body,position,not shape,not abstract,part
+153,almost like hes kicking,body,position,not shape,not abstract,part
+154,guy with head hanging down,body,position,not shape,not abstract,whole
+155,Foot kicking up,body,position,shape,not abstract,part
+156,falling off his body,body,not position,not shape,not abstract,part
+157,falling off the body,body,not position,not shape,not abstract,part
+158,Leg kicking up in air on the left,body,position,shape,not abstract,part
+159,falling off his body,body,not position,not shape,not abstract,part
+160,his hands up almost doing the thriller dance,body,position,not shape,not abstract,part
+161,his head almost falling off behind him,body,position,not shape,not abstract,part
+162,Can you see legs or not,body,"If the description mentions whether or not legs are visible, it would be classified as ""position"". If the description does not mention legs, it would be classified as ""not position"".",not shape,not abstract,"It depends on the context of the image being described. If the image is of a person or animal and the description is about their legs, then it would be considered as part. If the description is about the overall image or person or animal, then it would be considered as whole."
+163,one big fat leg,body,position,not shape,not abstract,part
+164,one small one,not body,not position,not shape,not abstract,part
+165,one leg above the other,body,position,not shape,not abstract,part
+166,falling backwards,body,position,not shape,not abstract,part
+167,one foot planted,body,position,not shape,not abstract,part
+168,the other in the air,not body,position,not shape,not abstract,part
+169,his arms make one shape,body,position,shape,not abstract,part
+170,are they separate,not body,not position,not shape,not abstract,"It is not clear what ""they"" refers to in your statement. Could you please provide more context or clarify your question?"
+171,man doing a zombie dance,body,position,not shape,abstract,whole
+172,foot off the ground,body,position,not shape,not abstract,part
+173,on,not body,not position,not shape,not abstract,whole
+174,which way is he facing,not body,position,not shape,"The description ""looking down"" does not specify the direction the person is facing. It could be interpreted as facing any direction while looking downward.",whole
+175,hands facing left,body,position,not shape,not abstract,part
+176,head on right side behind hands,body,position,not shape,not abstract,part
+177,Zombie thriller dance man,body,position,not shape,abstract,whole
+178,which direction is he walking,not body,position,not shape,not abstract,whole
+179,Two legs showing,body,position,not shape,not abstract,part
+180,walking left,not body,position,not shape,not abstract,whole
+181,guy doing the thriller dance,body,position,not shape,not abstract,whole
+182,one leg in the air,body,position,shape,not abstract,part
+183,facing left,not body,position,not shape,not abstract,whole
+184,thriller dance,not body,not position,not shape,abstract,whole
+185,going left,not body,position,not shape,not abstract,whole
+186,one foot planted,body,position,not shape,not abstract,part
+187,the other raised,body,position,not shape,not abstract,part
+188,thriller zombie guy,body,not position,not shape,abstract,whole
+189,1 leg standing,body,position,shape,not abstract,part
+190,facing the left,not body,position,not shape,not abstract,whole
+191,arms raised weirdly,body,position,not shape,not abstract,part
+192,to the left,not body,position,not shape,not abstract,whole
+193,two triangle arms,body,position,shape,not abstract,part
+194,facing left,not body,position,not shape,not abstract,whole
+195,face is slanted square,body,position,shape,not abstract,part
+196,more of an arrow shape arm,body,position,shape,not abstract,part
+197,attached to the body,body,not position,not shape,not abstract,part
+198,raised leg behind (to the right),body,position,not shape,not abstract,part
+199,the arm facing down a bit,body,position,not shape,not abstract,part
+200,head tilted back,body,position,not shape,not abstract,part
+201,raised leg to the left,body,position,not shape,not abstract,part
+202,facing left,not body,position,not shape,not abstract,whole
+203,head is falling off the back on the right,body,position,not shape,not abstract,part
+204,one leg on floor,body,position,not shape,not abstract,part
+205,one leg raised,body,position,shape,not abstract,part
+206,arms weird shape,body,not position,shape,not abstract,part
+207,facing left,not body,position,not shape,not abstract,whole
+208,looks like head is falling off the back on the right,body,position,not shape,not abstract,part
+209,one leg on floor,body,position,not shape,not abstract,part
+210,one leg raised,body,position,shape,not abstract,part
+211,facing left,not body,position,not shape,not abstract,whole
+212,one left in air,body,position,not shape,not abstract,part
+213,held tilted towards right handside,body,position,not shape,not abstract,part
+214,arms a weird shape,body,position,shape,not abstract,part
+215,one leg in air,body,position,shape,not abstract,part
+216,standing on 1 leg,body,position,not shape,not abstract,part
+217,weird thick arms,body,not position,not shape,not abstract,part
+218,other leg is in the air,body,position,not shape,not abstract,part
+219,head tilted back,body,position,not shape,not abstract,part
+220,head falling off back right,body,position,not shape,not abstract,part
+221,weird arms,body,not position,not shape,not abstract,part
+222,head falling off back to left,body,position,not shape,not abstract,part
+223,one foot on floor,body,position,not shape,not abstract,part
+224,one foot raised,body,position,shape,not abstract,part
+225,has a trapezoid as a head,not body,not position,shape,not abstract,part
+226,two feet with one in the air,body,position,shape,not abstract,part
+227,facing left,not body,position,not shape,not abstract,whole
+228,square sticking out of neck,body,not position,shape,not abstract,part
+229,head is a trapezoid,body,not position,shape,not abstract,part
+230,has a square on its neck,body,position,shape,not abstract,part
+231,trapezoid head,not body,not position,shape,not abstract,part
+232,square sticking out of the neck,body,position,shape,not abstract,part
+233,two feet facing left,body,position,shape,not abstract,part
+234,looking left,not body,position,not shape,not abstract,part
+235,with 1 foot,body,position,not shape,not abstract,part
+236,about to stomp on the floor,body,position,not shape,not abstract,part
+237,person facing left,not body,position,not shape,not abstract,whole
+238,balancing on one leg,body,position,not shape,not abstract,part
+239,square sticking out of neck,body,not position,shape,not abstract,part
+240,trapezoid head,not body,not position,shape,not abstract,part
+241,square on the neck,body,position,shape,not abstract,part
+242,it has 2 legs,body,not position,not shape,not abstract,part
+243,balancing on one foot,body,position,not shape,not abstract,part
+244,leaning left,not body,position,not shape,not abstract,part
+245,a head with a beak,body,not position,shape,not abstract,part
+246,looking down,not body,position,not shape,not abstract,part
+247,raised foot,body,position,not shape,not abstract,part
+248,facing the left,not body,position,not shape,not abstract,whole
+249,a square jutting out of the right shoulder,body,position,shape,not abstract,part
+250,ice skating,not body,position,not shape,not abstract,whole
+251,walking zombie,body,not position,not shape,abstract,whole
+252,square tilted back,not body,position,shape,not abstract,part
+253,figure facing the left,not body,position,shape,not abstract,whole
+254,one leg is down,body,position,not shape,not abstract,part
+255,one leg is up,body,position,not shape,not abstract,part
+256,one leg up on the left,body,position,not shape,not abstract,part
+257,one on the ground,not body,position,not shape,not abstract,part
+258,dancing birdman,not body,not position,not shape,abstract,whole
+259,facing left,not body,position,not shape,not abstract,whole
+260,big triangle for a head,not body,not position,shape,not abstract,part
+261,square balanced over right shoulder,body,position,shape,not abstract,part
+262,with one leg up,body,position,not shape,not abstract,part
+263,Bird man,not body,not position,not shape,abstract,whole
+264,Square on right,not body,position,shape,not abstract,part
+265,balancing on corner,not body,position,shape,not abstract,part
+266,Left foot off the ground,body,position,not shape,not abstract,part
+267,right foot on,body,position,not shape,not abstract,part
+268,bird man dancing,not body,not position,not shape,abstract,whole
+269,bird man,not body,not position,not shape,abstract,whole
+270,Square head,not body,not position,shape,not abstract,part
+271,to the top right,not body,position,not shape,not abstract,part
+272,Two legs on the left,body,position,not shape,not abstract,part
+273,one is lifted up,body,position,not shape,not abstract,part
+274,falling,body,not position,not shape,not abstract,whole
+275,the head,body,not position,not shape,not abstract,part
+276,falling head,body,not position,not shape,not abstract,part
+277,both legs are on the left,body,position,not shape,not abstract,part
+278,square head,not body,not position,shape,not abstract,part
+279,"""looks like its falling off""",not body,not position,not shape,not abstract,part
+280,code name was FALLING,not body,not position,not shape,not abstract,whole
+281,falling head,body,not position,not shape,not abstract,part
+282,two feet facing left,body,position,shape,not abstract,part
+283,walking left,not body,position,not shape,not abstract,whole
+284,head on right,body,position,not shape,not abstract,part
+285,falling guy,body,not position,not shape,not abstract,whole
+286,walking left,not body,position,not shape,not abstract,whole
+287,head on right,body,position,not shape,not abstract,part
+288,two feet pointing to the left,body,position,shape,not abstract,part
+289,falling head,body,not position,not shape,not abstract,part
+290,falling head,body,not position,not shape,not abstract,part
+291,lifted up,body,position,not shape,not abstract,part
+292,falling,body,not position,not shape,not abstract,whole
+293,head on the right,body,position,not shape,not abstract,part
+294,both legs to the left,body,position,not shape,not abstract,part
+295,falling head,body,not position,not shape,not abstract,part
+296,a person with body facing left,body,position,not shape,not abstract,whole
+297,head facing right,body,position,not shape,not abstract,part
+298,looks like a zombie,not body,not position,not shape,not abstract,whole
+299,one leg up,body,position,not shape,not abstract,part
+300,arms up like a zombie,body,position,not shape,not abstract,part
+301,strange guy lunged forward,body,position,not shape,not abstract,whole
+302,walking drunk,body,not position,not shape,not abstract,whole
+303,golf flag stuck in his back,body,position,not shape,not abstract,part
+304,bit like a t rex,body,not position,not shape,abstract,whole
+305,walking zombie,body,not position,not shape,abstract,whole
+306,really bad thriller dance,not body,not position,not shape,not abstract,whole
+307,facing left,not body,position,not shape,not abstract,whole
+308,Bad dancing man,body,not position,not shape,abstract,whole
+309,left arm is up,body,position,not shape,not abstract,part
+310,head is tilted downwards on the right side,body,position,not shape,not abstract,part
+311,one foot is slightly raised,body,position,not shape,not abstract,part
+312,Zombie dancer,not body,not position,not shape,abstract,whole
+313,arms left,body,position,not shape,not abstract,part
+314,head bowed to the right,body,position,not shape,not abstract,part
+315,standing on one foot,body,position,not shape,not abstract,part
+316,drunk dancer,not body,not position,not shape,abstract,whole
+317,t rex,body,not position,not shape,abstract,whole
+318,golf flag in his back,body,position,not shape,not abstract,part
+319,one leg lifted,body,position,shape,not abstract,part
+320,zombie man,body,not position,not shape,abstract,whole
+321,leg up,body,position,not shape,not abstract,part
+322,Frankenstein\s monster,body,not position,not shape,abstract,whole
+323,walking toward the left,not body,position,not shape,not abstract,whole
+324,arms up,body,position,not shape,not abstract,part
+325,head back,body,position,not shape,not abstract,part
+326,one leg raised,body,position,shape,not abstract,part
+327,foot at 45 degrees,body,position,shape,not abstract,part
+328,walking to the left,not body,position,not shape,not abstract,whole
+329,head tilted back,body,position,not shape,not abstract,part
+330,one leg lifted 45 degrees,body,position,shape,not abstract,part
+331,facing left,not body,position,not shape,not abstract,whole
+332,in a standing position,body,position,not shape,not abstract,whole
+333,one leg is raised,body,position,shape,not abstract,part
+334,appears to be carrying something on his back,body,position,not shape,not abstract,part
+335,looks similar to a workman,not body,not position,not shape,not abstract,whole
+336,Bottom half of an elephant,body,not position,not shape,not abstract,part
+337,standing on the back two legs,body,position,not shape,not abstract,part
+338,One leg is raised at an angle,body,position,shape,not abstract,part
+339,facing left,not body,position,not shape,not abstract,whole
+340,slightly tilted,not body,position,not shape,not abstract,whole
+341,handing off the top part,body,position,not shape,not abstract,part
+342,facing left,not body,position,not shape,not abstract,whole
+343,head is at the top right,body,position,not shape,not abstract,part
+344,monster walking left,not body,position,not shape,abstract,whole
+345,head tilted back,body,position,not shape,not abstract,part
+346,one leg raised,body,position,shape,not abstract,part
+347,monster facing left,not body,position,not shape,abstract,whole
+348,one leg raised,body,position,shape,not abstract,part
+349,Diamond on the top right,not body,position,shape,not abstract,part
+350,Big arm on the left,body,position,not shape,not abstract,part
+351,one leg in the air,body,position,shape,not abstract,part
+352,other on the ground,not body,not position,not shape,not abstract,part
+353,diamond on the right of the image,not body,position,shape,not abstract,part
+354,looking like a sad angel,not body,not position,not shape,abstract,whole
+355,of a hippo kicking something,body,position,not shape,not abstract,whole
+356,facing left,not body,position,not shape,not abstract,whole
+357,no arms,body,not position,not shape,not abstract,part
+358,both feet,body,position,not shape,not abstract,part
+359,Diamond to the right,not body,position,shape,not abstract,part
+360,leg lifted on the left,body,position,not shape,not abstract,part
+361,Strange shaped body,body,not position,shape,not abstract,whole
+362,angled,not body,position,shape,not abstract,whole
+363,Stepping to the left,body,position,not shape,not abstract,part
+364,mid walk,body,position,not shape,not abstract,part
+365,one foot mid-raised,body,position,shape,not abstract,part
+366,facing left,not body,position,not shape,not abstract,whole
+367,diamond on back,body,position,shape,not abstract,part
+368,Diamond on the top right,not body,position,shape,not abstract,part
+369,person facing left,not body,position,not shape,not abstract,whole
+370,arms and legs out,body,position,not shape,not abstract,part
+371,One leg is up,body,position,not shape,not abstract,part
+372,looks like a zombie,not body,not position,not shape,not abstract,whole
+373,Diamond to the top right,not body,position,shape,not abstract,part
+374,like a sad hippo walking to the left,body,position,not shape,not abstract,whole
+375,one leg up as if it was mid step,body,position,not shape,not abstract,part
+376,"Man looks like he\s doing the ""thriller"" dance",body,position,not shape,not abstract,whole
+377,his head behind him,body,position,not shape,not abstract,part
+378,Zombie pose to the left,body,position,not shape,abstract,part
+379,his head to the right,body,position,not shape,not abstract,part
+380,one leg up,body,position,not shape,not abstract,part
+381,One leg up,body,position,not shape,not abstract,part
+382,right,"I apologize for the confusion. ""Dancer"" can be classified as both body and not body, depending on the context. If the description is about the physical movements and actions of a dancer, it can be classified as body. However, if the description is about the profession or hobby of dancing, it can be classified as not body.",position,not shape,not abstract,part
+383,Legs are apart to step,body,position,not shape,not abstract,part
+384,arms are together,body,position,not shape,not abstract,part
+385,One leg up,body,position,not shape,not abstract,part
+386,Thriller dance,not body,position,not shape,abstract,whole
+387,standing on one leg with other one up,body,position,not shape,not abstract,part
+388,both arms out,body,position,not shape,not abstract,part
+389,body facing left,body,position,not shape,not abstract,part
+390,head facing right,body,position,not shape,not abstract,part
+391,thriller,not body,not position,not shape,not abstract,whole
+392,one foot in the air,body,position,shape,not abstract,part
+393,"""its walking""",body,position,not shape,not abstract,whole
+394,one foot planted firmly on the ground,body,position,not shape,not abstract,part
+395,with a diamond on the right side,not body,position,shape,not abstract,part
+396,a bit like a zombie,not body,not position,not shape,abstract,whole
+397,with the hands,body,position,not shape,not abstract,part
+398,Zombie person,body,not position,not shape,abstract,whole
+399,zombie one,not body,not position,not shape,abstract,whole
+400,the zombie,not body,not position,not shape,abstract,whole
+401,zombie,not body,not position,not shape,abstract,whole
+402,Zombie,not body,not position,not shape,abstract,whole
+403,carrying a flag over its shoulder,body,position,not shape,not abstract,part
+404,zombie walk,not body,position,not shape,abstract,whole
+405,standing on one foot,body,position,not shape,not abstract,part
+406,zombie,not body,not position,not shape,abstract,whole
+407,bear with a flag,not body,not position,not shape,abstract,whole
+408,facing left,not body,position,not shape,not abstract,whole
+409,marching,not body,position,not shape,not abstract,whole
+410,bear,not body,not position,not shape,abstract,whole
+411,zombie,not body,not position,not shape,abstract,whole
+412,figure,not body,not position,shape,not abstract,whole
+413,one leg up,body,position,not shape,not abstract,part
+414,zombie with flag,not body,position,not shape,abstract,whole
+415,zombie,not body,not position,not shape,abstract,whole
