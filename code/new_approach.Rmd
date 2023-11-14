@@ -37,7 +37,17 @@ raw <- read_csv(here("raw_chats/rotate_filtered_chat.csv")) |> filter(numPlayers
   
 raw |> select(text=spellchecked) |> write_csv(here("data/test/sample.csv"))
 
+raw_2 <- read_csv(here("raw_chats/rotate_filtered_chat.csv")) |> filter(numPlayers==4) |> filter(!is.chitchat) |> filter(!is.na(spellchecked)) |>  filter(target=="/experiment/tangram_B.png") |> select(gameId, targetNum, repNum, trialNum, numPlayers, playerId, target, role, countCorrect, spellchecked) 
+  
+raw_2 |> select(text=spellchecked) |> write_csv(here("data/test/sample_2.csv"))
 
+raw_3 <- read_csv(here("raw_chats/rotate_filtered_chat.csv")) |> filter(numPlayers==4) |> filter(!is.chitchat) |> filter(!is.na(spellchecked)) |>  filter(target=="/experiment/tangram_C.png") |> select(gameId, targetNum, repNum, trialNum, numPlayers, playerId, target, role, countCorrect, spellchecked) 
+  
+raw_3 |> select(text=spellchecked) |> write_csv(here("data/test/sample_3.csv"))
+
+raw_all <- read_csv(here("raw_chats/rotate_filtered_chat.csv")) |> filter(numPlayers==4) |> filter(!is.chitchat) |> filter(!is.na(spellchecked)) |>  select(gameId, targetNum, repNum, trialNum, numPlayers, playerId, target, role, countCorrect, spellchecked)
+
+raw_all |> select(text=spellchecked) |> write_csv(here("data/test/sample_all_4p.csv"))
 ```
 
 ## Post gpt
@@ -55,8 +65,19 @@ read_data <- function(file){
 ```
 
 ```{r}
-post <- read_csv(here("data/test/outsample_gpt3.csv")) |> bind_cols(raw) |> mutate(gpt_out=map(gpt_out, .f=fix_thing)) |> unnest(gpt_out, keep_empty = T) |> 
+post <- read_csv(here("data/test/chunked_sample_2.csv")) |> bind_cols(raw_2) |> mutate(gpt_out=map(gpt_out, .f=fix_thing)) |> unnest(gpt_out, keep_empty = T) |> 
 mutate(is_substring=str_detect(text, fixed(gpt_out, ignore_case=T ))) |> select(text, gpt_out, is_substring, everything())
+
+post |> filter(!is_substring) |> View()
+
+
+post_label <- post |> group_by(`...1`, text, role) |> #summarize(gpt_out=str_flatten(gpt_out, collapse=" \n\n")) |>
+  write_csv(here("data/test/post_sample_2.csv"))
+```
+
+```{r}
+post <- read_csv(here("data/test/outsample_gpt3.csv")) |> bind_cols(raw) |> mutate(gpt_out=map(gpt_out, .f=fix_thing)) |> unnest(gpt_out, keep_empty = T) |> 
+mutate(is_substring=str_detect(text, fixed(gpt_out, ignore_case=T ))) |> select(text, gpt_out, is_substring, everything()) |> filter(!is_substring) |> View()
 
 
 post_label <- post |> group_by(`...1`, text, role) |> summarize(gpt_out=str_flatten(gpt_out, collapse=" \n\n")) |> write_csv(here("data/test/outsample3_prelabel.csv"))
@@ -407,24 +428,37 @@ What tag classes to use?
 
 Get a human-human ceiling of agreement!
 
-What's right metric for chunking agreement?
+# Chunking agreement TODO
 
-Isaac/Izzy recommend: 
-Charf?
+```{r}
+V <- read_csv(here("data/test/outsample_V.csv")) |> 
+  mutate(rownum=row_number()) |> 
+  mutate(`text...2`=str_replace_all(`text...2`,"//", "//**//")) |> 
+  select(rownum, text=`text...1`, chunks=`text...2`) 
 
-Or loke bleu
+llm <- read_csv(here("data/test/outsample_gpt3.csv")) |> mutate(gpt_out=map(gpt_out, .f=fix_thing)) |> unnest(gpt_out, keep_empty = T) |> 
+  group_by(`...1`, text) |> 
+  summarize(chunks=str_c(gpt_out, collapse=" //**// ")) |> 
+  ungroup() |> 
+  select(rownum=`...1`, text, chunks)
 
-But yes one of these weighted ngram overlap metrics that @Isaac Caswell is an expert in
-10m
+test_that("same length", {expect_equal(nrow(V),nrow(llm))
+  #expect_equal(V$text, llm$text)
+  #this fails because quotes are a nightmare
+  })
 
-Isaac Caswell
-Yeah chrf is the way to go
+#let's try to figure out what format charf wants
+
+V |> select(chunks) |> write_csv(here("data/test/pre_charf_correct.txt"), col_names=F)
+
+llm |> select(chunks) |> write_csv(here("data/test/pre_charf_model.txt"), col_names=F)
+```
 
 https://github.com/mjpost/sacrebleu
 
-IC
+run `sacrebleu --i=pre_charf_model.txt --metric=chrf --chrf-word-order 2  --chrf-whitespace  pre_charf_correct.txt`
 
-use like `sacrebleu --i=model_output_file.txt --metric=chrf correct_output_file.txt `
+not sure what settings actually make sense
 
 
 

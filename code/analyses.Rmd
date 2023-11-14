@@ -1,0 +1,51 @@
+---
+title: "Language analyses"
+output: html_notebook
+---
+
+```{r set-up, include=F}
+knitr::opts_chunk$set(echo = FALSE, warning=F, message=F)
+knitr::opts_chunk$set(dev = "png", dev.args = list(type = "cairo-png"))
+options(knitr.table.format = "html")
+library(tidyverse)
+library(jsonlite)
+library(here)
+library(rlang)
+library(lme4)
+library(brms)
+#library(rstanarm)
+library(rstan)
+library(viridis)
+library(testthat)
+rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores())
+theme_set(theme_bw())
+
+ParseJSONColumn <- function(x) {
+  str_c("[ ", str_c(x, collapse = ",", sep=" "), " ]")  %>% 
+    fromJSON(flatten = T)
+}
+
+
+```
+
+# Repeat s-bert analyses
+
+# Look at number of chunks over time
+
+* not dealing with 0s in a reasonable way! 
+
+```{r}
+
+post |> group_by(gameId, repNum, role) |> tally() |> ggplot(aes(x=repNum, y=n))+geom_smooth(method="glm")+geom_jitter(width=0.2, height=.2)+facet_grid(.~role)
+```
+
+# Look at number of chunks of each type over time 
+
+# Type based something something
+
+# What labels are stickiest?
+
+# Where do end utterances originate?
+
+# Do any similarities predict stickiness?

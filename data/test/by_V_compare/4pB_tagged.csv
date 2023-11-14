@@ -1,0 +1,630 @@
+abstract,is_part [too hard] ,is_body,is_shape,is_position,is_posture,gpt_out,is_substring,...1,gameId,targetNum,repNum,trialNum,numPlayers,playerId,target,role,countCorrect,spellchecked
+n,n,y,n,n,y,sitting with his arms out,TRUE,0,3WzEi9zkHF77vdTw5,6,0,6,4,qZYMtuyj2SBfZk8XH,/experiment/tangram_B.png,speaker,3,ok so its a guy sitting with his arms out
+n,y,y,y,y,n,the two triangles go out either side just below the head,TRUE,1,3WzEi9zkHF77vdTw5,6,0,6,4,qZYMtuyj2SBfZk8XH,/experiment/tangram_B.png,speaker,3,the two triangles go out either side just below the head
+n,y,y,y,y,n,"the triangle on the right comes away from the ""body"" a bit",TRUE,2,3WzEi9zkHF77vdTw5,6,0,6,4,qZYMtuyj2SBfZk8XH,/experiment/tangram_B.png,speaker,3,"the triangle on the right comes away from the ""body"" a bit"
+n,y,y,n,y,n,one foot out to the left,TRUE,3,3WzEi9zkHF77vdTw5,6,0,6,4,qZYMtuyj2SBfZk8XH,/experiment/tangram_B.png,speaker,3,he has one foot out to the left
+n,n,n,n,y,n,a lady facing left,TRUE,4,3WzEi9zkHF77vdTw5,8,1,20,4,ieBYKaxXNCy2QcwJj,/experiment/tangram_B.png,speaker,3,This looks like a lady facing left
+n,y,y,y,n,n,her triangle arms,TRUE,5,3WzEi9zkHF77vdTw5,8,1,20,4,ieBYKaxXNCy2QcwJj,/experiment/tangram_B.png,speaker,3,her triangle arms face left
+n,n,n,n,y,n,face left,TRUE,5,3WzEi9zkHF77vdTw5,8,1,20,4,ieBYKaxXNCy2QcwJj,/experiment/tangram_B.png,speaker,3,her triangle arms face left
+n,y,y,y,y,n,she has a triangle behind her neck,FALSE,6,3WzEi9zkHF77vdTw5,8,1,20,4,ieBYKaxXNCy2QcwJj,/experiment/tangram_B.png,speaker,3,she has a triangle behind her neck
+n,n,n,n,y,n,facing left,TRUE,7,3WzEi9zkHF77vdTw5,8,1,20,4,ieBYKaxXNCy2QcwJj,/experiment/tangram_B.png,speaker,3,she is facing left!
+n,n,n,n,n,y,she is kneeling,TRUE,8,3WzEi9zkHF77vdTw5,8,1,20,4,ieBYKaxXNCy2QcwJj,/experiment/tangram_B.png,speaker,3,she is kneeling
+n,n,n,n,n,n,a woman in a dress,TRUE,9,3WzEi9zkHF77vdTw5,7,2,31,4,wXsGgzkQgoofFhxwk,/experiment/tangram_B.png,speaker,3,looks like a woman in a dress with her left foot out
+n,y,y,n,y,n,with her left foot out,TRUE,9,3WzEi9zkHF77vdTw5,7,2,31,4,wXsGgzkQgoofFhxwk,/experiment/tangram_B.png,speaker,3,looks like a woman in a dress with her left foot out
+n,y,y,n,y,n,both arms are raised to each side,TRUE,10,3WzEi9zkHF77vdTw5,7,2,31,4,wXsGgzkQgoofFhxwk,/experiment/tangram_B.png,speaker,3,both arms are raised to each side
+n,y,y,n,y,n,head tilted to the right and down slightly,TRUE,11,3WzEi9zkHF77vdTw5,7,2,31,4,wXsGgzkQgoofFhxwk,/experiment/tangram_B.png,speaker,3,head tilted to the right and down slightly
+n,y,y,n,y,n,right arm is away from her body slightly,TRUE,12,3WzEi9zkHF77vdTw5,7,2,31,4,wXsGgzkQgoofFhxwk,/experiment/tangram_B.png,speaker,3,right arm is away from her body slightly
+n,y,n,y,n,n,one triangle on the floor,TRUE,13,3WzEi9zkHF77vdTw5,7,2,31,4,qZYMtuyj2SBfZk8XH,/experiment/tangram_B.png,listener,3,one triangle on the floor to the left?
+n,n,n,n,y,n,to the left,TRUE,13,3WzEi9zkHF77vdTw5,7,2,31,4,qZYMtuyj2SBfZk8XH,/experiment/tangram_B.png,listener,3,one triangle on the floor to the left?
+n,y,n,y,y,n,triangle at the bottom of her dress thing facing left,TRUE,14,3WzEi9zkHF77vdTw5,7,2,31,4,ieBYKaxXNCy2QcwJj,/experiment/tangram_B.png,listener,3,does she have a triangle at the bottom of her dress thing facing left?
+n,n,n,n,y,y,someone kneeling to the left,TRUE,15,3WzEi9zkHF77vdTw5,10,3,46,4,hv4nKRCaDiRgPQjY4,/experiment/tangram_B.png,speaker,3,"one of the tricky ones, someone kneeling to the left with triangle arms out wide - right arm detached from body"
+n,y,y,y,n,n,triangle arms out wide,TRUE,15,3WzEi9zkHF77vdTw5,10,3,46,4,hv4nKRCaDiRgPQjY4,/experiment/tangram_B.png,speaker,3,"one of the tricky ones, someone kneeling to the left with triangle arms out wide - right arm detached from body"
+n,y,y,n,y,n,right arm detached from body,TRUE,15,3WzEi9zkHF77vdTw5,10,3,46,4,hv4nKRCaDiRgPQjY4,/experiment/tangram_B.png,speaker,3,"one of the tricky ones, someone kneeling to the left with triangle arms out wide - right arm detached from body"
+n,n,n,n,y,y,kneeling to the RIGHT,TRUE,16,3WzEi9zkHF77vdTw5,10,3,46,4,hv4nKRCaDiRgPQjY4,/experiment/tangram_B.png,speaker,3,kneeling to the RIGHT i mean
+n,n,n,n,y,y,falling to the right,TRUE,17,3WzEi9zkHF77vdTw5,10,3,46,4,ieBYKaxXNCy2QcwJj,/experiment/tangram_B.png,listener,3,falling to the right?
+n,n,n,n,y,n,facing left,TRUE,18,3WzEi9zkHF77vdTw5,10,3,46,4,hv4nKRCaDiRgPQjY4,/experiment/tangram_B.png,speaker,3,could also be a dog facing left with a square and triangle for ears
+n,y,y,y,n,n,with a square and triangle for ears,TRUE,18,3WzEi9zkHF77vdTw5,10,3,46,4,hv4nKRCaDiRgPQjY4,/experiment/tangram_B.png,speaker,3,could also be a dog facing left with a square and triangle for ears
+n,n,n,y,n,n,one triangle,TRUE,19,3WzEi9zkHF77vdTw5,10,3,46,4,qZYMtuyj2SBfZk8XH,/experiment/tangram_B.png,listener,3,one triangle on the floor to the left
+n,n,n,n,n,n,on the floor,TRUE,19,3WzEi9zkHF77vdTw5,10,3,46,4,qZYMtuyj2SBfZk8XH,/experiment/tangram_B.png,listener,3,one triangle on the floor to the left
+n,n,n,n,y,n,to the left,TRUE,19,3WzEi9zkHF77vdTw5,10,3,46,4,qZYMtuyj2SBfZk8XH,/experiment/tangram_B.png,listener,3,one triangle on the floor to the left
+n,y,n,n,y,y,falling right,TRUE,20,3WzEi9zkHF77vdTw5,3,4,51,4,qZYMtuyj2SBfZk8XH,/experiment/tangram_B.png,speaker,1,the woman falling right
+n,n,n,y,y,n,woman with triangle in front of her dress,TRUE,21,3WzEi9zkHF77vdTw5,7,5,67,4,ieBYKaxXNCy2QcwJj,/experiment/tangram_B.png,speaker,1,woman with triangle in front of her dress
+n,n,n,n,y,n,facing left,TRUE,22,3WzEi9zkHF77vdTw5,7,5,67,4,ieBYKaxXNCy2QcwJj,/experiment/tangram_B.png,speaker,1,she is facing left
+n,y,y,n,n,n,right arm detached,TRUE,23,3WzEi9zkHF77vdTw5,7,5,67,4,wXsGgzkQgoofFhxwk,/experiment/tangram_B.png,listener,1,right arm detached?
+n,y,n,y,y,n,triangle to the right,TRUE,24,3WzEi9zkHF77vdTw5,7,5,67,4,qZYMtuyj2SBfZk8XH,/experiment/tangram_B.png,listener,1,triangle to the right under her butt
+n,y,y,n,y,n,under her butt,TRUE,24,3WzEi9zkHF77vdTw5,7,5,67,4,qZYMtuyj2SBfZk8XH,/experiment/tangram_B.png,listener,1,triangle to the right under her butt
+n,y,n,y,y,n,Rotated square at the top,TRUE,25,rSMFkjhskBteiyQMB,6,0,6,4,PzsrjpFbCRkuAMq8B,/experiment/tangram_B.png,speaker,3,"Rotated square at the top, a triangle is touching it's point. They are touching another triangle."
+n,y,n,y,y,n,a triangle is touching its point,FALSE,25,rSMFkjhskBteiyQMB,6,0,6,4,PzsrjpFbCRkuAMq8B,/experiment/tangram_B.png,speaker,3,"Rotated square at the top, a triangle is touching it's point. They are touching another triangle."
+n,y,n,y,y,n,They are touching another triangle,TRUE,25,rSMFkjhskBteiyQMB,6,0,6,4,PzsrjpFbCRkuAMq8B,/experiment/tangram_B.png,speaker,3,"Rotated square at the top, a triangle is touching it's point. They are touching another triangle."
+n,n,n,n,n,y,an animal sat down,TRUE,26,rSMFkjhskBteiyQMB,6,0,6,4,PzsrjpFbCRkuAMq8B,/experiment/tangram_B.png,speaker,3,this picture looks like an animal sat down
+n,n,n,y,n,n,two triangles,TRUE,27,rSMFkjhskBteiyQMB,6,0,6,4,o7s7B6kZLqvaG62N4,/experiment/tangram_B.png,listener,3,do the two triangles kind look like wings?
+y,n,n,n,n,n,kind look like wings,TRUE,27,rSMFkjhskBteiyQMB,6,0,6,4,o7s7B6kZLqvaG62N4,/experiment/tangram_B.png,listener,3,do the two triangles kind look like wings?
+y,n,n,n,n,n,wings,TRUE,28,rSMFkjhskBteiyQMB,11,1,23,4,ZvhRyXkvKz6ES5HwX,/experiment/tangram_B.png,speaker,2,wings
+n,n,n,n,n,y,man kneeling,TRUE,29,rSMFkjhskBteiyQMB,11,1,23,4,ZvhRyXkvKz6ES5HwX,/experiment/tangram_B.png,speaker,2,man kneeling head facing down
+n,y,y,n,n,n,head facing down,TRUE,29,rSMFkjhskBteiyQMB,11,1,23,4,ZvhRyXkvKz6ES5HwX,/experiment/tangram_B.png,speaker,2,man kneeling head facing down
+y,n,n,n,n,n,wings,TRUE,30,rSMFkjhskBteiyQMB,4,2,28,4,ZGADNAezcCdtejsh5,/experiment/tangram_B.png,speaker,1,"wings, man head facing down, kneeling"
+n,y,y,n,n,n,man head facing down,TRUE,30,rSMFkjhskBteiyQMB,4,2,28,4,ZGADNAezcCdtejsh5,/experiment/tangram_B.png,speaker,1,"wings, man head facing down, kneeling"
+n,n,n,n,n,y,kneeling,TRUE,30,rSMFkjhskBteiyQMB,4,2,28,4,ZGADNAezcCdtejsh5,/experiment/tangram_B.png,speaker,1,"wings, man head facing down, kneeling"
+y,n,n,n,n,n,wings,TRUE,31,rSMFkjhskBteiyQMB,0,3,36,4,o7s7B6kZLqvaG62N4,/experiment/tangram_B.png,speaker,2,wings
+n,n,n,n,n,y,kneeling,TRUE,32,rSMFkjhskBteiyQMB,0,3,36,4,o7s7B6kZLqvaG62N4,/experiment/tangram_B.png,speaker,2,"kneeling, head tilted down"
+n,y,y,n,n,n,head tilted down,TRUE,32,rSMFkjhskBteiyQMB,0,3,36,4,o7s7B6kZLqvaG62N4,/experiment/tangram_B.png,speaker,2,"kneeling, head tilted down"
+y,n,n,n,n,n,mouse,TRUE,33,rSMFkjhskBteiyQMB,6,4,54,4,PzsrjpFbCRkuAMq8B,/experiment/tangram_B.png,speaker,1,mouse
+y,n,n,n,n,n,mouse,TRUE,34,rSMFkjhskBteiyQMB,6,4,54,4,ZvhRyXkvKz6ES5HwX,/experiment/tangram_B.png,listener,1,mouse?
+y,y,y,n,n,n,bunny ears,TRUE,35,rSMFkjhskBteiyQMB,6,4,54,4,ZGADNAezcCdtejsh5,/experiment/tangram_B.png,listener,1,bunny ears
+n,,n,y,n,n,point of square,TRUE,36,rSMFkjhskBteiyQMB,6,4,54,4,PzsrjpFbCRkuAMq8B,/experiment/tangram_B.png,speaker,1,"no, point of square and point of 2 different triangles touches"
+n,,n,y,n,n,point of 2 different triangles touches,TRUE,36,rSMFkjhskBteiyQMB,6,4,54,4,PzsrjpFbCRkuAMq8B,/experiment/tangram_B.png,speaker,1,"no, point of square and point of 2 different triangles touches"
+y,,n,n,n,n,the guy with wings,TRUE,37,rSMFkjhskBteiyQMB,6,4,54,4,o7s7B6kZLqvaG62N4,/experiment/tangram_B.png,listener,1,"like, the guy with wings?"
+y,,n,n,n,n,wings,TRUE,38,rSMFkjhskBteiyQMB,2,5,62,4,ZvhRyXkvKz6ES5HwX,/experiment/tangram_B.png,speaker,3,wings
+n,,n,y,n,n,a flat bottom part,TRUE,39,cA2SjWv3CePYZgyzS,1,0,1,4,HdKK2ktAX4RmvJwZk,/experiment/tangram_B.png,speaker,1,the one with a flat bottom part and two small triangles on each side
+n,,n,y,y,n,two small triangles on each side,TRUE,39,cA2SjWv3CePYZgyzS,1,0,1,4,HdKK2ktAX4RmvJwZk,/experiment/tangram_B.png,speaker,1,the one with a flat bottom part and two small triangles on each side
+n,,n,n,n,y,kneeling person,TRUE,40,cA2SjWv3CePYZgyzS,1,0,1,4,HdKK2ktAX4RmvJwZk,/experiment/tangram_B.png,speaker,1,like a kneeling person with the feet pointing to the left
+n,,y,n,y,n,feet pointing to the left,TRUE,40,cA2SjWv3CePYZgyzS,1,0,1,4,HdKK2ktAX4RmvJwZk,/experiment/tangram_B.png,speaker,1,like a kneeling person with the feet pointing to the left
+n,,n,y,n,n,backwards c shape,TRUE,41,cA2SjWv3CePYZgyzS,1,0,1,4,HdKK2ktAX4RmvJwZk,/experiment/tangram_B.png,speaker,1,it's the one with a backwards c shape on the left edge
+n,,n,n,y,n,on the left edge,TRUE,41,cA2SjWv3CePYZgyzS,1,0,1,4,HdKK2ktAX4RmvJwZk,/experiment/tangram_B.png,speaker,1,it's the one with a backwards c shape on the left edge
+n,,n,y,y,n,the bottom right has a right angle,TRUE,42,cA2SjWv3CePYZgyzS,6,1,18,4,KDECwB9Cikjj7ZsE9,/experiment/tangram_B.png,speaker,2,"The bottom right has a right angle, and there are triangles on the left and right"
+n,,n,y,y,n,triangles on the left and right,TRUE,42,cA2SjWv3CePYZgyzS,6,1,18,4,KDECwB9Cikjj7ZsE9,/experiment/tangram_B.png,speaker,2,"The bottom right has a right angle, and there are triangles on the left and right"
+n,,y,y,y,n,the right triangle is separated from the body,TRUE,43,cA2SjWv3CePYZgyzS,6,1,18,4,KDECwB9Cikjj7ZsE9,/experiment/tangram_B.png,speaker,2,the right triangle is separated from the body
+n,,n,y,y,n,the left triangle is connected,TRUE,44,cA2SjWv3CePYZgyzS,6,1,18,4,KDECwB9Cikjj7ZsE9,/experiment/tangram_B.png,speaker,2,the left triangle is connected
+n,,n,y,y,n,right triangle separated from body,TRUE,45,cA2SjWv3CePYZgyzS,6,2,30,4,HqyHHokWZEzaNafoJ,/experiment/tangram_B.png,speaker,2,right triangle separated from body
+n,,n,y,y,n,left triangle connected,TRUE,46,cA2SjWv3CePYZgyzS,6,2,30,4,HqyHHokWZEzaNafoJ,/experiment/tangram_B.png,speaker,2,left triangle connected
+n,,n,y,y,n,disjointed triangle to the right,TRUE,47,cA2SjWv3CePYZgyzS,7,3,43,4,tu7h5gBhgzwA6ttCD,/experiment/tangram_B.png,speaker,2,"disjointed triangle to the right, joined to the left"
+n,,n,n,y,n,joined to the left,TRUE,47,cA2SjWv3CePYZgyzS,7,3,43,4,tu7h5gBhgzwA6ttCD,/experiment/tangram_B.png,speaker,2,"disjointed triangle to the right, joined to the left"
+n,,n,y,y,n,right triangle,TRUE,48,cA2SjWv3CePYZgyzS,3,4,51,4,HdKK2ktAX4RmvJwZk,/experiment/tangram_B.png,speaker,3,right triangle. not joined
+n,,n,n,n,n,not joined,TRUE,48,cA2SjWv3CePYZgyzS,3,4,51,4,HdKK2ktAX4RmvJwZk,/experiment/tangram_B.png,speaker,3,right triangle. not joined
+n,,n,n,y,n,left one joined,TRUE,49,cA2SjWv3CePYZgyzS,3,4,51,4,HdKK2ktAX4RmvJwZk,/experiment/tangram_B.png,speaker,3,left one joined
+n,,n,y,y,n,disconnected triangle on right,TRUE,50,cA2SjWv3CePYZgyzS,1,5,61,4,KDECwB9Cikjj7ZsE9,/experiment/tangram_B.png,speaker,3,disconnected triangle on right
+n,,y,n,n,y,kneeling with their hands stretched out,TRUE,51,BXWWg9XvCErxTpT9k,2,0,2,4,2Rs4BqzSBpqDh2fpP,/experiment/tangram_B.png,speaker,0,the person is kneeling with their hands stretched out
+n,,n,n,n,n,not the one facing sideways,TRUE,52,BXWWg9XvCErxTpT9k,2,0,2,4,2Rs4BqzSBpqDh2fpP,/experiment/tangram_B.png,speaker,0,not the one facing sideways
+n,,y,n,n,n,their heels are up behind them,TRUE,53,BXWWg9XvCErxTpT9k,2,0,2,4,BHm7hWNhNRnqXSyJX,/experiment/tangram_B.png,listener,0,Does it look like their heels are up behind them?
+n,,n,y,n,n,little triangle sticking up behind them,TRUE,54,BXWWg9XvCErxTpT9k,2,0,2,4,FzbGtMkbEZkg6xLHp,/experiment/tangram_B.png,listener,0,With a little triangle sticking up behind them?
+n,,y,y,n,n,Two triangle arms,TRUE,55,BXWWg9XvCErxTpT9k,10,1,22,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,speaker,2,"Two triangle arms, one facing left and one facing right, kneeling a little with a leg to the side"
+n,,n,n,y,n,one facing left,TRUE,55,BXWWg9XvCErxTpT9k,10,1,22,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,speaker,2,"Two triangle arms, one facing left and one facing right, kneeling a little with a leg to the side"
+n,,n,n,y,n,one facing right,TRUE,55,BXWWg9XvCErxTpT9k,10,1,22,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,speaker,2,"Two triangle arms, one facing left and one facing right, kneeling a little with a leg to the side"
+n,,n,n,n,y,kneeling a little,TRUE,55,BXWWg9XvCErxTpT9k,10,1,22,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,speaker,2,"Two triangle arms, one facing left and one facing right, kneeling a little with a leg to the side"
+n,,y,n,n,n,with a leg to the side,TRUE,55,BXWWg9XvCErxTpT9k,10,1,22,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,speaker,2,"Two triangle arms, one facing left and one facing right, kneeling a little with a leg to the side"
+n,,n,n,n,n,wearing a dress,TRUE,56,BXWWg9XvCErxTpT9k,10,1,22,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,speaker,2,You could say it is wearing a dress
+n,,y,y,y,n,One triangle arm to the left,TRUE,57,BXWWg9XvCErxTpT9k,11,2,35,4,FzbGtMkbEZkg6xLHp,/experiment/tangram_B.png,speaker,3,One triangle arm to the left and one to the right.
+n,,n,n,y,n,one to the right,TRUE,57,BXWWg9XvCErxTpT9k,11,2,35,4,FzbGtMkbEZkg6xLHp,/experiment/tangram_B.png,speaker,3,One triangle arm to the left and one to the right.
+y,,n,n,n,y,the princess dance,TRUE,58,BXWWg9XvCErxTpT9k,11,2,35,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,listener,3,Let's call this one the princess dance
+y,,n,n,n,y,Princess daNCE,TRUE,59,BXWWg9XvCErxTpT9k,0,3,36,4,BHm7hWNhNRnqXSyJX,/experiment/tangram_B.png,speaker,3,Princess daNCE!
+n,,y,y,n,y,Kneeling with both triangle arms outstretched,TRUE,60,BXWWg9XvCErxTpT9k,8,4,56,4,2Rs4BqzSBpqDh2fpP,/experiment/tangram_B.png,speaker,2,Kneeling with both triangle arms outstretched
+n,,y,y,n,n,Triangle on back,TRUE,61,BXWWg9XvCErxTpT9k,8,4,56,4,FzbGtMkbEZkg6xLHp,/experiment/tangram_B.png,listener,2,Triangle on back?
+n,,y,n,y,n,one arm facing left,TRUE,62,BXWWg9XvCErxTpT9k,8,4,56,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,listener,2,one arm facing left one arm facing right?
+n,,y,n,y,n,one arm facing right,TRUE,62,BXWWg9XvCErxTpT9k,8,4,56,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,listener,2,one arm facing left one arm facing right?
+n,,y,n,n,n,Thick leg,TRUE,63,BXWWg9XvCErxTpT9k,8,4,56,4,BHm7hWNhNRnqXSyJX,/experiment/tangram_B.png,listener,2,Thick leg?
+y,,n,n,n,y,the princess dance with a dress,TRUE,64,BXWWg9XvCErxTpT9k,8,4,56,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,listener,2,its the princess dance with a dress one leg out and two triangles one left one right
+n,,y,n,n,n,one leg out,TRUE,64,BXWWg9XvCErxTpT9k,8,4,56,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,listener,2,its the princess dance with a dress one leg out and two triangles one left one right
+n,,n,y,n,n,two triangles,TRUE,64,BXWWg9XvCErxTpT9k,8,4,56,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,listener,2,its the princess dance with a dress one leg out and two triangles one left one right
+n,,n,n,y,n,one left,TRUE,64,BXWWg9XvCErxTpT9k,8,4,56,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,listener,2,its the princess dance with a dress one leg out and two triangles one left one right
+n,,n,n,y,n,one right,TRUE,64,BXWWg9XvCErxTpT9k,8,4,56,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,listener,2,its the princess dance with a dress one leg out and two triangles one left one right
+n,,y,y,n,n,triangle at the legs,TRUE,65,BXWWg9XvCErxTpT9k,8,4,56,4,2Rs4BqzSBpqDh2fpP,/experiment/tangram_B.png,speaker,2,"yes, triangle at the legs"
+y,,n,n,n,y,princess dance,TRUE,66,BXWWg9XvCErxTpT9k,9,5,69,4,c9T7t2RNEHdtaipbh,/experiment/tangram_B.png,speaker,3,princess dance
+n,,n,y,y,n,diamond on the top,TRUE,67,3AT9PDD5rDrb5GS4e,2,0,2,4,mv7eNLFBeLgyny7PY,/experiment/tangram_B.png,speaker,2,"diamond on the top, followed by a triangle which is separate and only linked by its point to the other shapes - i.e. there are three shapes, each linked by only one point"
+n,,n,y,n,n,triangle which is separate,TRUE,67,3AT9PDD5rDrb5GS4e,2,0,2,4,mv7eNLFBeLgyny7PY,/experiment/tangram_B.png,speaker,2,"diamond on the top, followed by a triangle which is separate and only linked by its point to the other shapes - i.e. there are three shapes, each linked by only one point"
+n,,n,y,n,n,linked by its point,TRUE,67,3AT9PDD5rDrb5GS4e,2,0,2,4,mv7eNLFBeLgyny7PY,/experiment/tangram_B.png,speaker,2,"diamond on the top, followed by a triangle which is separate and only linked by its point to the other shapes - i.e. there are three shapes, each linked by only one point"
+n,,n,y,n,n,three shapes,TRUE,67,3AT9PDD5rDrb5GS4e,2,0,2,4,mv7eNLFBeLgyny7PY,/experiment/tangram_B.png,speaker,2,"diamond on the top, followed by a triangle which is separate and only linked by its point to the other shapes - i.e. there are three shapes, each linked by only one point"
+n,,n,y,n,n,linked by only one point,TRUE,67,3AT9PDD5rDrb5GS4e,2,0,2,4,mv7eNLFBeLgyny7PY,/experiment/tangram_B.png,speaker,2,"diamond on the top, followed by a triangle which is separate and only linked by its point to the other shapes - i.e. there are three shapes, each linked by only one point"
+n,,n,y,y,n,three shapes meeting at the top at a single point,TRUE,68,3AT9PDD5rDrb5GS4e,9,1,21,4,kLzigdBtkD7wevtco,/experiment/tangram_B.png,speaker,3,This is one that has three shapes meeting at the top at a single point
+n,,n,y,n,n,two triangles,TRUE,69,3AT9PDD5rDrb5GS4e,9,1,21,4,kLzigdBtkD7wevtco,/experiment/tangram_B.png,speaker,3,two triangles and a diamond meeting at one point
+n,,n,y,n,n,a diamond,TRUE,69,3AT9PDD5rDrb5GS4e,9,1,21,4,kLzigdBtkD7wevtco,/experiment/tangram_B.png,speaker,3,two triangles and a diamond meeting at one point
+n,,n,y,n,n,meeting at one point,TRUE,69,3AT9PDD5rDrb5GS4e,9,1,21,4,kLzigdBtkD7wevtco,/experiment/tangram_B.png,speaker,3,two triangles and a diamond meeting at one point
+n,,n,y,n,n,a bunch of random shapes all attached together,TRUE,70,3AT9PDD5rDrb5GS4e,6,2,30,4,HbMrw3TnWZKgPoMgf,/experiment/tangram_B.png,speaker,2,Looks like a bunch of random shapes all attached together (doesn't look like a person or anything)
+n,,n,y,y,n,square at the top,TRUE,71,3AT9PDD5rDrb5GS4e,6,2,30,4,HbMrw3TnWZKgPoMgf,/experiment/tangram_B.png,speaker,2,Has a square at the top
+n,,n,y,n,n,three shapes,TRUE,72,3AT9PDD5rDrb5GS4e,8,3,44,4,x3CWnag6P66GcEExo,/experiment/tangram_B.png,speaker,2,"three shapes, diamond top middle with a triangle coming off"
+n,,n,y,y,n,diamond top middle,TRUE,72,3AT9PDD5rDrb5GS4e,8,3,44,4,x3CWnag6P66GcEExo,/experiment/tangram_B.png,speaker,2,"three shapes, diamond top middle with a triangle coming off"
+n,,n,y,n,n,triangle coming off,TRUE,72,3AT9PDD5rDrb5GS4e,8,3,44,4,x3CWnag6P66GcEExo,/experiment/tangram_B.png,speaker,2,"three shapes, diamond top middle with a triangle coming off"
+n,,n,y,n,n,large shape attached,TRUE,73,3AT9PDD5rDrb5GS4e,8,3,44,4,x3CWnag6P66GcEExo,/experiment/tangram_B.png,speaker,2,then the large shape attached
+n,,n,y,n,n,all joining one point,TRUE,74,3AT9PDD5rDrb5GS4e,8,3,44,4,x3CWnag6P66GcEExo,/experiment/tangram_B.png,speaker,2,all joining one point
+n,,n,y,y,n,triangle is on the right,TRUE,75,3AT9PDD5rDrb5GS4e,8,3,44,4,x3CWnag6P66GcEExo,/experiment/tangram_B.png,speaker,2,triangle is on the right
+n,,n,y,n,n,three shapes,TRUE,76,3AT9PDD5rDrb5GS4e,2,4,50,4,mv7eNLFBeLgyny7PY,/experiment/tangram_B.png,speaker,3,"three shapes, joined by a singular point each"
+n,,n,y,n,n,joined by a singular point each,TRUE,76,3AT9PDD5rDrb5GS4e,2,4,50,4,mv7eNLFBeLgyny7PY,/experiment/tangram_B.png,speaker,3,"three shapes, joined by a singular point each"
+n,,n,y,y,n,diamond on top,TRUE,77,3AT9PDD5rDrb5GS4e,2,4,50,4,mv7eNLFBeLgyny7PY,/experiment/tangram_B.png,speaker,3,diamond on top
+n,,n,y,y,n,triangle on the right,TRUE,78,3AT9PDD5rDrb5GS4e,2,4,50,4,mv7eNLFBeLgyny7PY,/experiment/tangram_B.png,speaker,3,triangle on the right
+y,,n,n,n,n,non human,TRUE,79,3AT9PDD5rDrb5GS4e,5,5,65,4,kLzigdBtkD7wevtco,/experiment/tangram_B.png,speaker,3,non human with square and two triangles connected at single point
+n,,n,y,n,n,square,TRUE,79,3AT9PDD5rDrb5GS4e,5,5,65,4,kLzigdBtkD7wevtco,/experiment/tangram_B.png,speaker,3,non human with square and two triangles connected at single point
+n,,n,y,n,n,two triangles,TRUE,79,3AT9PDD5rDrb5GS4e,5,5,65,4,kLzigdBtkD7wevtco,/experiment/tangram_B.png,speaker,3,non human with square and two triangles connected at single point
+n,,n,y,n,n,connected at single point,TRUE,79,3AT9PDD5rDrb5GS4e,5,5,65,4,kLzigdBtkD7wevtco,/experiment/tangram_B.png,speaker,3,non human with square and two triangles connected at single point
+n,,n,y,y,n,small triangle pointing up,TRUE,80,3AT9PDD5rDrb5GS4e,5,5,65,4,kLzigdBtkD7wevtco,/experiment/tangram_B.png,speaker,3,small triangle pointing up in bottom left
+n,,n,n,y,n,in bottom left,TRUE,80,3AT9PDD5rDrb5GS4e,5,5,65,4,kLzigdBtkD7wevtco,/experiment/tangram_B.png,speaker,3,small triangle pointing up in bottom left
+n,,n,n,n,y,Someone kneeling,TRUE,81,kBQMXHtyqWiM2LxL6,6,0,6,4,mkAas2g8EXQG9qda2,/experiment/tangram_B.png,speaker,2,Someone kneeling facing the right with their arms outstretched
+n,,n,n,y,n,facing the right,TRUE,81,kBQMXHtyqWiM2LxL6,6,0,6,4,mkAas2g8EXQG9qda2,/experiment/tangram_B.png,speaker,2,Someone kneeling facing the right with their arms outstretched
+n,,y,n,n,n,with their arms outstretched,TRUE,81,kBQMXHtyqWiM2LxL6,6,0,6,4,mkAas2g8EXQG9qda2,/experiment/tangram_B.png,speaker,2,Someone kneeling facing the right with their arms outstretched
+,,,,,,,NA,82,kBQMXHtyqWiM2LxL6,6,0,6,4,mkAas2g8EXQG9qda2,/experiment/tangram_B.png,speaker,2,Neither of the kneeling ones you selected before
+y,,n,n,n,n,a bit like a windmill,TRUE,83,kBQMXHtyqWiM2LxL6,6,0,6,4,JKK6SJ2bEMrshPp8P,/experiment/tangram_B.png,listener,2,looks a bit like a windmill?
+n,,n,n,n,n,A lump in the middle,TRUE,84,kBQMXHtyqWiM2LxL6,6,0,6,4,mkAas2g8EXQG9qda2,/experiment/tangram_B.png,speaker,2,"A lump in the middle, with a triangle pointing out to the left at the bottom"
+n,,n,y,y,n,a triangle pointing out to the left at the bottom,TRUE,84,kBQMXHtyqWiM2LxL6,6,0,6,4,mkAas2g8EXQG9qda2,/experiment/tangram_B.png,speaker,2,"A lump in the middle, with a triangle pointing out to the left at the bottom"
+n,,n,n,n,y,kneeling,TRUE,85,kBQMXHtyqWiM2LxL6,6,0,6,4,JKK6SJ2bEMrshPp8P,/experiment/tangram_B.png,listener,2,"it looks like they're kneeling, looking to the right with their head tipped back a bit, arms spread out back and front"
+n,,n,n,y,n,looking to the right,TRUE,85,kBQMXHtyqWiM2LxL6,6,0,6,4,JKK6SJ2bEMrshPp8P,/experiment/tangram_B.png,listener,2,"it looks like they're kneeling, looking to the right with their head tipped back a bit, arms spread out back and front"
+n,,y,n,n,n,head tipped back a bit,TRUE,85,kBQMXHtyqWiM2LxL6,6,0,6,4,JKK6SJ2bEMrshPp8P,/experiment/tangram_B.png,listener,2,"it looks like they're kneeling, looking to the right with their head tipped back a bit, arms spread out back and front"
+n,,y,n,y,n,arms spread out back and front,TRUE,85,kBQMXHtyqWiM2LxL6,6,0,6,4,JKK6SJ2bEMrshPp8P,/experiment/tangram_B.png,listener,2,"it looks like they're kneeling, looking to the right with their head tipped back a bit, arms spread out back and front"
+n,,n,y,y,n,Two triangles in the middle outstretched to both sides,TRUE,86,kBQMXHtyqWiM2LxL6,6,0,6,4,mkAas2g8EXQG9qda2,/experiment/tangram_B.png,speaker,2,Two triangles in the middle outstretched to both sides
+n,,n,n,n,y,kneeling one,TRUE,87,kBQMXHtyqWiM2LxL6,4,1,16,4,DJMWzKpmH3hrQTzWH,/experiment/tangram_B.png,speaker,3,another kneeling one
+n,,n,n,y,n,facing right,TRUE,88,kBQMXHtyqWiM2LxL6,4,1,16,4,DJMWzKpmH3hrQTzWH,/experiment/tangram_B.png,speaker,3,facing right
+n,,n,y,n,n,2 triangles adjacent,TRUE,89,kBQMXHtyqWiM2LxL6,4,1,16,4,DJMWzKpmH3hrQTzWH,/experiment/tangram_B.png,speaker,3,2 triangles adjacent like arms stretched out
+n,,y,n,n,n,like arms stretched out,TRUE,89,kBQMXHtyqWiM2LxL6,4,1,16,4,DJMWzKpmH3hrQTzWH,/experiment/tangram_B.png,speaker,3,2 triangles adjacent like arms stretched out
+n,,y,y,n,n,square head,TRUE,90,kBQMXHtyqWiM2LxL6,4,1,16,4,DJMWzKpmH3hrQTzWH,/experiment/tangram_B.png,speaker,3,square head
+n,,n,y,n,n,diamond rather,TRUE,91,kBQMXHtyqWiM2LxL6,4,1,16,4,DJMWzKpmH3hrQTzWH,/experiment/tangram_B.png,speaker,3,diamond rather
+y,,n,n,n,n,a windmill,TRUE,92,kBQMXHtyqWiM2LxL6,4,1,16,4,JKK6SJ2bEMrshPp8P,/experiment/tangram_B.png,listener,3,the one that looks a little like a windmill
+n,,n,y,y,n,triangle attached to the right,TRUE,93,kBQMXHtyqWiM2LxL6,4,1,16,4,DJMWzKpmH3hrQTzWH,/experiment/tangram_B.png,speaker,3,triangle attached to the right
+n,,n,y,y,n,joined triangle on the left,TRUE,94,kBQMXHtyqWiM2LxL6,4,1,16,4,DJMWzKpmH3hrQTzWH,/experiment/tangram_B.png,speaker,3,and joined triangle on the left
+n,,n,y,y,n,the bottom of the diamond has a triangle coming out of it,TRUE,95,kBQMXHtyqWiM2LxL6,4,1,16,4,HSh4jWAzERXqJPLFi,/experiment/tangram_B.png,listener,3,Ahh the bottom of the diamond has a triangle coming out of it?
+n,,n,n,n,y,kneeling,TRUE,96,kBQMXHtyqWiM2LxL6,7,2,31,4,HSh4jWAzERXqJPLFi,/experiment/tangram_B.png,speaker,0,It's the one kneeling
+n,,n,n,y,n,Facing right,TRUE,97,kBQMXHtyqWiM2LxL6,7,2,31,4,HSh4jWAzERXqJPLFi,/experiment/tangram_B.png,speaker,0,Facing right
+n,,y,y,y,n,attached to the bottom of the head,TRUE,98,kBQMXHtyqWiM2LxL6,7,2,31,4,HSh4jWAzERXqJPLFi,/experiment/tangram_B.png,speaker,0,There's a triangle attached to the bottom of the head (diamond)
+n,,n,y,y,n,a triangle at the bottom,TRUE,99,kBQMXHtyqWiM2LxL6,7,2,31,4,mkAas2g8EXQG9qda2,/experiment/tangram_B.png,listener,0,Does it have a triangle at the bottom? Are the arms outstretched?
+n,,y,n,n,n,the arms outstretched,TRUE,99,kBQMXHtyqWiM2LxL6,7,2,31,4,mkAas2g8EXQG9qda2,/experiment/tangram_B.png,listener,0,Does it have a triangle at the bottom? Are the arms outstretched?
+n,,n,y,y,n,a triangle at the bottom left,TRUE,100,kBQMXHtyqWiM2LxL6,7,2,31,4,HSh4jWAzERXqJPLFi,/experiment/tangram_B.png,speaker,0,there's a triangle at the bottom left
+n,,n,n,y,y,kneeling facing the right,TRUE,101,kBQMXHtyqWiM2LxL6,6,3,42,4,JKK6SJ2bEMrshPp8P,/experiment/tangram_B.png,speaker,3,"kneeling facing the right, arms spread open, looks a little like a windmill"
+n,,y,n,n,n,arms spread open,TRUE,101,kBQMXHtyqWiM2LxL6,6,3,42,4,JKK6SJ2bEMrshPp8P,/experiment/tangram_B.png,speaker,3,"kneeling facing the right, arms spread open, looks a little like a windmill"
+y,,n,n,n,n, a windmill,TRUE,101,kBQMXHtyqWiM2LxL6,6,3,42,4,JKK6SJ2bEMrshPp8P,/experiment/tangram_B.png,speaker,3,"kneeling facing the right, arms spread open, looks a little like a windmill"
+n,,n,y,n,n,small triangle,TRUE,102,kBQMXHtyqWiM2LxL6,6,3,42,4,JKK6SJ2bEMrshPp8P,/experiment/tangram_B.png,speaker,3,with the small triangle at the bottom left
+n,,n,n,y,n,bottom left,TRUE,102,kBQMXHtyqWiM2LxL6,6,3,42,4,JKK6SJ2bEMrshPp8P,/experiment/tangram_B.png,speaker,3,with the small triangle at the bottom left
+y,,n,n,n,n,the baby windmill,TRUE,103,kBQMXHtyqWiM2LxL6,6,3,42,4,HSh4jWAzERXqJPLFi,/experiment/tangram_B.png,listener,3,the baby windmill? lol
+y,,n,n,n,n,Mini windmill,TRUE,104,kBQMXHtyqWiM2LxL6,11,4,59,4,mkAas2g8EXQG9qda2,/experiment/tangram_B.png,speaker,3,Mini windmill or kneeling with arms out
+n,,y,n,n,y,kneeling with arms out,TRUE,104,kBQMXHtyqWiM2LxL6,11,4,59,4,mkAas2g8EXQG9qda2,/experiment/tangram_B.png,speaker,3,Mini windmill or kneeling with arms out
+n,,y,n,y,y,the kneeling to the right with arms outstretched,TRUE,105,kBQMXHtyqWiM2LxL6,5,5,65,4,DJMWzKpmH3hrQTzWH,/experiment/tangram_B.png,speaker,2,the kneeling to the right with arms outstretched
+n,,y,y,n,n,diamond head,TRUE,106,kBQMXHtyqWiM2LxL6,5,5,65,4,DJMWzKpmH3hrQTzWH,/experiment/tangram_B.png,speaker,2,diamond head
+n,,n,n,y,n,bottom right,TRUE,107,WSRJ7SEB5pmNLN6ZA,7,0,7,4,bWivtApbDfuWzQkbQ,/experiment/tangram_B.png,speaker,3,bottom right is like corner of a square
+n,,n,y,n,n,corner of a square,TRUE,107,WSRJ7SEB5pmNLN6ZA,7,0,7,4,bWivtApbDfuWzQkbQ,/experiment/tangram_B.png,speaker,3,bottom right is like corner of a square
+n,,y,y,n,n,a triangle by the head,TRUE,108,WSRJ7SEB5pmNLN6ZA,7,0,7,4,bWivtApbDfuWzQkbQ,/experiment/tangram_B.png,speaker,3,the there is a triangle by the head
+n,,y,y,n,n,tip of triangle pointed at head,TRUE,109,WSRJ7SEB5pmNLN6ZA,7,0,7,4,bWivtApbDfuWzQkbQ,/experiment/tangram_B.png,speaker,3,tip of triangle pointed at head
+n,,n,n,n,y,kneeling down,TRUE,110,WSRJ7SEB5pmNLN6ZA,10,1,22,4,9e4ijM5KmWNCtHWaP,/experiment/tangram_B.png,speaker,3,Kneeling down with triangle on right side touching the head
+n,,y,y,y,n,triangle on right side touching the head,TRUE,110,WSRJ7SEB5pmNLN6ZA,10,1,22,4,9e4ijM5KmWNCtHWaP,/experiment/tangram_B.png,speaker,3,Kneeling down with triangle on right side touching the head
+n,,y,n,y,n,left foot showing at the bottom,TRUE,111,WSRJ7SEB5pmNLN6ZA,10,1,22,4,9e4ijM5KmWNCtHWaP,/experiment/tangram_B.png,speaker,3,left foot showing at the bottom
+n,,n,n,n,y,someone sitting on the ground,TRUE,112,WSRJ7SEB5pmNLN6ZA,10,2,34,4,ygksyaWhRd4xPCE6F,/experiment/tangram_B.png,speaker,1,looks like someone sitting on the ground facing left
+n,,n,n,y,n,facing left,TRUE,112,WSRJ7SEB5pmNLN6ZA,10,2,34,4,ygksyaWhRd4xPCE6F,/experiment/tangram_B.png,speaker,1,looks like someone sitting on the ground facing left
+n,,y,y,n,n,triangle coming out of head,TRUE,113,WSRJ7SEB5pmNLN6ZA,10,2,34,4,ygksyaWhRd4xPCE6F,/experiment/tangram_B.png,speaker,1,triangle coming out of head on the right side
+n,,n,n,y,n,on the right side,TRUE,113,WSRJ7SEB5pmNLN6ZA,10,2,34,4,ygksyaWhRd4xPCE6F,/experiment/tangram_B.png,speaker,1,triangle coming out of head on the right side
+n,,y,n,y,n,arm facing left,TRUE,114,WSRJ7SEB5pmNLN6ZA,10,2,34,4,ygksyaWhRd4xPCE6F,/experiment/tangram_B.png,speaker,1,arm facing left
+n,,y,y,y,n,foot visible on the left,TRUE,115,WSRJ7SEB5pmNLN6ZA,10,2,34,4,ygksyaWhRd4xPCE6F,/experiment/tangram_B.png,speaker,1,foot visible on the left
+n,,n,n,y,y,kneeling facing right,TRUE,116,WSRJ7SEB5pmNLN6ZA,4,3,40,4,JuJLDpnjDw5qvy9Xa,/experiment/tangram_B.png,speaker,2,kneeling facing right.
+n,,y,y,n,n,triangle touches head,TRUE,117,WSRJ7SEB5pmNLN6ZA,4,3,40,4,JuJLDpnjDw5qvy9Xa,/experiment/tangram_B.png,speaker,2,triangle touches head
+y,,n,n,n,n,odd one,TRUE,118,P8wDF8HAYYAcwBYsm,3,0,3,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,1,Another odd one. Does not look much like a human.
+y,,n,n,n,n,does not look much like a human,TRUE,118,P8wDF8HAYYAcwBYsm,3,0,3,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,1,Another odd one. Does not look much like a human.
+y,,n,n,n,n,a mouse,TRUE,119,P8wDF8HAYYAcwBYsm,3,0,3,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,1,I can sorta see a mouse though!
+n,,y,n,n,n,two big ears,TRUE,120,P8wDF8HAYYAcwBYsm,3,0,3,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,1,"two big ears, pointing nose. Facing left."
+n,,y,n,n,n,pointing nose,TRUE,120,P8wDF8HAYYAcwBYsm,3,0,3,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,1,"two big ears, pointing nose. Facing left."
+n,,n,n,y,n,facing left,TRUE,120,P8wDF8HAYYAcwBYsm,3,0,3,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,1,"two big ears, pointing nose. Facing left."
+n,,n,y,n,n,small triangle,TRUE,121,P8wDF8HAYYAcwBYsm,3,0,3,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,1,A small triangle on the left side could be its foot or tail.
+n,,n,n,y,n,on the left side,TRUE,121,P8wDF8HAYYAcwBYsm,3,0,3,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,1,A small triangle on the left side could be its foot or tail.
+n,,y,n,n,n,its foot or tail,TRUE,121,P8wDF8HAYYAcwBYsm,3,0,3,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,1,A small triangle on the left side could be its foot or tail.
+n,,n,y,n,n,diamond,TRUE,122,P8wDF8HAYYAcwBYsm,3,0,3,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,1,Its ears are a diamond and a triangle
+n,,n,y,n,n,triangle,TRUE,122,P8wDF8HAYYAcwBYsm,3,0,3,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,1,Its ears are a diamond and a triangle
+y,,y,n,n,n,pointy nosed mouse,TRUE,123,P8wDF8HAYYAcwBYsm,1,1,13,4,mKtcij3NPdyCXiLFo,/experiment/tangram_B.png,speaker,2,the one previously described as a pointy nosed mouse
+y,,n,n,n,n,wacky guy,TRUE,124,P8wDF8HAYYAcwBYsm,9,2,33,4,AvDPnSsMqWyr7iWfX,/experiment/tangram_B.png,speaker,3,wacky guy two hands up with a little lagging triangle on left side
+n,,y,y,n,n,two hands up,TRUE,124,P8wDF8HAYYAcwBYsm,9,2,33,4,AvDPnSsMqWyr7iWfX,/experiment/tangram_B.png,speaker,3,wacky guy two hands up with a little lagging triangle on left side
+n,,n,y,n,n,with a little lagging triangle,TRUE,124,P8wDF8HAYYAcwBYsm,9,2,33,4,AvDPnSsMqWyr7iWfX,/experiment/tangram_B.png,speaker,3,wacky guy two hands up with a little lagging triangle on left side
+n,,n,n,y,n,on left side,TRUE,124,P8wDF8HAYYAcwBYsm,9,2,33,4,AvDPnSsMqWyr7iWfX,/experiment/tangram_B.png,speaker,3,wacky guy two hands up with a little lagging triangle on left side
+y,,y,n,n,n,mouse with pointy nose,TRUE,125,P8wDF8HAYYAcwBYsm,9,2,33,4,zgk9XQZah5mGjpGhJ,/experiment/tangram_B.png,listener,3,mouse with pointy nose?
+n,,y,y,n,n,diamond head,TRUE,126,P8wDF8HAYYAcwBYsm,9,2,33,4,AvDPnSsMqWyr7iWfX,/experiment/tangram_B.png,speaker,3,"diamond head, one hand is almost off, other is connected"
+n,,y,n,n,n,one hand is almost off,TRUE,126,P8wDF8HAYYAcwBYsm,9,2,33,4,AvDPnSsMqWyr7iWfX,/experiment/tangram_B.png,speaker,3,"diamond head, one hand is almost off, other is connected"
+n,,n,n,n,n,other is connected,TRUE,126,P8wDF8HAYYAcwBYsm,9,2,33,4,AvDPnSsMqWyr7iWfX,/experiment/tangram_B.png,speaker,3,"diamond head, one hand is almost off, other is connected"
+y,,y,n,n,n,mouse with pointy nose,TRUE,127,P8wDF8HAYYAcwBYsm,3,3,39,4,zgk9XQZah5mGjpGhJ,/experiment/tangram_B.png,speaker,3,"mouse with pointy nose, looking left"
+n,,n,n,y,n,looking left,TRUE,127,P8wDF8HAYYAcwBYsm,3,3,39,4,zgk9XQZah5mGjpGhJ,/experiment/tangram_B.png,speaker,3,"mouse with pointy nose, looking left"
+n,,y,n,n,n,pointy nose,TRUE,128,P8wDF8HAYYAcwBYsm,1,4,49,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,2,pointy nose mouse
+n,,n,n,y,n,facing left,TRUE,129,P8wDF8HAYYAcwBYsm,1,4,49,4,N5fwHnQMc7e7jKPm9,/experiment/tangram_B.png,speaker,2,facing left
+n,,n,n,y,n,left facing,TRUE,130,P8wDF8HAYYAcwBYsm,1,5,61,4,mKtcij3NPdyCXiLFo,/experiment/tangram_B.png,speaker,3,left facing pointy nosed mouse
+n,,y,n,n,n,pointy nosed,TRUE,130,P8wDF8HAYYAcwBYsm,1,5,61,4,mKtcij3NPdyCXiLFo,/experiment/tangram_B.png,speaker,3,left facing pointy nosed mouse
+n,,y,n,n,n,his head tilted,TRUE,131,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,He has his head tilted
+n,,y,n,n,n,behind his head,TRUE,132,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,One arms is behind his head on the RIGHT.
+n,,n,n,y,n,on the RIGHT,TRUE,132,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,One arms is behind his head on the RIGHT.
+n,,n,n,y,n,in front of him,TRUE,133,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,The other arm is in front of him on the LEFT.
+n,,n,n,y,n,on the LEFT,TRUE,133,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,The other arm is in front of him on the LEFT.
+n,,y,n,n,y,sitting on his rear,TRUE,134,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,He is pretty much sitting on his rear.
+n,,n,n,n,y,kind of sitting out in front of his,TRUE,135,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,One foot is kind of sitting out in front of his below the ARM that is on the LEFT.
+n,,y,n,n,n,below the ARM,TRUE,135,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,One foot is kind of sitting out in front of his below the ARM that is on the LEFT.
+n,,n,n,y,n,on the LEFT,TRUE,135,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,One foot is kind of sitting out in front of his below the ARM that is on the LEFT.
+n,,n,n,n,n,BIG,TRUE,136,XpTJWaJYpSojYdngB,10,0,10,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,listener,0,BIG leg on left and a tiny leg on right?
+n,,y,n,y,n,leg on left,TRUE,136,XpTJWaJYpSojYdngB,10,0,10,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,listener,0,BIG leg on left and a tiny leg on right?
+n,,y,n,y,n,a tiny leg on right,TRUE,136,XpTJWaJYpSojYdngB,10,0,10,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,listener,0,BIG leg on left and a tiny leg on right?
+n,,y,n,y,n,No legs on the right,TRUE,137,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,No legs on the right.
+n,,y,n,n,n,Just a small foot looking thing,TRUE,138,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,Just a small foot looking thing on the left.
+n,,n,n,y,n,on the left,TRUE,138,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,Just a small foot looking thing on the left.
+n,,y,n,n,n,giant hand,TRUE,139,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,And a giant hand on the left side.
+n,,n,n,y,n,on the left side,TRUE,139,XpTJWaJYpSojYdngB,10,0,10,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,0,And a giant hand on the left side.
+y,,n,n,n,y,the dancing one,TRUE,140,XpTJWaJYpSojYdngB,10,0,10,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,listener,0,I guess this is the dancing one
+y,,n,n,n,n,yelling on the ground,TRUE,141,XpTJWaJYpSojYdngB,3,1,15,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,2,"Ok so in this one he looks like he is yelling on the ground, one hand to the right and one to the left"
+n,,y,n,y,n,one hand to the right,TRUE,141,XpTJWaJYpSojYdngB,3,1,15,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,2,"Ok so in this one he looks like he is yelling on the ground, one hand to the right and one to the left"
+n,,y,n,y,n,one hand to the left,FALSE,141,XpTJWaJYpSojYdngB,3,1,15,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,2,"Ok so in this one he looks like he is yelling on the ground, one hand to the right and one to the left"
+n,,y,n,n,n,both knees on the ground,TRUE,142,XpTJWaJYpSojYdngB,3,1,15,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,2,both knees on the ground
+n,,y,n,y,n,his foot pointed to the left,TRUE,143,XpTJWaJYpSojYdngB,3,1,15,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,2,You can only see his foot pointed to the left
+n,,y,n,n,n,slight gap between both arms,TRUE,144,XpTJWaJYpSojYdngB,3,1,15,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,listener,2,slight gap between both arms?
+n,,y,n,n,n,under the head,TRUE,145,XpTJWaJYpSojYdngB,3,1,15,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,listener,2,under the head
+n,,y,n,y,n,a gap under his head,TRUE,146,XpTJWaJYpSojYdngB,3,1,15,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,2,There is a gap under his head
+n,,y,n,n,n,for one arm,TRUE,147,XpTJWaJYpSojYdngB,3,1,15,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,2,for one arm
+n,,n,n,n,n,facing down,TRUE,148,XpTJWaJYpSojYdngB,3,1,15,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,listener,2,His head (the box) is facing down too?
+n,,n,n,y,n,looks to the right,TRUE,149,XpTJWaJYpSojYdngB,3,1,15,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,2,No he looks to the right.
+n,,y,n,n,n,on his knees,TRUE,150,XpTJWaJYpSojYdngB,3,1,15,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,2,"He is on his knees, arms on the both sides"
+n,,y,n,n,n,arms on the both sides,TRUE,150,XpTJWaJYpSojYdngB,3,1,15,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,2,"He is on his knees, arms on the both sides"
+y,,n,n,n,n,the angry guy,TRUE,151,XpTJWaJYpSojYdngB,7,2,31,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,speaker,2,the angry guy from laju
+n,,y,n,n,n,the head nearly falling off the body,TRUE,152,XpTJWaJYpSojYdngB,7,2,31,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,listener,2,the head nearly falling off the body?
+n,,y,y,n,n,triangle coming out of the head,TRUE,153,XpTJWaJYpSojYdngB,7,2,31,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,listener,2,triangle coming out of the head?
+n,,n,n,n,y,sitting,TRUE,154,XpTJWaJYpSojYdngB,7,2,31,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,speaker,2,"sitting , yelling, legs on the left, arms are both ways, head is somewhat on the right, has a gap between both hands right under the head"
+y,,n,n,n,n,yelling,TRUE,154,XpTJWaJYpSojYdngB,7,2,31,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,speaker,2,"sitting , yelling, legs on the left, arms are both ways, head is somewhat on the right, has a gap between both hands right under the head"
+n,,y,n,y,n,legs on the left,TRUE,154,XpTJWaJYpSojYdngB,7,2,31,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,speaker,2,"sitting , yelling, legs on the left, arms are both ways, head is somewhat on the right, has a gap between both hands right under the head"
+n,,y,n,n,n,arms are both ways,TRUE,154,XpTJWaJYpSojYdngB,7,2,31,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,speaker,2,"sitting , yelling, legs on the left, arms are both ways, head is somewhat on the right, has a gap between both hands right under the head"
+n,,y,n,y,n,head is somewhat on the right,TRUE,154,XpTJWaJYpSojYdngB,7,2,31,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,speaker,2,"sitting , yelling, legs on the left, arms are both ways, head is somewhat on the right, has a gap between both hands right under the head"
+n,,y,n,y,n,has a gap between both hands right under the head,TRUE,154,XpTJWaJYpSojYdngB,7,2,31,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,speaker,2,"sitting , yelling, legs on the left, arms are both ways, head is somewhat on the right, has a gap between both hands right under the head"
+n,,n,n,n,n,looking up,TRUE,155,XpTJWaJYpSojYdngB,7,2,31,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,listener,2,He's looking up?
+y,,y,n,n,n,bunny ears,TRUE,156,XpTJWaJYpSojYdngB,7,2,31,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,listener,2,bunny ears but looking up?
+n,,n,n,n,n,looking up,TRUE,156,XpTJWaJYpSojYdngB,7,2,31,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,listener,2,bunny ears but looking up?
+n,,n,y,n,n,90 degree angle,TRUE,157,XpTJWaJYpSojYdngB,7,2,31,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,speaker,2,"maybe, look for a 90 degree angle on the right bottom"
+n,,n,n,y,n,on the right bottom,TRUE,157,XpTJWaJYpSojYdngB,7,2,31,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,speaker,2,"maybe, look for a 90 degree angle on the right bottom"
+y,,n,n,n,n,complicated one,TRUE,158,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,"complicated one. box head, looks like it has a loudspeaker coming out of head"
+n,,y,y,n,n,box head,TRUE,158,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,"complicated one. box head, looks like it has a loudspeaker coming out of head"
+y,,y,n,n,n,looks like it has a loudspeaker coming out of head,TRUE,158,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,"complicated one. box head, looks like it has a loudspeaker coming out of head"
+n,,n,n,n,y,kneeling,TRUE,159,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,kneeling. feet pointed to the left
+n,,y,n,y,n,feet pointed to the left,TRUE,159,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,kneeling. feet pointed to the left
+n,,y,n,y,n,Both arms are on the right,TRUE,160,XpTJWaJYpSojYdngB,2,3,38,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,listener,2,Both arms are on the right?
+n,,,,,,,NA,161,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,I don't really see arms.
+n,,y,n,y,n,Slight shoulder beneath the head,TRUE,162,XpTJWaJYpSojYdngB,2,3,38,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,listener,2,Slight shoulder beneath the head?
+n,,n,n,y,y,kneeling towards the right,TRUE,163,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,"kneeling towards the right, yes shoulder is very pointed on the left"
+n,,y,n,y,n,shoulder is very pointed on the left,TRUE,163,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,"kneeling towards the right, yes shoulder is very pointed on the left"
+n,,n,y,n,n,triangle things,TRUE,164,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,triangle things coming out of the box on top
+n,,n,y,y,n,coming out of the box,TRUE,164,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,triangle things coming out of the box on top
+n,,n,n,y,n,on top,TRUE,164,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,triangle things coming out of the box on top
+n,,n,y,n,n,one triangle,TRUE,165,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,one triangle sorry
+,,,,,,,TRUE,165,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,one triangle sorry
+n,,y,n,y,n,feet on the left,TRUE,166,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,feet on the left
+n,,y,n,y,n,pointy shoulders on the left,TRUE,167,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,pointy shoulders on the left
+y,,y,n,n,n,bunnyman with ears,TRUE,168,XpTJWaJYpSojYdngB,2,3,38,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,listener,2,Is it bunnyman with ears?
+n,,n,y,n,n,only one triangle,TRUE,169,XpTJWaJYpSojYdngB,2,3,38,4,NNz8YomT37yNTBreJ,/experiment/tangram_B.png,speaker,2,"no, not bunnyman. only one triangle"
+n,,y,y,y,n,ONE triangle behind his head,TRUE,170,XpTJWaJYpSojYdngB,10,4,58,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,3,ONE triangle behind his head.
+n,,y,n,y,n,Arms pointing to the left,TRUE,171,XpTJWaJYpSojYdngB,10,4,58,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,3,Arms pointing to the left.
+y,,n,n,n,n,staring up at the sky,TRUE,172,XpTJWaJYpSojYdngB,10,4,58,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,3,He looks like he is staring up at the sky or ceiling.
+y,,n,n,n,n,staring up at the ceiling,FALSE,172,XpTJWaJYpSojYdngB,10,4,58,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,3,He looks like he is staring up at the sky or ceiling.
+n,,n,y,n,n,perfect 90 degree angle,TRUE,173,XpTJWaJYpSojYdngB,10,4,58,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,speaker,3,Bottom right is a perfect 90 degree angle.
+y,,n,n,n,n,The angry yelling man,TRUE,174,XpTJWaJYpSojYdngB,6,5,66,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,3,The angry yelling man
+n,,y,y,n,n,One triangle is coming from his head,TRUE,175,XpTJWaJYpSojYdngB,6,5,66,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,3,One triangle is coming from his head
+n,,n,n,n,y,kneeling,TRUE,176,XpTJWaJYpSojYdngB,6,5,66,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,3,his is kneeling
+n,,y,n,n,n,Where are the arms,TRUE,177,XpTJWaJYpSojYdngB,6,5,66,4,dvL9Dyxot9QTGRmrc,/experiment/tangram_B.png,listener,3,Where are the arms?
+n,,y,n,n,n,one with a gap between both hands,TRUE,178,XpTJWaJYpSojYdngB,6,5,66,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,listener,3,one with a gap between both hands under the head
+n,,y,n,y,n,under the head,TRUE,178,XpTJWaJYpSojYdngB,6,5,66,4,8xnowrWZSRfnTBKrT,/experiment/tangram_B.png,listener,3,one with a gap between both hands under the head
+n,,y,n,y,n,Arms are on the left,TRUE,179,XpTJWaJYpSojYdngB,6,5,66,4,aWXqkafSBD9Ty7ZCa,/experiment/tangram_B.png,speaker,3,Arms are on the left
+n,,n,n,n,n,on a flat surface,TRUE,180,hHoRuwi7p8k2XhzD3,4,0,4,4,uCwT2ve8pCX7fjkss,/experiment/tangram_B.png,speaker,3,the head is on a flat surface
+n,,y,y,y,n,with a triangle stuck to the side of the head,TRUE,181,hHoRuwi7p8k2XhzD3,4,0,4,4,uCwT2ve8pCX7fjkss,/experiment/tangram_B.png,speaker,3,with a triangle stuck to the side of the head
+y,,y,n,n,n,the head and neck looks a bit like a pacman mouth,TRUE,182,hHoRuwi7p8k2XhzD3,4,0,4,4,uCwT2ve8pCX7fjkss,/experiment/tangram_B.png,speaker,3,the head and neck looks a bit like a pacman mouth
+n,,y,y,y,n,triangle on the right side of head,TRUE,183,hHoRuwi7p8k2XhzD3,4,0,4,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,listener,3,triangle on the right side of head?
+n,,y,n,n,n,Head angled,TRUE,184,hHoRuwi7p8k2XhzD3,4,0,4,4,ZbwQGxZJhW6p47jY2,/experiment/tangram_B.png,listener,3,"Head angled, triangle from his neck"
+n,,y,y,y,n,triangle from his neck,TRUE,184,hHoRuwi7p8k2XhzD3,4,0,4,4,ZbwQGxZJhW6p47jY2,/experiment/tangram_B.png,listener,3,"Head angled, triangle from his neck"
+y,,n,n,n,y,kneeling fairy/angel,TRUE,185,hHoRuwi7p8k2XhzD3,4,0,4,4,KkT9XAqwc7NzTdDSE,/experiment/tangram_B.png,listener,3,does it look like a kneeling fairy/angel?
+n,,n,n,n,y,man kneeling,TRUE,186,hHoRuwi7p8k2XhzD3,3,1,15,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,man kneeling with hands together on left forming a triangle
+n,,y,n,y,n,hands together on left,TRUE,186,hHoRuwi7p8k2XhzD3,3,1,15,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,man kneeling with hands together on left forming a triangle
+n,,n,y,n,n,forming a triangle,TRUE,186,hHoRuwi7p8k2XhzD3,3,1,15,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,man kneeling with hands together on left forming a triangle
+n,,y,n,n,n,head looking up,TRUE,187,hHoRuwi7p8k2XhzD3,3,1,15,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,head looking up facing left
+n,,n,n,y,n,facing left,TRUE,187,hHoRuwi7p8k2XhzD3,3,1,15,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,head looking up facing left
+n,,n,y,n,n,triangle hat,TRUE,188,hHoRuwi7p8k2XhzD3,3,1,15,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,triangle hat on back of head near neck area
+n,,y,n,y,n,on back of head,TRUE,188,hHoRuwi7p8k2XhzD3,3,1,15,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,triangle hat on back of head near neck area
+n,,y,n,y,n,near neck area,TRUE,188,hHoRuwi7p8k2XhzD3,3,1,15,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,triangle hat on back of head near neck area
+n,,y,n,y,n,feet extend out on left side,TRUE,189,hHoRuwi7p8k2XhzD3,3,1,15,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,feet extend out on left side
+y,,y,n,n,n,bunny ears,TRUE,190,hHoRuwi7p8k2XhzD3,3,1,15,4,KkT9XAqwc7NzTdDSE,/experiment/tangram_B.png,listener,3,bunny ears?
+y,,y,n,n,n,no bunny ears,TRUE,191,hHoRuwi7p8k2XhzD3,3,1,15,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,no bunny ears
+n,,n,y,n,n,just one triangle hat,TRUE,192,hHoRuwi7p8k2XhzD3,3,1,15,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,just one triangle hat on right side of head
+n,,y,n,y,n,on right side of head,TRUE,192,hHoRuwi7p8k2XhzD3,3,1,15,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,just one triangle hat on right side of head
+y,,y,n,n,n,mouse's head,FALSE,193,hHoRuwi7p8k2XhzD3,2,2,26,4,ZbwQGxZJhW6p47jY2,/experiment/tangram_B.png,speaker,2,"Looks like a mouse's head with two ears, one square one triangle"
+n,,y,n,n,n,two ears,TRUE,193,hHoRuwi7p8k2XhzD3,2,2,26,4,ZbwQGxZJhW6p47jY2,/experiment/tangram_B.png,speaker,2,"Looks like a mouse's head with two ears, one square one triangle"
+n,,n,y,n,n,one square,TRUE,193,hHoRuwi7p8k2XhzD3,2,2,26,4,ZbwQGxZJhW6p47jY2,/experiment/tangram_B.png,speaker,2,"Looks like a mouse's head with two ears, one square one triangle"
+n,,n,y,n,n,one triangle,TRUE,193,hHoRuwi7p8k2XhzD3,2,2,26,4,ZbwQGxZJhW6p47jY2,/experiment/tangram_B.png,speaker,2,"Looks like a mouse's head with two ears, one square one triangle"
+y,,n,n,n,n,a mouse,TRUE,194,hHoRuwi7p8k2XhzD3,4,3,40,4,KkT9XAqwc7NzTdDSE,/experiment/tangram_B.png,speaker,2,looks like a mouse with one square ear and one triangle one
+n,,y,y,n,n,one square ear,TRUE,194,hHoRuwi7p8k2XhzD3,4,3,40,4,KkT9XAqwc7NzTdDSE,/experiment/tangram_B.png,speaker,2,looks like a mouse with one square ear and one triangle one
+n,,n,y,n,n,one triangle one,TRUE,194,hHoRuwi7p8k2XhzD3,4,3,40,4,KkT9XAqwc7NzTdDSE,/experiment/tangram_B.png,speaker,2,looks like a mouse with one square ear and one triangle one
+n,,y,n,y,n,nose looking to the upper left,TRUE,195,hHoRuwi7p8k2XhzD3,4,3,40,4,KkT9XAqwc7NzTdDSE,/experiment/tangram_B.png,speaker,2,nose looking to the upper left
+n,,n,y,n,n,square head,TRUE,196,hHoRuwi7p8k2XhzD3,9,4,57,4,uCwT2ve8pCX7fjkss,/experiment/tangram_B.png,speaker,3,square head with a triangle hanging off it
+n,,n,y,n,n,triangle hanging off it,TRUE,196,hHoRuwi7p8k2XhzD3,9,4,57,4,uCwT2ve8pCX7fjkss,/experiment/tangram_B.png,speaker,3,square head with a triangle hanging off it
+y,,n,n,n,n,looks like a mouse,TRUE,197,hHoRuwi7p8k2XhzD3,9,4,57,4,KkT9XAqwc7NzTdDSE,/experiment/tangram_B.png,listener,3,looks like a mouse?
+n,,n,y,y,n,triangle hanging to the right,TRUE,198,hHoRuwi7p8k2XhzD3,9,4,57,4,uCwT2ve8pCX7fjkss,/experiment/tangram_B.png,speaker,3,triangle hanging to the right
+n,,y,n,n,n,head is on a flat surface,TRUE,199,hHoRuwi7p8k2XhzD3,9,4,57,4,uCwT2ve8pCX7fjkss,/experiment/tangram_B.png,speaker,3,head is on a flat surface
+y,,y,n,n,n,mouse head,TRUE,200,hHoRuwi7p8k2XhzD3,6,5,66,4,f4yCdS7r3GCeu2Jan,/experiment/tangram_B.png,speaker,3,mouse head
+n,,n,n,n,n,kneeling with arms raised,TRUE,201,JmgdhSKRPPxDKvprr,11,0,11,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,speaker,3,kneeling with arms raised
+n,,y,y,n,n,one foot with triangle shoe,TRUE,202,JmgdhSKRPPxDKvprr,11,0,11,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,speaker,3,one foot with triangle shoe on the left
+n,,n,n,y,n,on the left,TRUE,202,JmgdhSKRPPxDKvprr,11,0,11,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,speaker,3,one foot with triangle shoe on the left
+n,,y,y,n,n,arms like triangles,TRUE,203,JmgdhSKRPPxDKvprr,11,0,11,4,TFvBbKSS8eN9KxxHD,/experiment/tangram_B.png,listener,3,arms like triangles?
+n,,y,n,n,n,white sliver to define right arm from body,TRUE,204,JmgdhSKRPPxDKvprr,11,0,11,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,speaker,3,white sliver to define right arm from body
+n,,y,y,n,n,2 triangle arms,TRUE,205,JmgdhSKRPPxDKvprr,11,0,11,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,speaker,3,2 triangle arms
+n,,y,n,n,n,bent knee,TRUE,206,JmgdhSKRPPxDKvprr,11,0,11,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,speaker,3,bent knee
+n,,y,y,n,n,diamond face,TRUE,207,JmgdhSKRPPxDKvprr,11,0,11,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,speaker,3,diamond face
+n,,y,n,n,n,no gap between other arm,TRUE,208,JmgdhSKRPPxDKvprr,11,0,11,4,fnpWjeJ5eoBme4DLX,/experiment/tangram_B.png,listener,3,no gap between other arm?
+n,,y,n,n,n,and body,TRUE,209,JmgdhSKRPPxDKvprr,11,0,11,4,fnpWjeJ5eoBme4DLX,/experiment/tangram_B.png,listener,3,and body
+n,,n,n,n,n,small white line,TRUE,210,JmgdhSKRPPxDKvprr,11,0,11,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,speaker,3,small white line
+n,,y,n,y,n,right arm from body,TRUE,211,JmgdhSKRPPxDKvprr,11,0,11,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,speaker,3,to define right arm from body
+n,,n,n,n,n,kneeling down,TRUE,212,JmgdhSKRPPxDKvprr,3,1,15,4,fnpWjeJ5eoBme4DLX,/experiment/tangram_B.png,speaker,2,"kneeling down, facing right. one arm to right with gap. one arm to left, no gap. head tilted forward right."
+n,,n,n,y,n,facing right,TRUE,212,JmgdhSKRPPxDKvprr,3,1,15,4,fnpWjeJ5eoBme4DLX,/experiment/tangram_B.png,speaker,2,"kneeling down, facing right. one arm to right with gap. one arm to left, no gap. head tilted forward right."
+n,,y,n,y,n,one arm to right with gap,TRUE,212,JmgdhSKRPPxDKvprr,3,1,15,4,fnpWjeJ5eoBme4DLX,/experiment/tangram_B.png,speaker,2,"kneeling down, facing right. one arm to right with gap. one arm to left, no gap. head tilted forward right."
+n,,y,n,y,n,one arm to left,TRUE,212,JmgdhSKRPPxDKvprr,3,1,15,4,fnpWjeJ5eoBme4DLX,/experiment/tangram_B.png,speaker,2,"kneeling down, facing right. one arm to right with gap. one arm to left, no gap. head tilted forward right."
+n,,n,n,n,n,no gap,TRUE,212,JmgdhSKRPPxDKvprr,3,1,15,4,fnpWjeJ5eoBme4DLX,/experiment/tangram_B.png,speaker,2,"kneeling down, facing right. one arm to right with gap. one arm to left, no gap. head tilted forward right."
+n,,y,n,y,n,head tilted forward right,TRUE,212,JmgdhSKRPPxDKvprr,3,1,15,4,fnpWjeJ5eoBme4DLX,/experiment/tangram_B.png,speaker,2,"kneeling down, facing right. one arm to right with gap. one arm to left, no gap. head tilted forward right."
+n,,y,n,n,n,knees form a right angle,TRUE,213,JmgdhSKRPPxDKvprr,3,1,15,4,fnpWjeJ5eoBme4DLX,/experiment/tangram_B.png,speaker,2,knees form a right angle
+n,,y,n,n,n,how many arms,TRUE,214,JmgdhSKRPPxDKvprr,3,1,15,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,listener,2,how many arms
+n,,y,n,n,n,diamond head,TRUE,215,JmgdhSKRPPxDKvprr,4,2,28,4,TFvBbKSS8eN9KxxHD,/experiment/tangram_B.png,speaker,3,"diamond head, kneeling, facing right, arms like triangles, slither of white between right triangle and body"
+n,,n,n,n,y,kneeling,TRUE,215,JmgdhSKRPPxDKvprr,4,2,28,4,TFvBbKSS8eN9KxxHD,/experiment/tangram_B.png,speaker,3,"diamond head, kneeling, facing right, arms like triangles, slither of white between right triangle and body"
+n,,n,n,y,n,facing right,TRUE,215,JmgdhSKRPPxDKvprr,4,2,28,4,TFvBbKSS8eN9KxxHD,/experiment/tangram_B.png,speaker,3,"diamond head, kneeling, facing right, arms like triangles, slither of white between right triangle and body"
+n,,y,y,n,n,arms like triangles,TRUE,215,JmgdhSKRPPxDKvprr,4,2,28,4,TFvBbKSS8eN9KxxHD,/experiment/tangram_B.png,speaker,3,"diamond head, kneeling, facing right, arms like triangles, slither of white between right triangle and body"
+n,,y,y,n,n,slither of white between right triangle and body,TRUE,215,JmgdhSKRPPxDKvprr,4,2,28,4,TFvBbKSS8eN9KxxHD,/experiment/tangram_B.png,speaker,3,"diamond head, kneeling, facing right, arms like triangles, slither of white between right triangle and body"
+n,,n,n,n,y,kneeling position,TRUE,216,JmgdhSKRPPxDKvprr,3,3,39,4,rQQgejQgtheEwqMBT,/experiment/tangram_B.png,speaker,3,"kneeling position, one triangle arm left, no gaps between body and arm for left, right arm pointed right with small gap"
+n,,y,y,y,n,one triangle arm left,TRUE,216,JmgdhSKRPPxDKvprr,3,3,39,4,rQQgejQgtheEwqMBT,/experiment/tangram_B.png,speaker,3,"kneeling position, one triangle arm left, no gaps between body and arm for left, right arm pointed right with small gap"
+n,,y,n,y,n,no gaps between body and arm for left,TRUE,216,JmgdhSKRPPxDKvprr,3,3,39,4,rQQgejQgtheEwqMBT,/experiment/tangram_B.png,speaker,3,"kneeling position, one triangle arm left, no gaps between body and arm for left, right arm pointed right with small gap"
+n,,y,n,y,n,right arm pointed right with small gap,TRUE,216,JmgdhSKRPPxDKvprr,3,3,39,4,rQQgejQgtheEwqMBT,/experiment/tangram_B.png,speaker,3,"kneeling position, one triangle arm left, no gaps between body and arm for left, right arm pointed right with small gap"
+n,,n,n,n,n,sliver of white,TRUE,217,JmgdhSKRPPxDKvprr,3,3,39,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,listener,3,sliver of white?
+n,,y,n,n,n,between right arm and body,TRUE,218,JmgdhSKRPPxDKvprr,3,3,39,4,rQQgejQgtheEwqMBT,/experiment/tangram_B.png,speaker,3,yes between right arm and body
+n,,y,n,n,n,arms in the air,TRUE,219,JmgdhSKRPPxDKvprr,7,4,55,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,speaker,3,arms in the air
+n,,y,n,n,n,slither of white separating arm and body,TRUE,220,JmgdhSKRPPxDKvprr,7,4,55,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,speaker,3,slither of white separating arm and body
+n,,y,n,y,n,foot on the left,TRUE,221,JmgdhSKRPPxDKvprr,7,4,55,4,iXBZR58GszGxcMCtC,/experiment/tangram_B.png,speaker,3,1 foot on the left
+n,,n,n,y,n,kneeling and facing right,TRUE,222,JmgdhSKRPPxDKvprr,7,4,55,4,fnpWjeJ5eoBme4DLX,/experiment/tangram_B.png,listener,3,kneeling and facing right?
+n,,n,n,y,n,kneeling facing right,TRUE,223,JmgdhSKRPPxDKvprr,10,5,70,4,fnpWjeJ5eoBme4DLX,/experiment/tangram_B.png,speaker,2,"kneeling facing right, small white slither between arm and body"
+n,,y,n,n,n,small white sliver between arm and body,TRUE,223,JmgdhSKRPPxDKvprr,10,5,70,4,fnpWjeJ5eoBme4DLX,/experiment/tangram_B.png,speaker,2,"kneeling facing right, small white slither between arm and body"
+n,,n,y,n,n,the top is a square,TRUE,224,ogPZPPCKpGn4votMa,7,0,7,4,JZaLQa7iPemTRbX7r,/experiment/tangram_B.png,speaker,2,the top is a square and right underneath are two triangle shapes.
+n,,n,y,y,n,right underneath are two triangle shapes,TRUE,224,ogPZPPCKpGn4votMa,7,0,7,4,JZaLQa7iPemTRbX7r,/experiment/tangram_B.png,speaker,2,the top is a square and right underneath are two triangle shapes.
+y,,n,n,n,n,a blob,TRUE,225,ogPZPPCKpGn4votMa,7,0,7,4,JZaLQa7iPemTRbX7r,/experiment/tangram_B.png,speaker,2,looks more like a blob and less like a person
+y,,n,n,n,n,less like a person,TRUE,225,ogPZPPCKpGn4votMa,7,0,7,4,JZaLQa7iPemTRbX7r,/experiment/tangram_B.png,speaker,2,looks more like a blob and less like a person
+n,,y,y,n,n,a square for a head,TRUE,226,ogPZPPCKpGn4votMa,4,1,16,4,Y3ATEvaw2Ex9TyTaM,/experiment/tangram_B.png,speaker,3,it has a square for a head and is just a bunch of shapes mashed together
+y,,n,y,n,n,just a bunch of shapes mashed together,TRUE,226,ogPZPPCKpGn4votMa,4,1,16,4,Y3ATEvaw2Ex9TyTaM,/experiment/tangram_B.png,speaker,3,it has a square for a head and is just a bunch of shapes mashed together
+n,,n,y,n,n,a triangle points in both directions,TRUE,227,ogPZPPCKpGn4votMa,4,1,16,4,Y3ATEvaw2Ex9TyTaM,/experiment/tangram_B.png,speaker,3,has a triangle points in both directions and a another triangle at the bottom left
+n,,n,y,y,n,a another triangle at the bottom left,TRUE,227,ogPZPPCKpGn4votMa,4,1,16,4,Y3ATEvaw2Ex9TyTaM,/experiment/tangram_B.png,speaker,3,has a triangle points in both directions and a another triangle at the bottom left
+n,,y,y,n,n,the head is a diamond,TRUE,228,ogPZPPCKpGn4votMa,3,2,27,4,aTGuHMqQLmcnEx3KE,/experiment/tangram_B.png,speaker,2,"the head is a diamond, there are two triangles pointing left and right, with a smaller triangle on the bottom left"
+n,,n,y,y,n,two triangles pointing left and right,TRUE,228,ogPZPPCKpGn4votMa,3,2,27,4,aTGuHMqQLmcnEx3KE,/experiment/tangram_B.png,speaker,2,"the head is a diamond, there are two triangles pointing left and right, with a smaller triangle on the bottom left"
+n,,n,y,y,n,smaller triangle on the bottom left,TRUE,228,ogPZPPCKpGn4votMa,3,2,27,4,aTGuHMqQLmcnEx3KE,/experiment/tangram_B.png,speaker,2,"the head is a diamond, there are two triangles pointing left and right, with a smaller triangle on the bottom left"
+n,,n,n,y,n,looking left,TRUE,229,ogPZPPCKpGn4votMa,6,3,42,4,fLSfDEdkLomjBKJ4E,/experiment/tangram_B.png,speaker,0,looking left with diamond head
+n,,y,y,n,n,diamond head,TRUE,229,ogPZPPCKpGn4votMa,6,3,42,4,fLSfDEdkLomjBKJ4E,/experiment/tangram_B.png,speaker,0,looking left with diamond head
+n,,n,n,n,y,sitting down,TRUE,230,ogPZPPCKpGn4votMa,6,3,42,4,fLSfDEdkLomjBKJ4E,/experiment/tangram_B.png,speaker,0,sitting down
+n,,n,y,y,n,diamond on top,TRUE,231,ogPZPPCKpGn4votMa,1,4,49,4,JZaLQa7iPemTRbX7r,/experiment/tangram_B.png,speaker,2,diamond on top. two triangles right below facing each direction. big blob on bottom
+n,,n,y,y,n,two triangles right below facing each direction,TRUE,231,ogPZPPCKpGn4votMa,1,4,49,4,JZaLQa7iPemTRbX7r,/experiment/tangram_B.png,speaker,2,diamond on top. two triangles right below facing each direction. big blob on bottom
+n,,n,n,y,n,big blob on bottom,TRUE,231,ogPZPPCKpGn4votMa,1,4,49,4,JZaLQa7iPemTRbX7r,/experiment/tangram_B.png,speaker,2,diamond on top. two triangles right below facing each direction. big blob on bottom
+n,,n,y,y,n,diamond on top,FALSE,232,ogPZPPCKpGn4votMa,7,5,67,4,Y3ATEvaw2Ex9TyTaM,/experiment/tangram_B.png,speaker,3,"diamond on top, two triangles on both sides with another smaller triangle on the bottom left side"
+n,,n,y,y,n,two triangles on both sides,TRUE,232,ogPZPPCKpGn4votMa,7,5,67,4,Y3ATEvaw2Ex9TyTaM,/experiment/tangram_B.png,speaker,3,"diamond on top, two triangles on both sides with another smaller triangle on the bottom left side"
+n,,n,y,y,n,another smaller triangle on the bottom left side,TRUE,232,ogPZPPCKpGn4votMa,7,5,67,4,Y3ATEvaw2Ex9TyTaM,/experiment/tangram_B.png,speaker,3,"diamond on top, two triangles on both sides with another smaller triangle on the bottom left side"
+n,,n,y,n,n,ok square,TRUE,233,LfuChcnEB54q8Ztys,6,0,6,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,ok square balancing on the point of two triangles which are touching
+n,,n,y,n,n,balancing on the point,TRUE,233,LfuChcnEB54q8Ztys,6,0,6,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,ok square balancing on the point of two triangles which are touching
+n,,n,y,n,n,two triangles,TRUE,233,LfuChcnEB54q8Ztys,6,0,6,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,ok square balancing on the point of two triangles which are touching
+n,,n,n,n,n,touching,TRUE,233,LfuChcnEB54q8Ztys,6,0,6,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,ok square balancing on the point of two triangles which are touching
+n,,n,n,n,y,kneeling figure,TRUE,234,LfuChcnEB54q8Ztys,6,0,6,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,looks like a kneeling figure
+n,,n,y,n,n,under the square,TRUE,235,LfuChcnEB54q8Ztys,6,0,6,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,under the square is a smaller triangle on the right and a larger one on the left
+n,,n,y,y,n,a smaller triangle on the right,TRUE,235,LfuChcnEB54q8Ztys,6,0,6,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,under the square is a smaller triangle on the right and a larger one on the left
+n,,n,n,y,n,a larger one on the left,TRUE,235,LfuChcnEB54q8Ztys,6,0,6,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,under the square is a smaller triangle on the right and a larger one on the left
+n,,y,n,n,n,arms out,TRUE,236,LfuChcnEB54q8Ztys,6,0,6,4,tdJMBevkwaPaQKjM6,/experiment/tangram_B.png,listener,3,arms out?
+n,,y,n,n,n,Arms facing slightly down,TRUE,237,LfuChcnEB54q8Ztys,6,0,6,4,Hy3Ns8dTnNNFyByPq,/experiment/tangram_B.png,listener,3,Arms facing slightly down?
+n,,y,n,n,n,arms out,TRUE,238,LfuChcnEB54q8Ztys,6,0,6,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,yeah could look like arms out
+n,,n,y,n,n,small triangle,TRUE,239,LfuChcnEB54q8Ztys,6,0,6,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,there is a small triangle on the bottom left of the figure
+n,,n,n,y,n,bottom left,TRUE,239,LfuChcnEB54q8Ztys,6,0,6,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,there is a small triangle on the bottom left of the figure
+n,,n,y,n,n,the square,TRUE,240,LfuChcnEB54q8Ztys,4,1,16,4,wzhhQtjp6x8rGAv7f,/experiment/tangram_B.png,speaker,3,the square's balancing on top of 2 triangles
+n,,n,y,n,n,balancing on top of 2 triangles,TRUE,240,LfuChcnEB54q8Ztys,4,1,16,4,wzhhQtjp6x8rGAv7f,/experiment/tangram_B.png,speaker,3,the square's balancing on top of 2 triangles
+n,,n,n,n,y,kneeling,TRUE,241,LfuChcnEB54q8Ztys,4,1,16,4,tdJMBevkwaPaQKjM6,/experiment/tangram_B.png,listener,3,kneeling?
+n,,n,y,n,n,one triangle is bigger,TRUE,242,LfuChcnEB54q8Ztys,4,1,16,4,wzhhQtjp6x8rGAv7f,/experiment/tangram_B.png,speaker,3,"one triangle is bigger, the other (on the right) is smaller"
+n,,n,n,y,n,the other (on the right) is smaller,TRUE,242,LfuChcnEB54q8Ztys,4,1,16,4,wzhhQtjp6x8rGAv7f,/experiment/tangram_B.png,speaker,3,"one triangle is bigger, the other (on the right) is smaller"
+n,,n,n,n,n,on knees,TRUE,243,LfuChcnEB54q8Ztys,8,2,32,4,tdJMBevkwaPaQKjM6,/experiment/tangram_B.png,speaker,2,"on knees, square is balancing on two triangles"
+n,,n,y,n,n,square is balancing on two triangles,TRUE,243,LfuChcnEB54q8Ztys,8,2,32,4,tdJMBevkwaPaQKjM6,/experiment/tangram_B.png,speaker,2,"on knees, square is balancing on two triangles"
+n,,n,y,n,n,third triangle,TRUE,244,LfuChcnEB54q8Ztys,8,2,32,4,tdJMBevkwaPaQKjM6,/experiment/tangram_B.png,speaker,2,there's a third triangle bottom left
+n,,n,n,y,n,bottom left,TRUE,244,LfuChcnEB54q8Ztys,8,2,32,4,tdJMBevkwaPaQKjM6,/experiment/tangram_B.png,speaker,2,there's a third triangle bottom left
+n,,n,y,y,n,the one triangle on the right is tilted,TRUE,245,LfuChcnEB54q8Ztys,8,2,32,4,tdJMBevkwaPaQKjM6,/experiment/tangram_B.png,speaker,2,the one triangle on the right is tilted
+n,,n,n,y,n,Facing right,TRUE,246,LfuChcnEB54q8Ztys,8,2,32,4,Hy3Ns8dTnNNFyByPq,/experiment/tangram_B.png,listener,2,Facing right or left?
+n,,n,n,y,n,left,TRUE,246,LfuChcnEB54q8Ztys,8,2,32,4,Hy3Ns8dTnNNFyByPq,/experiment/tangram_B.png,listener,2,Facing right or left?
+n,,n,n,y,n,right,TRUE,247,LfuChcnEB54q8Ztys,8,2,32,4,tdJMBevkwaPaQKjM6,/experiment/tangram_B.png,speaker,2,right kinda
+n,,n,y,y,n,the triangle at the bottom left,TRUE,248,LfuChcnEB54q8Ztys,8,2,32,4,tdJMBevkwaPaQKjM6,/experiment/tangram_B.png,speaker,2,like the triangle at the bottom left would be the feet
+n,,y,n,n,n,the feet,TRUE,248,LfuChcnEB54q8Ztys,8,2,32,4,tdJMBevkwaPaQKjM6,/experiment/tangram_B.png,speaker,2,like the triangle at the bottom left would be the feet
+y,,n,n,n,n,begging for food,TRUE,249,LfuChcnEB54q8Ztys,4,3,40,4,Hy3Ns8dTnNNFyByPq,/experiment/tangram_B.png,speaker,2,"Looks like a dog begging for food, facing left with a square balancing on the corner and the triangle right below it on the right (looks like ears)"
+n,,n,n,y,n,facing left,TRUE,249,LfuChcnEB54q8Ztys,4,3,40,4,Hy3Ns8dTnNNFyByPq,/experiment/tangram_B.png,speaker,2,"Looks like a dog begging for food, facing left with a square balancing on the corner and the triangle right below it on the right (looks like ears)"
+n,,n,y,n,n,square balancing on the corner,TRUE,249,LfuChcnEB54q8Ztys,4,3,40,4,Hy3Ns8dTnNNFyByPq,/experiment/tangram_B.png,speaker,2,"Looks like a dog begging for food, facing left with a square balancing on the corner and the triangle right below it on the right (looks like ears)"
+n,,n,y,y,n,triangle right below it on the right,TRUE,249,LfuChcnEB54q8Ztys,4,3,40,4,Hy3Ns8dTnNNFyByPq,/experiment/tangram_B.png,speaker,2,"Looks like a dog begging for food, facing left with a square balancing on the corner and the triangle right below it on the right (looks like ears)"
+n,,y,n,n,n,looks like ears,TRUE,249,LfuChcnEB54q8Ztys,4,3,40,4,Hy3Ns8dTnNNFyByPq,/experiment/tangram_B.png,speaker,2,"Looks like a dog begging for food, facing left with a square balancing on the corner and the triangle right below it on the right (looks like ears)"
+n,,n,y,y,n,a triangle facing left,TRUE,250,LfuChcnEB54q8Ztys,4,3,40,4,Hy3Ns8dTnNNFyByPq,/experiment/tangram_B.png,speaker,2,Arms are a triangle facing left at the bottom left of the image
+n,,n,n,y,n,at the bottom left of the image,FALSE,250,LfuChcnEB54q8Ztys,4,3,40,4,Hy3Ns8dTnNNFyByPq,/experiment/tangram_B.png,speaker,2,Arms are a triangle facing left at the bottom left of the image
+n,,n,y,y,n,Just one triangle on bottom left,TRUE,251,LfuChcnEB54q8Ztys,4,3,40,4,Hy3Ns8dTnNNFyByPq,/experiment/tangram_B.png,speaker,2,Just one triangle on bottom left
+n,,n,y,n,n,square balanced on two triangles,TRUE,252,LfuChcnEB54q8Ztys,10,4,58,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,square balanced on two triangles
+y,,n,n,n,n,begging dog,TRUE,253,LfuChcnEB54q8Ztys,10,4,58,4,Dr6TQXga6KydoDzMN,/experiment/tangram_B.png,speaker,3,looks like a begging dog
+n,,n,y,n,n,square balancing,TRUE,254,LfuChcnEB54q8Ztys,5,5,65,4,wzhhQtjp6x8rGAv7f,/experiment/tangram_B.png,speaker,3,square balancing on two triangles
+n,,n,y,n,n,on two triangles,TRUE,254,LfuChcnEB54q8Ztys,5,5,65,4,wzhhQtjp6x8rGAv7f,/experiment/tangram_B.png,speaker,3,square balancing on two triangles
+n,,n,y,n,n,diamond shaped head,TRUE,255,pAaZt2Cv9MEFRCAY5,10,0,10,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,speaker,2,There's a diamond shaped head with a triangle hanging off of it
+n,,n,y,n,n,triangle hanging off of it,TRUE,255,pAaZt2Cv9MEFRCAY5,10,0,10,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,speaker,2,There's a diamond shaped head with a triangle hanging off of it
+n,,n,y,y,n,Triangle is to the right,TRUE,256,pAaZt2Cv9MEFRCAY5,10,0,10,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,speaker,2,Triangle is to the right
+n,,n,y,n,n,small triangle,TRUE,257,pAaZt2Cv9MEFRCAY5,10,0,10,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,speaker,2,The bottom left is a small triangle
+n,,n,y,n,n,mini triangle,TRUE,258,pAaZt2Cv9MEFRCAY5,10,0,10,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,listener,2,is there a mini triangle in the bottom left
+n,,n,n,y,n,bottom left,TRUE,258,pAaZt2Cv9MEFRCAY5,10,0,10,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,listener,2,is there a mini triangle in the bottom left
+n,,n,n,y,n,bottom right,TRUE,259,pAaZt2Cv9MEFRCAY5,10,0,10,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,speaker,2,And the bottom right is a right angle
+n,,n,y,n,n,right angle,TRUE,259,pAaZt2Cv9MEFRCAY5,10,0,10,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,speaker,2,And the bottom right is a right angle
+n,,y,n,n,n,on his knees,TRUE,260,pAaZt2Cv9MEFRCAY5,10,0,10,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,listener,2,a person on his knees with hands out?
+n,,y,n,n,n,with hands out,TRUE,260,pAaZt2Cv9MEFRCAY5,10,0,10,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,listener,2,a person on his knees with hands out?
+n,,y,n,n,n,fat leg,TRUE,261,pAaZt2Cv9MEFRCAY5,10,0,10,4,9mSYH8ydChYf35e2C,/experiment/tangram_B.png,listener,2,fat leg?
+n,,y,y,y,n,The triangle next to the head is surrounded by empty space,TRUE,262,pAaZt2Cv9MEFRCAY5,10,0,10,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,speaker,2,The triangle next to the head is surrounded by empty space
+n,,y,n,y,n,To the right of the head,TRUE,263,pAaZt2Cv9MEFRCAY5,10,0,10,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,speaker,2,To the right of the head
+n,,y,n,n,n,FAT LEG,TRUE,264,pAaZt2Cv9MEFRCAY5,10,0,10,4,9mSYH8ydChYf35e2C,/experiment/tangram_B.png,listener,2,CODE NAME FAT LEG
+n,,y,n,n,n,the one with the fat leg,TRUE,265,pAaZt2Cv9MEFRCAY5,0,1,12,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,speaker,3,okay so it's the one with the fat leg
+n,,n,y,n,n,the square with the triangle,TRUE,266,pAaZt2Cv9MEFRCAY5,0,1,12,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,speaker,3,the square with the triangle
+n,,n,y,y,n,mini triangle on the left,TRUE,267,pAaZt2Cv9MEFRCAY5,0,1,12,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,speaker,3,and a mini triangle on the left
+n,,y,n,n,n,head on the middle,TRUE,268,pAaZt2Cv9MEFRCAY5,4,2,28,4,9mSYH8ydChYf35e2C,/experiment/tangram_B.png,speaker,1,"head on the middle, leg on left, bottom right has a 90 degree angle.. what were we calling it?"
+n,,y,n,n,n,leg on left,TRUE,268,pAaZt2Cv9MEFRCAY5,4,2,28,4,9mSYH8ydChYf35e2C,/experiment/tangram_B.png,speaker,1,"head on the middle, leg on left, bottom right has a 90 degree angle.. what were we calling it?"
+n,,n,y,y,n,bottom right has a 90 degree angle,TRUE,268,pAaZt2Cv9MEFRCAY5,4,2,28,4,9mSYH8ydChYf35e2C,/experiment/tangram_B.png,speaker,1,"head on the middle, leg on left, bottom right has a 90 degree angle.. what were we calling it?"
+n,,y,n,n,n,a foot,TRUE,269,pAaZt2Cv9MEFRCAY5,4,2,28,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,listener,1,is there a foot?
+y,,n,n,n,n,not the monk,TRUE,270,pAaZt2Cv9MEFRCAY5,4,2,28,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,listener,1,It's not the monk right?
+y,,n,n,n,n,zigzag,TRUE,271,pAaZt2Cv9MEFRCAY5,4,2,28,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,listener,1,zigzag?
+n,,n,n,y,y,walking left,TRUE,272,pAaZt2Cv9MEFRCAY5,4,2,28,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,listener,1,is this the one walking left with head on right side?
+n,,y,n,y,n,head on right side,TRUE,272,pAaZt2Cv9MEFRCAY5,4,2,28,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,listener,1,is this the one walking left with head on right side?
+n,,y,n,n,n,both arms are looking like stretched,TRUE,273,pAaZt2Cv9MEFRCAY5,4,2,28,4,9mSYH8ydChYf35e2C,/experiment/tangram_B.png,speaker,1,"both arms are looking like stretched, has a gap between both arms right under the head"
+n,,y,n,y,n,has a gap between both arms right under the head,TRUE,273,pAaZt2Cv9MEFRCAY5,4,2,28,4,9mSYH8ydChYf35e2C,/experiment/tangram_B.png,speaker,1,"both arms are looking like stretched, has a gap between both arms right under the head"
+,,,,,,,NA,274,pAaZt2Cv9MEFRCAY5,4,2,28,4,9mSYH8ydChYf35e2C,/experiment/tangram_B.png,speaker,1,no not the monk
+n,,n,y,y,n,bottom right 90 degree angle,TRUE,275,pAaZt2Cv9MEFRCAY5,4,2,28,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,listener,1,There are only two with bottom right 90 degree angle
+y,,n,n,n,n,monk,TRUE,276,pAaZt2Cv9MEFRCAY5,4,2,28,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,listener,1,monk and the other one
+y,,n,n,n,n,the other one,TRUE,276,pAaZt2Cv9MEFRCAY5,4,2,28,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,listener,1,monk and the other one
+y,,n,n,n,n,guy kneeling and praying,TRUE,277,pAaZt2Cv9MEFRCAY5,4,2,28,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,listener,1,guy kneeling and praying?
+,,,,,,,NA,278,pAaZt2Cv9MEFRCAY5,4,2,28,4,9mSYH8ydChYf35e2C,/experiment/tangram_B.png,speaker,1,the other one
+n,,n,y,y,n,mini triangle on bottom left,TRUE,279,pAaZt2Cv9MEFRCAY5,4,2,28,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,listener,1,The one with the mini triangle on bottom left?
+y,,n,n,n,n,not the monk the other one,TRUE,280,pAaZt2Cv9MEFRCAY5,4,2,28,4,9mSYH8ydChYf35e2C,/experiment/tangram_B.png,speaker,1,"not the monnk the other one, whats the code name?"
+,,,,,n,,TRUE,280,pAaZt2Cv9MEFRCAY5,4,2,28,4,9mSYH8ydChYf35e2C,/experiment/tangram_B.png,speaker,1,"not the monnk the other one, whats the code name?"
+y,,n,n,n,n,the beggar,TRUE,281,pAaZt2Cv9MEFRCAY5,4,2,28,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,listener,1,is it the beggar?
+n,,y,n,y,n,on knees facing right,TRUE,282,pAaZt2Cv9MEFRCAY5,5,3,41,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,speaker,2,other beggar/ prayer. on knees facing right. has hands close to face
+n,,y,n,n,n,has hands close to face,TRUE,282,pAaZt2Cv9MEFRCAY5,5,3,41,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,speaker,2,other beggar/ prayer. on knees facing right. has hands close to face
+n,,n,y,y,n,right angle in bottom right,TRUE,283,pAaZt2Cv9MEFRCAY5,5,3,41,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,speaker,2,right angle in bottom right
+n,,y,n,y,n,small foot on left,TRUE,284,pAaZt2Cv9MEFRCAY5,5,3,41,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,speaker,2,small foot on left
+n,,n,y,n,n,triangle,TRUE,285,pAaZt2Cv9MEFRCAY5,5,3,41,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,speaker,2,(triangle)
+n,,n,y,n,n,mini triangle,TRUE,286,pAaZt2Cv9MEFRCAY5,5,3,41,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,listener,2,mini triangle
+y,,n,n,n,n,like the beggar,TRUE,287,pAaZt2Cv9MEFRCAY5,5,3,41,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,listener,2,like the beggar thats standing with his knees bent
+n,,y,n,n,y,standing with his knees bent,TRUE,287,pAaZt2Cv9MEFRCAY5,5,3,41,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,listener,2,like the beggar thats standing with his knees bent
+y,,n,n,n,n,zigzag,TRUE,288,pAaZt2Cv9MEFRCAY5,5,3,41,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,listener,2,zigzag?
+n,,n,y,y,n,90 degree on bottom right,TRUE,289,pAaZt2Cv9MEFRCAY5,5,3,41,4,9mSYH8ydChYf35e2C,/experiment/tangram_B.png,listener,2,90 degree on bottom right?
+n,,y,y,n,n,mini triangle for his foot,TRUE,290,pAaZt2Cv9MEFRCAY5,5,3,41,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,speaker,2,mini triangle for his foot on the left yeah
+n,,n,n,y,n,on the left,TRUE,290,pAaZt2Cv9MEFRCAY5,5,3,41,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,speaker,2,mini triangle for his foot on the left yeah
+y,,n,n,n,n,not zigzag,TRUE,291,pAaZt2Cv9MEFRCAY5,5,3,41,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,speaker,2,not zigzag
+n,,y,n,n,y,fully kneeling,TRUE,292,pAaZt2Cv9MEFRCAY5,5,3,41,4,gpHcgtiWZ4yyMWCHY,/experiment/tangram_B.png,speaker,2,he is fully kneeling
+n,,n,y,y,n,the one with the mini triangle on bottom left,TRUE,293,pAaZt2Cv9MEFRCAY5,8,4,56,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,speaker,3,the one with the mini triangle on bottom left
+n,,n,y,y,n,right angle on bottom right,TRUE,294,pAaZt2Cv9MEFRCAY5,8,4,56,4,nxqKjc7pHLrY5WfQ4,/experiment/tangram_B.png,speaker,3,right angle on bottom right
+n,,n,y,y,n,mini triangle bottom left,TRUE,295,pAaZt2Cv9MEFRCAY5,7,5,67,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,speaker,3,mini triangle bottom left
+n,,n,y,y,n,right angle on the bottom right,TRUE,296,pAaZt2Cv9MEFRCAY5,7,5,67,4,PTgQgdtPBpeZAgKSJ,/experiment/tangram_B.png,speaker,3,right angle on the bottom right
+n,,y,n,n,n,both arms up,TRUE,297,sTKnvCuK8iawf6BNr,4,0,4,4,aGQoTZ2j6XtnRsAmq,/experiment/tangram_B.png,speaker,3,both arms up
+n,,y,n,n,n,on his knees,TRUE,298,sTKnvCuK8iawf6BNr,4,0,4,4,aGQoTZ2j6XtnRsAmq,/experiment/tangram_B.png,speaker,3,on his knees
+n,,y,n,n,n,arms open,TRUE,299,sTKnvCuK8iawf6BNr,4,0,4,4,aGQoTZ2j6XtnRsAmq,/experiment/tangram_B.png,speaker,3,arms open
+n,,n,n,n,n,moving forward,TRUE,300,Sjf5nadz9keqBvs24,11,0,11,4,gnxtfvsi22jSQDpbi,/experiment/tangram_B.png,speaker,1,Guy moving forward one foot on ground the other his knee with arms spread out each side
+n,,y,n,n,n,one foot on ground,TRUE,300,Sjf5nadz9keqBvs24,11,0,11,4,gnxtfvsi22jSQDpbi,/experiment/tangram_B.png,speaker,1,Guy moving forward one foot on ground the other his knee with arms spread out each side
+n,,y,n,n,n,the other his knee,TRUE,300,Sjf5nadz9keqBvs24,11,0,11,4,gnxtfvsi22jSQDpbi,/experiment/tangram_B.png,speaker,1,Guy moving forward one foot on ground the other his knee with arms spread out each side
+n,,y,n,n,n,arms spread out each side,TRUE,300,Sjf5nadz9keqBvs24,11,0,11,4,gnxtfvsi22jSQDpbi,/experiment/tangram_B.png,speaker,1,Guy moving forward one foot on ground the other his knee with arms spread out each side
+n,,y,n,n,n,man on his knees,TRUE,301,Sjf5nadz9keqBvs24,11,1,23,4,YisDn9qApPgZZysmj,/experiment/tangram_B.png,speaker,3,"man on his knees, both arms stretched out both sides. Facing right"
+n,,y,n,n,n,both arms stretched out both sides,TRUE,301,Sjf5nadz9keqBvs24,11,1,23,4,YisDn9qApPgZZysmj,/experiment/tangram_B.png,speaker,3,"man on his knees, both arms stretched out both sides. Facing right"
+n,,n,n,y,n,facing right,TRUE,301,Sjf5nadz9keqBvs24,11,1,23,4,YisDn9qApPgZZysmj,/experiment/tangram_B.png,speaker,3,"man on his knees, both arms stretched out both sides. Facing right"
+n,,y,n,n,n,part of his leg,TRUE,302,Sjf5nadz9keqBvs24,11,1,23,4,YisDn9qApPgZZysmj,/experiment/tangram_B.png,speaker,3,you can see part of his leg
+n,,y,n,n,n,and his feet,TRUE,303,Sjf5nadz9keqBvs24,11,1,23,4,YisDn9qApPgZZysmj,/experiment/tangram_B.png,speaker,3,and his feet
+n,,n,n,y,n,Facing the right side,TRUE,304,Sjf5nadz9keqBvs24,2,2,26,4,yfs6nLKcp7Y5rodRa,/experiment/tangram_B.png,speaker,3,"Facing the right side, both arms stretched out like triangles, you can see his feet"
+n,,y,n,n,n,both arms stretched out like triangles,TRUE,304,Sjf5nadz9keqBvs24,2,2,26,4,yfs6nLKcp7Y5rodRa,/experiment/tangram_B.png,speaker,3,"Facing the right side, both arms stretched out like triangles, you can see his feet"
+n,,y,n,n,n,you can see his feet,TRUE,304,Sjf5nadz9keqBvs24,2,2,26,4,yfs6nLKcp7Y5rodRa,/experiment/tangram_B.png,speaker,3,"Facing the right side, both arms stretched out like triangles, you can see his feet"
+n,,y,n,n,n,Arms are stretched out on both sides,TRUE,305,Sjf5nadz9keqBvs24,2,2,26,4,yfs6nLKcp7Y5rodRa,/experiment/tangram_B.png,speaker,3,Arms are stretched out on both sides
+n,,n,n,n,y,Kneeling man,TRUE,306,Sjf5nadz9keqBvs24,6,3,42,4,xcjfXmiPdus699r6v,/experiment/tangram_B.png,speaker,3,"Kneeling man, one hand out to each side, one foot poked out to the left"
+n,,y,n,y,n,one hand out to each side,TRUE,306,Sjf5nadz9keqBvs24,6,3,42,4,xcjfXmiPdus699r6v,/experiment/tangram_B.png,speaker,3,"Kneeling man, one hand out to each side, one foot poked out to the left"
+n,,y,n,y,n,one foot poked out to the left,TRUE,306,Sjf5nadz9keqBvs24,6,3,42,4,xcjfXmiPdus699r6v,/experiment/tangram_B.png,speaker,3,"Kneeling man, one hand out to each side, one foot poked out to the left"
+n,,n,n,y,y,lunging to the right,TRUE,307,Sjf5nadz9keqBvs24,0,4,48,4,gnxtfvsi22jSQDpbi,/experiment/tangram_B.png,speaker,2,Man lunging to the right arms out each side one foot on floor the other his knee
+n,,y,n,n,n,arms out each side,TRUE,307,Sjf5nadz9keqBvs24,0,4,48,4,gnxtfvsi22jSQDpbi,/experiment/tangram_B.png,speaker,2,Man lunging to the right arms out each side one foot on floor the other his knee
+n,,y,n,n,n,one foot on floor,TRUE,307,Sjf5nadz9keqBvs24,0,4,48,4,gnxtfvsi22jSQDpbi,/experiment/tangram_B.png,speaker,2,Man lunging to the right arms out each side one foot on floor the other his knee
+n,,y,n,n,n,the other his knee,TRUE,307,Sjf5nadz9keqBvs24,0,4,48,4,gnxtfvsi22jSQDpbi,/experiment/tangram_B.png,speaker,2,Man lunging to the right arms out each side one foot on floor the other his knee
+n,,y,n,n,n,man on his knees,TRUE,308,Sjf5nadz9keqBvs24,10,5,70,4,YisDn9qApPgZZysmj,/experiment/tangram_B.png,speaker,3,"man on his knees, both arms stretched out both sides"
+n,,y,n,n,n,both arms stretched out both sides,TRUE,308,Sjf5nadz9keqBvs24,10,5,70,4,YisDn9qApPgZZysmj,/experiment/tangram_B.png,speaker,3,"man on his knees, both arms stretched out both sides"
+n,,y,n,n,n,part of his leg is shown,TRUE,309,Sjf5nadz9keqBvs24,10,5,70,4,YisDn9qApPgZZysmj,/experiment/tangram_B.png,speaker,3,part of his leg is shown
+n,,y,n,n,n,with his feet,TRUE,310,Sjf5nadz9keqBvs24,10,5,70,4,YisDn9qApPgZZysmj,/experiment/tangram_B.png,speaker,3,with his feet
+n,,y,n,n,n,on one knee,TRUE,311,aJmxCcm4qPQKzrTZA,0,0,0,4,azqn8fB45HJpjaCMw,/experiment/tangram_B.png,speaker,2,"Gymnast on one knee, arms straight out, head slightly tilted down"
+n,,y,n,n,n,arms straight out,TRUE,311,aJmxCcm4qPQKzrTZA,0,0,0,4,azqn8fB45HJpjaCMw,/experiment/tangram_B.png,speaker,2,"Gymnast on one knee, arms straight out, head slightly tilted down"
+n,,y,n,n,n,head slightly tilted down,TRUE,311,aJmxCcm4qPQKzrTZA,0,0,0,4,azqn8fB45HJpjaCMw,/experiment/tangram_B.png,speaker,2,"Gymnast on one knee, arms straight out, head slightly tilted down"
+y,,n,n,n,y,nun kneeling at church,TRUE,312,aJmxCcm4qPQKzrTZA,1,1,13,4,tSSE6WrrX5B6873NB,/experiment/tangram_B.png,speaker,0,nun kneeling at church
+n,,y,n,n,n,arms stretched out in front of her,TRUE,313,aJmxCcm4qPQKzrTZA,1,1,13,4,EmgSocMvhQLaaApoe,/experiment/tangram_B.png,listener,0,arms stretched out in front of her?
+n,,y,n,y,n,one arm stretched out front,TRUE,314,aJmxCcm4qPQKzrTZA,1,1,13,4,tSSE6WrrX5B6873NB,/experiment/tangram_B.png,speaker,0,one arm stretched out front
+n,,y,n,n,n,head down,TRUE,315,aJmxCcm4qPQKzrTZA,1,1,13,4,azqn8fB45HJpjaCMw,/experiment/tangram_B.png,listener,0,head down or straight
+n,,n,n,n,n,straight,TRUE,315,aJmxCcm4qPQKzrTZA,1,1,13,4,azqn8fB45HJpjaCMw,/experiment/tangram_B.png,listener,0,head down or straight
+n,,y,n,y,n,the other arm behind her,TRUE,316,aJmxCcm4qPQKzrTZA,1,1,13,4,tSSE6WrrX5B6873NB,/experiment/tangram_B.png,speaker,0,the other arm behind her
+n,,y,n,n,n,head slightly down,TRUE,317,aJmxCcm4qPQKzrTZA,1,1,13,4,tSSE6WrrX5B6873NB,/experiment/tangram_B.png,speaker,0,head slightly down
+n,,y,n,y,n,knees facing right,TRUE,318,aJmxCcm4qPQKzrTZA,1,1,13,4,tSSE6WrrX5B6873NB,/experiment/tangram_B.png,speaker,0,knees facing right
+n,,n,n,y,n,facing right,TRUE,319,aJmxCcm4qPQKzrTZA,6,2,30,4,EmgSocMvhQLaaApoe,/experiment/tangram_B.png,speaker,3,"figure is facing right, in a kneeling position, both arms outstretched, similar to a soccer player celebrating a goal"
+n,,n,n,n,y,in a kneeling position,TRUE,319,aJmxCcm4qPQKzrTZA,6,2,30,4,EmgSocMvhQLaaApoe,/experiment/tangram_B.png,speaker,3,"figure is facing right, in a kneeling position, both arms outstretched, similar to a soccer player celebrating a goal"
+n,,y,n,n,n,both arms outstretched,TRUE,319,aJmxCcm4qPQKzrTZA,6,2,30,4,EmgSocMvhQLaaApoe,/experiment/tangram_B.png,speaker,3,"figure is facing right, in a kneeling position, both arms outstretched, similar to a soccer player celebrating a goal"
+y,,n,n,n,n,similar to a soccer player celebrating a goal,TRUE,319,aJmxCcm4qPQKzrTZA,6,2,30,4,EmgSocMvhQLaaApoe,/experiment/tangram_B.png,speaker,3,"figure is facing right, in a kneeling position, both arms outstretched, similar to a soccer player celebrating a goal"
+n,,y,n,n,n,head is tilted slightly downwards,TRUE,320,aJmxCcm4qPQKzrTZA,6,2,30,4,EmgSocMvhQLaaApoe,/experiment/tangram_B.png,speaker,3,head is tilted slightly downwards
+y,,n,n,n,n,Victory celebration after scoring a goal,TRUE,321,aJmxCcm4qPQKzrTZA,6,3,42,4,S2FEoRWc2m9QDnjtr,/experiment/tangram_B.png,speaker,3,Victory celebration after scoring a goal. FAcing right. Imagine being in a Lunge position for exercising
+n,,n,n,y,n,FAcing right,TRUE,321,aJmxCcm4qPQKzrTZA,6,3,42,4,S2FEoRWc2m9QDnjtr,/experiment/tangram_B.png,speaker,3,Victory celebration after scoring a goal. FAcing right. Imagine being in a Lunge position for exercising
+y,,n,n,n,y,Imagine being in a Lunge position for exercising,TRUE,321,aJmxCcm4qPQKzrTZA,6,3,42,4,S2FEoRWc2m9QDnjtr,/experiment/tangram_B.png,speaker,3,Victory celebration after scoring a goal. FAcing right. Imagine being in a Lunge position for exercising
+y,,y,n,n,n,umpire on one knee,TRUE,322,aJmxCcm4qPQKzrTZA,0,4,48,4,azqn8fB45HJpjaCMw,/experiment/tangram_B.png,speaker,2,"umpire on one knee, other leg stretched out behind"
+n,,y,n,n,n,other leg stretched out behind,TRUE,322,aJmxCcm4qPQKzrTZA,0,4,48,4,azqn8fB45HJpjaCMw,/experiment/tangram_B.png,speaker,2,"umpire on one knee, other leg stretched out behind"
+y,,n,n,n,n,calling someone safe,TRUE,323,aJmxCcm4qPQKzrTZA,0,4,48,4,azqn8fB45HJpjaCMw,/experiment/tangram_B.png,speaker,2,calling someone safe
+n,,n,n,n,n,looking down,TRUE,324,aJmxCcm4qPQKzrTZA,0,4,48,4,azqn8fB45HJpjaCMw,/experiment/tangram_B.png,speaker,2,looking down
+n,,n,n,n,n,facing where,TRUE,325,aJmxCcm4qPQKzrTZA,0,4,48,4,tSSE6WrrX5B6873NB,/experiment/tangram_B.png,listener,2,facing where?
+n,,n,n,y,n,our right,TRUE,326,aJmxCcm4qPQKzrTZA,0,4,48,4,azqn8fB45HJpjaCMw,/experiment/tangram_B.png,speaker,2,our right
+n,,n,n,n,y,kneeling woman,TRUE,327,aJmxCcm4qPQKzrTZA,11,5,71,4,tSSE6WrrX5B6873NB,/experiment/tangram_B.png,speaker,2,kneeling woman with big sleeves
+n,,n,n,n,n,with big sleeves,TRUE,327,aJmxCcm4qPQKzrTZA,11,5,71,4,tSSE6WrrX5B6873NB,/experiment/tangram_B.png,speaker,2,kneeling woman with big sleeves
+n,,n,n,y,n,facing right,TRUE,328,aJmxCcm4qPQKzrTZA,11,5,71,4,tSSE6WrrX5B6873NB,/experiment/tangram_B.png,speaker,2,facing right
+n,,y,n,y,n,one arm in front,TRUE,329,aJmxCcm4qPQKzrTZA,11,5,71,4,tSSE6WrrX5B6873NB,/experiment/tangram_B.png,speaker,2,one arm in front another one behind
+n,,n,n,y,n,another one behind,TRUE,329,aJmxCcm4qPQKzrTZA,11,5,71,4,tSSE6WrrX5B6873NB,/experiment/tangram_B.png,speaker,2,one arm in front another one behind
+n,,n,n,n,n,on top of two isosceles triangles,TRUE,330,HneJtaCiAJZ3wSMtR,8,0,8,4,96z2BzXdGDNpPhG46,/experiment/tangram_B.png,speaker,3,A diamond is on top of two isosceles triangles. The triangle on the left has a body with a small triangle on the bottom left.
+n,,n,n,y,n,on the left,TRUE,330,HneJtaCiAJZ3wSMtR,8,0,8,4,96z2BzXdGDNpPhG46,/experiment/tangram_B.png,speaker,3,A diamond is on top of two isosceles triangles. The triangle on the left has a body with a small triangle on the bottom left.
+n,,n,n,y,n,with a small triangle on the bottom left,TRUE,330,HneJtaCiAJZ3wSMtR,8,0,8,4,96z2BzXdGDNpPhG46,/experiment/tangram_B.png,speaker,3,A diamond is on top of two isosceles triangles. The triangle on the left has a body with a small triangle on the bottom left.
+n,,n,y,y,n,diamond on top,TRUE,331,HneJtaCiAJZ3wSMtR,11,1,23,4,zfkDAvY8mpzxyfDYN,/experiment/tangram_B.png,speaker,3,"diamond on top, main body looks like an angel kneeling to the right, with two triangular shapes just under the diamond representing wings"
+y,,y,n,y,y,main body looks like an angel kneeling to the right,TRUE,331,HneJtaCiAJZ3wSMtR,11,1,23,4,zfkDAvY8mpzxyfDYN,/experiment/tangram_B.png,speaker,3,"diamond on top, main body looks like an angel kneeling to the right, with two triangular shapes just under the diamond representing wings"
+y,,n,y,n,n,two triangular shapes just under the diamond representing wings,TRUE,331,HneJtaCiAJZ3wSMtR,11,1,23,4,zfkDAvY8mpzxyfDYN,/experiment/tangram_B.png,speaker,3,"diamond on top, main body looks like an angel kneeling to the right, with two triangular shapes just under the diamond representing wings"
+n,,n,y,n,n,small triangle,TRUE,332,HneJtaCiAJZ3wSMtR,11,1,23,4,zfkDAvY8mpzxyfDYN,/experiment/tangram_B.png,speaker,3,small triangle bottom left representing feet
+n,,n,n,y,n,bottom left,TRUE,332,HneJtaCiAJZ3wSMtR,11,1,23,4,zfkDAvY8mpzxyfDYN,/experiment/tangram_B.png,speaker,3,small triangle bottom left representing feet
+n,,y,n,n,n,representing feet,TRUE,332,HneJtaCiAJZ3wSMtR,11,1,23,4,zfkDAvY8mpzxyfDYN,/experiment/tangram_B.png,speaker,3,small triangle bottom left representing feet
+y,,n,n,n,n,an angel type figure,TRUE,333,HneJtaCiAJZ3wSMtR,7,2,31,4,BwTwfm8jxWQwjoghp,/experiment/tangram_B.png,speaker,3,Looks like an angel type figure with triangle hanging to left.
+n,,n,y,y,n,triangle hanging to left,TRUE,333,HneJtaCiAJZ3wSMtR,7,2,31,4,BwTwfm8jxWQwjoghp,/experiment/tangram_B.png,speaker,3,Looks like an angel type figure with triangle hanging to left.
+n,,n,n,y,n,hanging to right,TRUE,334,HneJtaCiAJZ3wSMtR,7,2,31,4,BwTwfm8jxWQwjoghp,/experiment/tangram_B.png,speaker,3,Correction hanging to right.
+y,,n,n,y,y,dog sat down looking left,TRUE,335,HneJtaCiAJZ3wSMtR,10,3,46,4,Bi3FCtgbeStyivGCw,/experiment/tangram_B.png,speaker,2,"Looks like a dog sat down looking left, pointy nose, ears made up on a diamond and triangle, little triangle bottom left looks like a paw"
+n,,y,n,n,n,pointy nose,TRUE,335,HneJtaCiAJZ3wSMtR,10,3,46,4,Bi3FCtgbeStyivGCw,/experiment/tangram_B.png,speaker,2,"Looks like a dog sat down looking left, pointy nose, ears made up on a diamond and triangle, little triangle bottom left looks like a paw"
+n,,y,y,n,n,ears made up on a diamond and triangle,TRUE,335,HneJtaCiAJZ3wSMtR,10,3,46,4,Bi3FCtgbeStyivGCw,/experiment/tangram_B.png,speaker,2,"Looks like a dog sat down looking left, pointy nose, ears made up on a diamond and triangle, little triangle bottom left looks like a paw"
+y,,n,y,y,n,little triangle bottom left looks like a paw,TRUE,335,HneJtaCiAJZ3wSMtR,10,3,46,4,Bi3FCtgbeStyivGCw,/experiment/tangram_B.png,speaker,2,"Looks like a dog sat down looking left, pointy nose, ears made up on a diamond and triangle, little triangle bottom left looks like a paw"
+n,,n,y,y,n,diamond and triangle on the right tilted,TRUE,336,HneJtaCiAJZ3wSMtR,10,3,46,4,Bi3FCtgbeStyivGCw,/experiment/tangram_B.png,speaker,2,diamond and triangle on the right tilted
+n,,n,y,y,n,The diamond on top with triangles on left / right,TRUE,337,HneJtaCiAJZ3wSMtR,8,4,56,4,96z2BzXdGDNpPhG46,/experiment/tangram_B.png,speaker,3,The diamond on top with triangles on left / right. The angel looking one
+y,,n,n,n,n,The angel looking one,TRUE,337,HneJtaCiAJZ3wSMtR,8,4,56,4,96z2BzXdGDNpPhG46,/experiment/tangram_B.png,speaker,3,The diamond on top with triangles on left / right. The angel looking one
+n,,n,y,y,n,diamond on top,TRUE,338,HneJtaCiAJZ3wSMtR,4,5,64,4,zfkDAvY8mpzxyfDYN,/experiment/tangram_B.png,speaker,3,"diamond on top, like an angel kneeling, wings under the diamond head representing by triangles. facing to the right"
+y,,n,n,n,y,like an angel kneeling,TRUE,338,HneJtaCiAJZ3wSMtR,4,5,64,4,zfkDAvY8mpzxyfDYN,/experiment/tangram_B.png,speaker,3,"diamond on top, like an angel kneeling, wings under the diamond head representing by triangles. facing to the right"
+y,,n,y,y,n,wings under the diamond,TRUE,338,HneJtaCiAJZ3wSMtR,4,5,64,4,zfkDAvY8mpzxyfDYN,/experiment/tangram_B.png,speaker,3,"diamond on top, like an angel kneeling, wings under the diamond head representing by triangles. facing to the right"
+n,,y,y,n,n,head representing by triangles,TRUE,338,HneJtaCiAJZ3wSMtR,4,5,64,4,zfkDAvY8mpzxyfDYN,/experiment/tangram_B.png,speaker,3,"diamond on top, like an angel kneeling, wings under the diamond head representing by triangles. facing to the right"
+n,,n,n,y,n,facing to the right,TRUE,338,HneJtaCiAJZ3wSMtR,4,5,64,4,zfkDAvY8mpzxyfDYN,/experiment/tangram_B.png,speaker,3,"diamond on top, like an angel kneeling, wings under the diamond head representing by triangles. facing to the right"
+n,,n,n,n,n,Sitting facing forward,TRUE,339,yYtSpzsEi4mnTuPrj,2,0,2,4,jEJ4n5fT9uRd4QYkA,/experiment/tangram_B.png,speaker,3,Hard to describe. Sitting facing forward with triangles going <^>
+n,,n,y,n,n,triangles going <^>,TRUE,339,yYtSpzsEi4mnTuPrj,2,0,2,4,jEJ4n5fT9uRd4QYkA,/experiment/tangram_B.png,speaker,3,Hard to describe. Sitting facing forward with triangles going <^>
+n,,n,y,y,n,triangle on the bottom left,TRUE,340,yYtSpzsEi4mnTuPrj,2,0,2,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,listener,3,Is there a triangle on the bottom left
+n,,y,n,n,y,someone sitting on their knees,TRUE,341,yYtSpzsEi4mnTuPrj,2,0,2,4,hY28gtQhhvyFvpihB,/experiment/tangram_B.png,listener,3,looks like someone sitting on their knees
+n,,n,n,y,n,towards top of image,TRUE,342,yYtSpzsEi4mnTuPrj,2,0,2,4,jEJ4n5fT9uRd4QYkA,/experiment/tangram_B.png,speaker,3,<^> towards top of image.
+n,,n,y,y,n,Squared off a bit on the right,FALSE,343,yYtSpzsEi4mnTuPrj,2,0,2,4,jEJ4n5fT9uRd4QYkA,/experiment/tangram_B.png,speaker,3,Squared off a bit on the right
+n,,n,n,n,y,a person kneeling,TRUE,344,yYtSpzsEi4mnTuPrj,8,1,20,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,speaker,3,"Tough one, looks like a person kneeling, arms out on either side and head looking to the right"
+n,,y,n,n,n,arms out on either side,TRUE,344,yYtSpzsEi4mnTuPrj,8,1,20,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,speaker,3,"Tough one, looks like a person kneeling, arms out on either side and head looking to the right"
+n,,y,n,y,n,head looking to the right,TRUE,344,yYtSpzsEi4mnTuPrj,8,1,20,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,speaker,3,"Tough one, looks like a person kneeling, arms out on either side and head looking to the right"
+n,,n,y,n,n,Small triangle on the bottom left,TRUE,345,yYtSpzsEi4mnTuPrj,8,1,20,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,speaker,3,Small triangle on the bottom left
+n,,y,n,y,n,Head is a bit to the right,TRUE,346,yYtSpzsEi4mnTuPrj,8,1,20,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,speaker,3,Head is a bit to the right and there's a small triangle on the bottom left that looks like a foot
+n,,n,y,n,n,small triangle on the bottom left,TRUE,346,yYtSpzsEi4mnTuPrj,8,1,20,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,speaker,3,Head is a bit to the right and there's a small triangle on the bottom left that looks like a foot
+n,,y,n,n,n,looks like a foot,TRUE,346,yYtSpzsEi4mnTuPrj,8,1,20,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,speaker,3,Head is a bit to the right and there's a small triangle on the bottom left that looks like a foot
+n,,n,n,y,n,looking to the left,TRUE,347,yYtSpzsEi4mnTuPrj,8,1,20,4,hY28gtQhhvyFvpihB,/experiment/tangram_B.png,listener,3,looks like it's looking to the left on his knees with a foot behind it
+n,,y,n,n,n,on his knees,TRUE,347,yYtSpzsEi4mnTuPrj,8,1,20,4,hY28gtQhhvyFvpihB,/experiment/tangram_B.png,listener,3,looks like it's looking to the left on his knees with a foot behind it
+n,,y,n,n,n,with a foot behind it,TRUE,347,yYtSpzsEi4mnTuPrj,8,1,20,4,hY28gtQhhvyFvpihB,/experiment/tangram_B.png,listener,3,looks like it's looking to the left on his knees with a foot behind it
+n,,n,n,n,y,kneeling,TRUE,348,yYtSpzsEi4mnTuPrj,8,1,20,4,jEJ4n5fT9uRd4QYkA,/experiment/tangram_B.png,listener,3,"< ^ > kneeling, foot out right"
+n,,y,n,y,n,foot out right,TRUE,348,yYtSpzsEi4mnTuPrj,8,1,20,4,jEJ4n5fT9uRd4QYkA,/experiment/tangram_B.png,listener,3,"< ^ > kneeling, foot out right"
+n,,n,n,y,n,looking to the right,TRUE,349,yYtSpzsEi4mnTuPrj,8,1,20,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,speaker,3,I would say he's looking to the right
+n,,y,n,y,n,Foot in left,TRUE,350,yYtSpzsEi4mnTuPrj,8,1,20,4,jEJ4n5fT9uRd4QYkA,/experiment/tangram_B.png,listener,3,"Foot in left I mean, got it"
+n,,n,y,n,n,weird shape,TRUE,351,yYtSpzsEi4mnTuPrj,9,2,33,4,AsnekdTpMSmufQLkR,/experiment/tangram_B.png,speaker,2,"It's another weird shape. The one with three triangles <^>, and a small triangle on the bottom left."
+n,,n,y,n,n,three triangles,TRUE,351,yYtSpzsEi4mnTuPrj,9,2,33,4,AsnekdTpMSmufQLkR,/experiment/tangram_B.png,speaker,2,"It's another weird shape. The one with three triangles <^>, and a small triangle on the bottom left."
+n,,n,y,n,n,small triangle,TRUE,351,yYtSpzsEi4mnTuPrj,9,2,33,4,AsnekdTpMSmufQLkR,/experiment/tangram_B.png,speaker,2,"It's another weird shape. The one with three triangles <^>, and a small triangle on the bottom left."
+n,,n,n,y,n,bottom left,TRUE,351,yYtSpzsEi4mnTuPrj,9,2,33,4,AsnekdTpMSmufQLkR,/experiment/tangram_B.png,speaker,2,"It's another weird shape. The one with three triangles <^>, and a small triangle on the bottom left."
+n,,n,y,n,n,small triangle,TRUE,352,yYtSpzsEi4mnTuPrj,9,2,33,4,jEJ4n5fT9uRd4QYkA,/experiment/tangram_B.png,listener,2,Oh the small triangle on the left that looks like a foot
+n,,n,n,y,n,on the left,TRUE,352,yYtSpzsEi4mnTuPrj,9,2,33,4,jEJ4n5fT9uRd4QYkA,/experiment/tangram_B.png,listener,2,Oh the small triangle on the left that looks like a foot
+n,,y,n,n,n,looks like a foot,TRUE,352,yYtSpzsEi4mnTuPrj,9,2,33,4,jEJ4n5fT9uRd4QYkA,/experiment/tangram_B.png,listener,2,Oh the small triangle on the left that looks like a foot
+n,,y,n,y,y,kneeling with foot out to the left,TRUE,353,yYtSpzsEi4mnTuPrj,0,3,36,4,hY28gtQhhvyFvpihB,/experiment/tangram_B.png,speaker,1,kneeling with foot out to the left
+n,,n,n,y,n,facing the right,TRUE,354,yYtSpzsEi4mnTuPrj,0,3,36,4,AsnekdTpMSmufQLkR,/experiment/tangram_B.png,listener,1,He's facing the right? Diamond back?
+n,,y,y,n,n,Diamond back,TRUE,354,yYtSpzsEi4mnTuPrj,0,3,36,4,AsnekdTpMSmufQLkR,/experiment/tangram_B.png,listener,1,He's facing the right? Diamond back?
+n,,y,n,y,n,Arms out to the right,TRUE,355,yYtSpzsEi4mnTuPrj,0,3,36,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,listener,1,Arms out to the right?
+n,,y,n,y,n,foot on the left,TRUE,356,yYtSpzsEi4mnTuPrj,7,4,55,4,jEJ4n5fT9uRd4QYkA,/experiment/tangram_B.png,speaker,3,The other hard one with the foot on the left
+n,,,,,n,,NA,357,yYtSpzsEi4mnTuPrj,7,4,55,4,jEJ4n5fT9uRd4QYkA,/experiment/tangram_B.png,speaker,3,< ^ >
+n,,n,n,n,y,Weird kneeling one,TRUE,358,yYtSpzsEi4mnTuPrj,9,5,69,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,speaker,3,"Weird kneeling one, small foot on left"
+n,,y,n,y,n,small foot on left,TRUE,358,yYtSpzsEi4mnTuPrj,9,5,69,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,speaker,3,"Weird kneeling one, small foot on left"
+,,,,,,,NA,359,yYtSpzsEi4mnTuPrj,9,5,69,4,Za93y7uusM9q8x2fY,/experiment/tangram_B.png,speaker,3,<^> one
+n,,y,n,y,n,foot on the left,TRUE,360,hhTtzgf2BMCbDwG5i,10,0,10,4,DdGLXDbFtj5DMqy6C,/experiment/tangram_B.png,speaker,2,"i don't know what this one is...foot on the left, and there's a triangle coming off the head on the right side"
+n,,y,y,n,n,triangle coming off the head,TRUE,360,hhTtzgf2BMCbDwG5i,10,0,10,4,DdGLXDbFtj5DMqy6C,/experiment/tangram_B.png,speaker,2,"i don't know what this one is...foot on the left, and there's a triangle coming off the head on the right side"
+n,,n,n,y,n,on the right side,TRUE,360,hhTtzgf2BMCbDwG5i,10,0,10,4,DdGLXDbFtj5DMqy6C,/experiment/tangram_B.png,speaker,2,"i don't know what this one is...foot on the left, and there's a triangle coming off the head on the right side"
+n,,y,n,y,n,one hand on the left,TRUE,361,hhTtzgf2BMCbDwG5i,10,0,10,4,DdGLXDbFtj5DMqy6C,/experiment/tangram_B.png,speaker,2,i guess one hand on the left
+n,,n,n,y,n,lifted on the right side,TRUE,362,hhTtzgf2BMCbDwG5i,10,0,10,4,4ou5aRsXYjJ6b4e7A,/experiment/tangram_B.png,listener,2,is the foot lifted on the right side?
+n,,y,n,y,n,not really a right foot visible,TRUE,363,hhTtzgf2BMCbDwG5i,10,0,10,4,DdGLXDbFtj5DMqy6C,/experiment/tangram_B.png,speaker,2,there's not really a right foot visible
+n,,y,n,n,n,arm up by the head,TRUE,364,hhTtzgf2BMCbDwG5i,10,0,10,4,DdGLXDbFtj5DMqy6C,/experiment/tangram_B.png,speaker,2,i'm not sure if that's the arm up by the head
+n,,y,y,y,n,a triangle beneath the head,TRUE,365,hhTtzgf2BMCbDwG5i,10,0,10,4,CYJgWvH9gDvTupk6Y,/experiment/tangram_B.png,listener,2,Does it look like there is a triangle beneath the head on both the left and the right?
+n,,n,n,y,n,on both the left and the right,TRUE,365,hhTtzgf2BMCbDwG5i,10,0,10,4,CYJgWvH9gDvTupk6Y,/experiment/tangram_B.png,listener,2,Does it look like there is a triangle beneath the head on both the left and the right?
+n,,y,n,y,n,hand to the left,TRUE,366,hhTtzgf2BMCbDwG5i,10,0,10,4,Bsi92GnvwSEqfAZxN,/experiment/tangram_B.png,listener,2,hand to the left diamond on the top triangle to the right
+n,,n,y,y,n,diamond on the top,TRUE,366,hhTtzgf2BMCbDwG5i,10,0,10,4,Bsi92GnvwSEqfAZxN,/experiment/tangram_B.png,listener,2,hand to the left diamond on the top triangle to the right
+n,,n,y,y,n,triangle to the right,TRUE,366,hhTtzgf2BMCbDwG5i,10,0,10,4,Bsi92GnvwSEqfAZxN,/experiment/tangram_B.png,listener,2,hand to the left diamond on the top triangle to the right
+n,,n,n,n,n,off center slightly,TRUE,367,hhTtzgf2BMCbDwG5i,9,1,21,4,CYJgWvH9gDvTupk6Y,/experiment/tangram_B.png,speaker,2,Awkward one this. Head is off center slightly...
+n,,y,n,y,n,Foot/leg sticking out at the left,TRUE,368,hhTtzgf2BMCbDwG5i,9,1,21,4,CYJgWvH9gDvTupk6Y,/experiment/tangram_B.png,speaker,2,Foot/leg sticking out at the left
+n,,y,y,y,n,two triangles below the head,TRUE,369,hhTtzgf2BMCbDwG5i,9,1,21,4,CYJgWvH9gDvTupk6Y,/experiment/tangram_B.png,speaker,2,two triangles below the head.
+n,,n,n,n,y,kneeling,TRUE,370,hhTtzgf2BMCbDwG5i,9,1,21,4,CYJgWvH9gDvTupk6Y,/experiment/tangram_B.png,speaker,2,Maybe kneeling
+n,,y,n,n,y,kneeling with arms stretched out,TRUE,371,hhTtzgf2BMCbDwG5i,6,2,30,4,4ou5aRsXYjJ6b4e7A,/experiment/tangram_B.png,speaker,1,kneeling with arms stretched out
+n,,n,n,y,n,facing left,TRUE,372,hhTtzgf2BMCbDwG5i,6,2,30,4,4ou5aRsXYjJ6b4e7A,/experiment/tangram_B.png,speaker,1,facing left
+n,,y,n,y,n,the foot on the left,TRUE,373,hhTtzgf2BMCbDwG5i,6,2,30,4,4ou5aRsXYjJ6b4e7A,/experiment/tangram_B.png,speaker,1,can see the foot on the left
+n,,y,n,y,n,the arm is on the left,TRUE,374,hhTtzgf2BMCbDwG5i,6,3,42,4,Bsi92GnvwSEqfAZxN,/experiment/tangram_B.png,speaker,3,the arm is on the left with the head on top and the triangle on the right
+n,,y,n,y,n,with the head on top,TRUE,374,hhTtzgf2BMCbDwG5i,6,3,42,4,Bsi92GnvwSEqfAZxN,/experiment/tangram_B.png,speaker,3,the arm is on the left with the head on top and the triangle on the right
+n,,n,y,y,n,the triangle on the right,FALSE,374,hhTtzgf2BMCbDwG5i,6,3,42,4,Bsi92GnvwSEqfAZxN,/experiment/tangram_B.png,speaker,3,the arm is on the left with the head on top and the triangle on the right
+y,,n,n,n,n,the awkward one,TRUE,375,hhTtzgf2BMCbDwG5i,9,4,57,4,DdGLXDbFtj5DMqy6C,/experiment/tangram_B.png,speaker,3,"the awkward one, head off center, leg on the left, arm on the left"
+n,,y,n,n,n,head off center,TRUE,375,hhTtzgf2BMCbDwG5i,9,4,57,4,DdGLXDbFtj5DMqy6C,/experiment/tangram_B.png,speaker,3,"the awkward one, head off center, leg on the left, arm on the left"
+n,,y,n,y,n,leg on the left,TRUE,375,hhTtzgf2BMCbDwG5i,9,4,57,4,DdGLXDbFtj5DMqy6C,/experiment/tangram_B.png,speaker,3,"the awkward one, head off center, leg on the left, arm on the left"
+n,,y,n,y,n,arm on the left,TRUE,375,hhTtzgf2BMCbDwG5i,9,4,57,4,DdGLXDbFtj5DMqy6C,/experiment/tangram_B.png,speaker,3,"the awkward one, head off center, leg on the left, arm on the left"
+n,,n,y,y,n,triangle on the right,TRUE,376,hhTtzgf2BMCbDwG5i,9,4,57,4,DdGLXDbFtj5DMqy6C,/experiment/tangram_B.png,speaker,3,triangle on the right
+y,,n,n,n,n,Awkward guy,TRUE,377,hhTtzgf2BMCbDwG5i,4,5,64,4,CYJgWvH9gDvTupk6Y,/experiment/tangram_B.png,speaker,2,Awkward guy. Head off center.
+n,,y,n,n,n,Head off center,TRUE,377,hhTtzgf2BMCbDwG5i,4,5,64,4,CYJgWvH9gDvTupk6Y,/experiment/tangram_B.png,speaker,2,Awkward guy. Head off center.
+n,,n,n,y,n,facing right,TRUE,378,hYBwiiFBSBi9ySwpJ,7,0,7,4,vvrB7yWYcj3xJt8SA,/experiment/tangram_B.png,speaker,2,Picture looks like its facing right. Looks like it is kneeling. And there's a triangle attached to the square
+n,,n,n,n,y,kneeling,TRUE,378,hYBwiiFBSBi9ySwpJ,7,0,7,4,vvrB7yWYcj3xJt8SA,/experiment/tangram_B.png,speaker,2,Picture looks like its facing right. Looks like it is kneeling. And there's a triangle attached to the square
+n,,n,y,y,n,a triangle attached to the square,TRUE,378,hYBwiiFBSBi9ySwpJ,7,0,7,4,vvrB7yWYcj3xJt8SA,/experiment/tangram_B.png,speaker,2,Picture looks like its facing right. Looks like it is kneeling. And there's a triangle attached to the square
+n,,n,n,y,n,facing left,TRUE,379,hYBwiiFBSBi9ySwpJ,4,1,16,4,tnNKrEsyuarajKSEw,/experiment/tangram_B.png,speaker,1,"facing left, sitting down w hands out left"
+n,,y,n,y,n,sitting down w hands out left,TRUE,379,hYBwiiFBSBi9ySwpJ,4,1,16,4,tnNKrEsyuarajKSEw,/experiment/tangram_B.png,speaker,1,"facing left, sitting down w hands out left"
+n,,n,y,n,n,triangle on square,TRUE,380,hYBwiiFBSBi9ySwpJ,4,1,16,4,tnNKrEsyuarajKSEw,/experiment/tangram_B.png,speaker,1,and triangle on square
+n,,n,y,y,n,diamond on top,TRUE,381,hYBwiiFBSBi9ySwpJ,6,2,30,4,qyMp5qBwkSWmzxaEE,/experiment/tangram_B.png,speaker,3,"diamond on top, triangle attached to diamond on the right"
+n,,n,y,y,n,triangle attached to diamond on the right,TRUE,381,hYBwiiFBSBi9ySwpJ,6,2,30,4,qyMp5qBwkSWmzxaEE,/experiment/tangram_B.png,speaker,3,"diamond on top, triangle attached to diamond on the right"
+n,,n,n,y,n,facing right,TRUE,382,hYBwiiFBSBi9ySwpJ,7,3,43,4,NTR9zfw5KYayy9sT5,/experiment/tangram_B.png,speaker,2,"facing right, kneeling throwing up a triangle"
+n,,n,n,n,y,kneeling,TRUE,382,hYBwiiFBSBi9ySwpJ,7,3,43,4,NTR9zfw5KYayy9sT5,/experiment/tangram_B.png,speaker,2,"facing right, kneeling throwing up a triangle"
+y,,n,y,n,n,throwing up a triangle,TRUE,382,hYBwiiFBSBi9ySwpJ,7,3,43,4,NTR9zfw5KYayy9sT5,/experiment/tangram_B.png,speaker,2,"facing right, kneeling throwing up a triangle"
+n,,n,n,y,n,facing right,TRUE,383,hYBwiiFBSBi9ySwpJ,3,4,51,4,vvrB7yWYcj3xJt8SA,/experiment/tangram_B.png,speaker,3,"facing right, kneeling and vomiting a triangle"
+y,,n,y,n,y,kneeling and vomiting a triangle,TRUE,383,hYBwiiFBSBi9ySwpJ,3,4,51,4,vvrB7yWYcj3xJt8SA,/experiment/tangram_B.png,speaker,3,"facing right, kneeling and vomiting a triangle"
+n,,n,n,y,y,seated facing left,TRUE,384,hYBwiiFBSBi9ySwpJ,5,5,65,4,tnNKrEsyuarajKSEw,/experiment/tangram_B.png,speaker,1,seated facing left with triangle on the head
+n,,y,y,n,n,with triangle on the head,TRUE,384,hYBwiiFBSBi9ySwpJ,5,5,65,4,tnNKrEsyuarajKSEw,/experiment/tangram_B.png,speaker,1,seated facing left with triangle on the head
