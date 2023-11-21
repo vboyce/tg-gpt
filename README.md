@@ -2,19 +2,10 @@
 
 # Next steps:
 
-Reorg the repo!; write a new set of clean scripts!
+write a new set of clean scripts! (or for now not fully scripted by parts of new_approach.Rmd)
 
-* write chunk testing that will flag disagreements
-
-* ++ consider adding a check to get back missing abstractions? -- concatenate output & worddiff against original? 
-
-post-chunk cleanup:
-* consider adding a filter for double space issues
-* deal with NAs after chunking
-* normalize capitals? all lower case? also maybe just get rid of apostrophes and replace dashes and slashes with spaces? 
-
-
-Check everything that was a y at least once -- solidify codes
+-- combine post-tagging
+-- currently waiting on tagging to run!
 
 * pick initial tagging schema
 
@@ -67,29 +58,21 @@ What are analyses we'd want? (TODO implement)
 * Lemmatize and compare for dropout?
 * Dependency parse? 
 
-# Data/test (out of date)
+# New world order of file org
 
-* sample = unchunked
+## Code 
+R code and py code
 
-* outsample_gpt4 = chunked by gpt4
-* outsample_gpt3 = chunked by gpt3
-* outsample3_labelled = chunked by gpt3, graded by how good/bad the chunks were
-* outsample_V = chunked by V ("gold" standard) 
+## Raw_chats
+Input from other tg projects
 
-* sample_to_tag = auto chunked by gpt3 (=outsample_gpt3), no tags 
-* tagged_by_hand = auto chunked, hand tagged
-* outsample_tag1 = auto chunked, auto tagged (no examples, gpt3)
+## Data/test
+while we're doing testing on 4p, this is where things are
+folders indicate the workflow
+* metrics is for doing comparision between by_V_compare and model output
+* pre-chunk is to get processed by chunk.ipynb
+* post-chunk is produced by chunk.ipynb, then processed for hand abstract tagging/fixing
+* after hand fixing and tagging abstract is in post_abstract
+* after auto tagging, is in post_tag (where it will be ready for further processing/models)
 
 
-# Other files
-
-Non-obselete:
-* chunk.ipynb
-* tagging_utils.py (?)
-* tagging.ipynb
-
-Obselete:
-* clean_text.Rmd
-* try1.ipynb
-* post/
-* final/

@@ -26,410 +26,242 @@ ParseJSONColumn <- function(x) {
     fromJSON(flatten = T)
 }
 
+pre_chunk_loc <- "data/test/pre_chunk"
 
+post_chunk_loc <- "data/test/post_chunk"
+pre_sub_loc <- "data/test/pre_sub"
+
+post_sub_loc <- "data/test/post_sub"
+pre_fix_loc <- "data/test/pre_fix_chunk"
+
+post_fix_loc <- "data/test/post_fix_chunk"
+pre_abstract_loc <- "data/test/pre_abstract"
+
+post_abstract_loc <- "data/test/post_abstract"
+pre_tag_loc <- "data/test/pre_tag"
+
+post_tag_loc <- "data/test/post_tag"
+done_loc <- "data/test/done"
+
+# I think the theory here is that R can write into pre_ files but not post_ files
 ```
-# New approach
 
-## Take filtered chat sample & pre-do it
+
+# Pre-chunking
+
+TODO for spellchecked column, remove double spaces before running for future
+
 ```{r}
 
-raw <- read_csv(here("raw_chats/rotate_filtered_chat.csv")) |> filter(numPlayers==4) |> filter(!is.chitchat) |> filter(!is.na(spellchecked)) |>  filter(target=="/experiment/tangram_A.png") |> select(gameId, targetNum, repNum, trialNum, numPlayers, playerId, target, role, countCorrect, spellchecked)
-  
-raw |> select(text=spellchecked) |> write_csv(here("data/test/sample.csv"))
+raw_all <- read_csv(here("raw_chats/rotate_filtered_chat.csv")) |> filter(numPlayers==4) |> filter(!is.chitchat) |> filter(!is.na(spellchecked)) |>  select(gameId, targetNum, repNum, trialNum, numPlayers, playerId, target, role, countCorrect, spellchecked) |> mutate(row_id=row_number())
 
-raw_2 <- read_csv(here("raw_chats/rotate_filtered_chat.csv")) |> filter(numPlayers==4) |> filter(!is.chitchat) |> filter(!is.na(spellchecked)) |>  filter(target=="/experiment/tangram_B.png") |> select(gameId, targetNum, repNum, trialNum, numPlayers, playerId, target, role, countCorrect, spellchecked) 
-  
-raw_2 |> select(text=spellchecked) |> write_csv(here("data/test/sample_2.csv"))
-
-raw_3 <- read_csv(here("raw_chats/rotate_filtered_chat.csv")) |> filter(numPlayers==4) |> filter(!is.chitchat) |> filter(!is.na(spellchecked)) |>  filter(target=="/experiment/tangram_C.png") |> select(gameId, targetNum, repNum, trialNum, numPlayers, playerId, target, role, countCorrect, spellchecked) 
-  
-raw_3 |> select(text=spellchecked) |> write_csv(here("data/test/sample_3.csv"))
-
-raw_all <- read_csv(here("raw_chats/rotate_filtered_chat.csv")) |> filter(numPlayers==4) |> filter(!is.chitchat) |> filter(!is.na(spellchecked)) |>  select(gameId, targetNum, repNum, trialNum, numPlayers, playerId, target, role, countCorrect, spellchecked)
-
-raw_all |> select(text=spellchecked) |> write_csv(here("data/test/sample_all_4p.csv"))
+raw_all |> select(text=spellchecked) |> write_csv(here(pre_chunk_loc,"sample_all_4p.csv"))
 ```
+# Run chunk script
 
-## Post gpt
+# Post chunk stuff
 ```{r}
 
 fix_thing <- function(text){
   unlist(strsplit(gsub("[\\[\\]']", "", text, perl = TRUE), ", "))
 }
 
-read_data <- function(file){
- read_csv(here(file)) |> mutate(gpt_out = map (gpt_out, .f=fix_thing)) |> unnest(gpt_out) |> mutate(is_substring=str_detect(text, fixed(gpt_out, ignore_case=T )))
+read_data <- function(file, raw){
+ dat <- read_csv(here(post_chunk_loc,file)) |> 
+    bind_cols(raw)
+ test_that("file and raw don't line up",{expect_equal(dat$text,dat$spellchecked)})
+ 
+ dat <- dat |> 
+    mutate(gpt_out = map (gpt_out, .f=fix_thing)) |> 
+    unnest(gpt_out, keep_empty = T) |> 
+    mutate(text=str_replace_all(text, "  ", " ")) |> mutate(is_substring=str_detect(text, fixed(gpt_out, ignore_case=T ))) 
+ 
+ dat |> select(text, chunk=gpt_out, row_id,
+               gameId, targetNum, trialNum, numPlayers,
+               playerId, target, role, is_substring) |> write_csv(here(pre_sub_loc,file))
 }
 
+check_substrings <- function(dat){
+dat |> filter(!is_substring) |> View()
+}
 
-```
-
-```{r}
-post <- read_csv(here("data/test/chunked_sample_2.csv")) |> bind_cols(raw_2) |> mutate(gpt_out=map(gpt_out, .f=fix_thing)) |> unnest(gpt_out, keep_empty = T) |> 
-mutate(is_substring=str_detect(text, fixed(gpt_out, ignore_case=T ))) |> select(text, gpt_out, is_substring, everything())
-
-post |> filter(!is_substring) |> View()
-
-
-post_label <- post |> group_by(`...1`, text, role) |> #summarize(gpt_out=str_flatten(gpt_out, collapse=" \n\n")) |>
-  write_csv(here("data/test/post_sample_2.csv"))
-```
-
-```{r}
-post <- read_csv(here("data/test/outsample_gpt3.csv")) |> bind_cols(raw) |> mutate(gpt_out=map(gpt_out, .f=fix_thing)) |> unnest(gpt_out, keep_empty = T) |> 
-mutate(is_substring=str_detect(text, fixed(gpt_out, ignore_case=T ))) |> select(text, gpt_out, is_substring, everything()) |> filter(!is_substring) |> View()
-
-
-post_label <- post |> group_by(`...1`, text, role) |> summarize(gpt_out=str_flatten(gpt_out, collapse=" \n\n")) |> write_csv(here("data/test/outsample3_prelabel.csv"))
-```
-
-Everything that wasn't a substring was b/c of weirdnesses around punctuation (on both sides) --> might want to run a spellcheck or handcheck on those (8 out of 278 items / 416 descriptions)
-
-```{r}
-read_csv(here("data/test/outsample3_labelled.csv")) |> group_by(`Parsing grade`) |> tally()
-
-nrow(post_label)
-
-```
-
-
-
-```{r}
-
-nrow(post)
-post |> filter(is.na(is_substring)) |> nrow() # 16 blanks, 10 of which *should* have been labelled (and others should have been tagged by spell check) 
-post |> filter(!is_substring) |> nrow() # 8 although they weren't bad
-
-```
-
-Ungenerously, 224 / 258 were adequate (87 %) 
-Generously,  244 / 258 were adequate (94 %) 
-
-Also missed 10 things that it labelled as blank and shouldn't and 6 were acceptable. So maybe between 84% and 92% acceptable 
-
-Real question is how useful it is down the road
-
-
-
-# Number of chunks over time 
-
-* not dealing with 0s in a reasonable way! 
-
-```{r}
-
-post |> group_by(gameId, repNum, role) |> tally() |> ggplot(aes(x=repNum, y=n))+geom_smooth(method="glm")+geom_jitter(width=0.2, height=.2)+facet_grid(.~role)
-```
-# Length of chunks over time 
-
-* these haven't been cleaned up so this may be pretty unreliable
-
-```{r}
-
-post |> mutate(words=str_count(gpt_out, "\\S+")) |> group_by(gameId, repNum, role) |> ggplot(aes(x=repNum, y=words))+geom_smooth(method="glm")+geom_jitter(width=0.2, height=.2)+facet_grid(.~role)+coord_cartesian(ylim=c(0,15))
-
-post |> mutate(words=str_count(gpt_out, "\\S+")) |> group_by(gameId, repNum, role) |> summarize(words=sum(words)) |> ggplot(aes(x=repNum, y=words))+geom_smooth(method="glm", formula=y~poly(x,3))+geom_jitter(width=0.2, height=.2)+facet_grid(.~role)+coord_cartesian(ylim=c(0,50))
-```
-
-looks like both number of chunks and lengths of chunks decrease (although second is not super reliable b/c method needs help). As well as (obvious given the last two) numbers of total words in chunks (which is proxy for referential words) 
-
-# Types of chunks over time 
-
-* will need to figure out a *better* tagging system to get something more sophisticated, but we can work with what we have for now
-
-# Closed class labels
-
-can just label body parts and shapes in a closed class way
-```{r}
-body_parts <- c("head", "arm", "leg", "foot", "feet", "shoulder", "hand", "back", "face", "neck", "body") # might be problems with back
-
-shapes <- c("triangle", "square", "diamond", "trapezoid", "trapezium", "block", "shape" ) # ? "box"
-
-positional <- c("above", "below", "right", "left", "tilt", "up", "down") # might be problems with the polysemy of right? # ? "level with"
-
-zombie <- c("zombie", "bird", "danc", "thrill", "flag", "karate", "crane", "horse", "hippo", "elephant", "angel", "drunk", "rex", "monster", "workman", "bear") # this is just to approximate what gets used 
-# gpt might be better for dealing with polysemy
-```
-
-```{r}
-
-closed_class <- post |> mutate(gpt_out=str_to_lower(gpt_out),
-                                                 has_body =str_detect(gpt_out, paste(body_parts, collapse = "|")),
-                               has_shape = str_detect(gpt_out, paste(shapes, collapse = "|")),
-                               has_position = str_detect(gpt_out, paste(positional, collapse = "|")),
-                               has_holistic = str_detect(gpt_out, paste(zombie, collapse = "|")))
-
+verify_substrings <- function(loc,file){
+  d <- read_csv(here(loc,file)) |> 
+    mutate(is_substring=str_detect(text, fixed(chunk, ignore_case=T ))) |> filter(!is.na(chunk))
+ # test_that("only substrings",{expect_in(d$is_substring, c(T))})
+  d |> filter(!is_substring)
   
+}
+
+do_string <- function(a,b){
+  str_replace(a,coll(b),"*")
+}
+
+#TODO add a row_id somewhere that matches utterance and then use that to keep things in order 
+# it's the summarize that messes with the order!
+diff_text_chunks <- function(file){
+  df <- read_csv(here(post_sub_loc,file)) |> 
+    select(-is_substring) |> 
+    group_by(row_id, across(c(-chunk))) |> 
+    mutate(chunk=str_to_lower(chunk)) |> 
+    summarize(chunks=list(chunk)) |> 
+    mutate(text=str_to_lower(text)) |> 
+    rowwise() |> 
+    mutate(remainder=reduce(chunks, do_string, .init=text)) |> 
+    unnest(chunks, keep_empty=T) |> 
+    group_by(across(c(-chunks))) |>
+    summarize(chunks=str_c(chunks,collapse="  /*/  ")) |> 
+    select(remainder,chunks,text,everything()) |> 
+    write_csv(here(pre_fix_loc,file))
+}
+
+check_na_rows <- function(dat){
+  dat |> filter(is.na(chunk)) |> View()
+}
+
+prep_abstract <- function(file){
+  d <- read_csv(here(post_fix_loc, file)) |> 
+  mutate(chunk=str_split(chunks,coll("/*/"))) |> 
+  select(-chunks, -remainder) |> 
+  unnest(chunk, keep_empty=T) |> 
+  mutate(chunk=trimws(chunk) |> str_replace_all("  ", " "),
+         abstract="",
+         abstract_2="",
+         chunk_id=row_number()) |> 
+    filter(!is.na(chunk)) |> 
+  select(abstract_2, abstract,chunk_id,chunk, everything()) |> 
+  write_csv(here(pre_abstract_loc,file))
+}
+
+prep_tag <- function(file){
+  read_csv(here(post_abstract_loc,file)) |> 
+  filter(!is.na(chunk)) |> 
+  select(-abstract, -abstract_2) |> 
+    mutate(abstract= ifelse(is.na(abstract_final),0,abstract_final)) |> 
+  arrange(chunk_id) |> 
+  select(-text, -abstract_final) |> 
+  write_csv(here(pre_tag_loc, file))
+}
+
+# do_post_tag <- function(file){
+#   read_csv(here(post_tag_loc,file)) |> 
+#   mutate(is_abstract=abstract,
+#          is_body=ifelse(str_detect(body,"not"),0,1),
+#          is_position=ifelse(str_detect(position,"not"),0,1),
+#          is_shape=ifelse(str_detect(shape,"not"), 0,1),
+#          is_posture=ifelse(str_detect(posture,"not"),0,1)) |> 
+#   select(-`...1`, -abstract, -body, -position, -shape, -posture) |> 
+#     write_csv(here(done_loc,file))
+# }
+
+detect_body <- str_c("\\b(face|head|back|shoulder|shoulders",
+                 "|arm|arms|leg|legs|foot|feet|body|knee|knees|",
+                 "toe|toes|hand|hands|body|butt|heel|heels|ear|ears|nose|neck)\\b")
+
+detect_shape <- str_c("squar|triangle|triangular|diamond|shape|
+                      trapez|angle|degree")
+
+detect_position <- str_c("right|left|above|below|under|over|top|bottom|behind|side|beneath")
+
+detect_posture <- str_c("kick|crouch|squat|kneel|knelt|stood|",
+                        "stand|sit|sat|lying|walk|facing|fall|looking")
+
+
+do_tag <- function(file) {
+  read_csv(here(pre_tag_loc,file)) |>   mutate(regex_body=ifelse(str_detect(chunk,detect_body),1,0),
+         regex_shape=ifelse(str_detect(chunk, detect_shape),1,0),
+         regex_position=ifelse(str_detect(chunk, detect_position),1,0),
+         regex_posture=ifelse(str_detect(chunk, detect_posture),1,0)) |> write_csv(here(done_loc, file))}
+
 ```
 
-Note that these labels are hand-listed with regard to the text used, just trying to get a sense of what we could do here if we figuring out automatic labelling. 
+```{r}
+testing <- read_data("4p_all.csv", 
+                     raw_all)
+
+```
+
+## check things that weren't substrings
+should get resolved into a copy of the pre_abstract file
+
+```{r}
+#check_substrings(testing)
+```
+
+## verify only substrings
+
+```{r}
+#verify_substrings(post_sub_loc,"4p_all.csv") |> View()
+```
+## find what wasn't used
+
+```{r}
+# look for lines where nothing was used
+testing <- diff_text_chunks("4p_all.csv")
+```
+
+## prep for abstract
+
+TODO how to do substring verification where it'll show the lines that error!
+
+TODO did we lose the NAs somewhere??
+
+```{r}
+test <- prep_abstract("4p_all.csv")
+
+verify_substrings(pre_abstract_loc,"4p_all.csv")
+
+#test |>  mutate(is_substring=str_detect(text, fixed(chunk, ignore_case=T ))) |> filter(!is.na(chunk)) |> filter(!is_substring)
+
+
+```
+
+## pre tag 
 
 ```{r}
 
-closed_class |> group_by(has_body, has_shape, has_position, has_holistic) |> tally() |> arrange(desc(n))
 
+ test <- prep_tag("4p_all.csv")
 ```
-common types are: body, body+position, holistic, position, (none), body+shape, 
+
+## go run tagging here
+
+or actually maybe the gpt tagging is pretty iffy and we should just doing it closed class?
+
+## post tag
+
+what do we do about the tagging sometimes being bad?
 
 ```{r}
-
-closed_class |> filter(!is.na(gpt_out))|> group_by(has_body, repNum) |> tally() |> ggplot(aes(x=repNum, y=n, color=has_body))+geom_point()+geom_line()+coord_cartesian(ylim=c(0,100))
-
-
-closed_class |> filter(!is.na(gpt_out))|> group_by(has_position, repNum) |> tally() |> ggplot(aes(x=repNum, y=n, color=has_position))+geom_point()+geom_line()+coord_cartesian(ylim=c(0,100))
-
-closed_class |> filter(!is.na(gpt_out))|> group_by(has_shape, repNum) |> tally() |> ggplot(aes(x=repNum, y=n, color=has_shape))+geom_point()+geom_line()+coord_cartesian(ylim=c(0,100))
-
-closed_class |> filter(!is.na(gpt_out))|> group_by(has_holistic, repNum) |> tally() |> ggplot(aes(x=repNum, y=n, color=has_holistic))+geom_point()+geom_line()+coord_cartesian(ylim=c(0,100))
-
-
+do_tag("4p_all.csv")
 ```
-# Try tagging prep 
+
+# pre-sbert
 
 ```{r}
+ a <- read_csv(here(done_loc,"4p_all.csv")) # this on chunk will just work for sbert 
 
-post |> filter(!is.na(gpt_out)) %>% select(gpt_out) |> write_csv(here("data/test/sample_to_tag.csv"))
+a |> group_by(gameId,targetNum, trialNum, numPlayers, playerId, target, role) |> 
+  summarize(across(starts_with("is"),~list(.)),
+            sentence=str_c(chunk, collapse=", ")) |> write_csv(here(done_loc,"4p_all_concat.csv"))
 
 
 ```
 
-# Tagging check!
+# post-sbert
 
 ```{r}
-
-v_codes <- read_csv(here("data/test/tagged_by_hand.csv")) %>% rename_with( ~str_c(.x,"_v"))
-
-llm_codes <- read_csv(here("data/test/outsample_tag1.csv"))
-
-llm_codes %>% select(body) %>% unique()
-llm_codes %>% select(position) %>% unique()
-llm_codes %>% select(shape) %>% unique()
-llm_codes %>% select(abstract) %>% unique()
-
-both <- v_codes %>% bind_cols(llm_codes) %>% select(-`...7`)
-
-both %>% filter(gpt_out_v !=gpt_out)
-
-agreement <- both %>% mutate(across(c(body, position, shape, abstract), ~ifelse(str_detect(.x, "not"), 0,1))) %>% select(-gpt_out) %>% 
-  mutate(body_v_mod=str_c(body_v, "_", body),
-         position_v_mod=str_c(position_v, "_", position),
-         shape_v_mod=str_c(shape_v, "_", shape),
-         abstract_v_mod=str_c(abstract_v, "_", abstract)) 
-
-agreement_table_1 <- agreement %>%   
-  select(body_v_mod, position_v_mod, shape_v_mod,abstract_v_mod) %>% 
-  pivot_longer(everything()) %>% 
-  group_by(name,value) %>% 
-  tally() %>% 
-  pivot_wider(names_from=value, values_from=n) %>% 
-  mutate(pct_match=(`0_0`+`1_1`)/(`0_0`+`0_1`+`1_0`+`1_1`),
-         sens=(`1_1`/(`1_1`+`1_0`)),
-         spec=(`0_0`)/(`0_1`+`0_0`))
-         
-
+library(reticulate)
+np <- import("numpy")
+mat = np$load(here("data/test/post_sbert/4p_all.npy"))
+saveRDS(mat,here("data/test/post_sbert/4p_all.RData"))
+mat = np$load(here("data/test/post_sbert/4p_all_concat.npy"))
+saveRDS(mat,here("data/test/post_sbert/4p_all_concat.RData"))
 
 ```
-
-```{r}
-
-# with examples
-
-v_codes <- read_csv(here("data/test/tagged_by_hand.csv")) %>% rename_with( ~str_c(.x,"_v"))
-
-llm_codes <- read_csv(here("data/test/outsample_examples.csv"))
-
-llm_codes %>% select(body) %>% unique()
-llm_codes %>% select(position) %>% unique()
-llm_codes %>% select(shape) %>% unique()
-llm_codes %>% select(abstract) %>% unique()
-
-both <- v_codes %>% bind_cols(llm_codes) %>% select(-`...7`)
-
-both %>% filter(gpt_out_v !=gpt_out)
-
-agreement <- both %>%
-  mutate(part=ifelse(part!="part", "not part", "part")) %>% #remove this line later!
-  mutate(across(c(body, position, shape, abstract, part), ~ifelse(str_detect(.x, "not"), 0,1))) %>% select(-gpt_out) %>% 
-  mutate(body_v_mod=str_c(body_v, "_", body),
-         position_v_mod=str_c(position_v, "_", position),
-         shape_v_mod=str_c(shape_v, "_", shape),
-         abstract_v_mod=str_c(abstract_v, "_", abstract),
-         part_v_mod=str_c(part_v, "_", part)) 
-
-agreement_table <- agreement %>%   
-  select(body_v_mod, position_v_mod, shape_v_mod,abstract_v_mod, part_v_mod) %>% 
-  pivot_longer(everything()) %>% 
-  group_by(name,value) %>% 
-  tally() %>% 
-  pivot_wider(names_from=value, values_from=n, values_fill=0 ) %>% 
-  mutate(pct_match=(`0_0`+`1_1`)/(`0_0`+`0_1`+`1_0`+`1_1`),
-         sens=(`1_1`/(`1_1`+`1_0`)),
-         spec=(`0_0`)/(`0_1`+`0_0`))
-
-agreement %>% filter(abstract_v_mod %in% c("0_1","1_0")) %>% View()
-
-agreement %>% filter(body_v_mod %in% c("0_1","1_0")) %>% View()
-
-agreement %>% filter(shape_v_mod %in% c("0_1","1_0")) %>% View()
-
-agreement %>% filter(part_v_mod %in% c("0_1","1_0")) %>% View()
-
-agreement %>% filter(position_v_mod %in% c("0_1","1_0")) %>% View()
-
-
-
-```
-
-TODO How to deal with when it doesn't return a proper answer???
-
-
-Sensitivity is extremely bad for abstract! Kinda bad for everything.
-
-Okay now sensitivity is now still bad, but less bad for abstract
-body -- sensitivity went up, spec went way down :(
-
-position -- just got purely worse :(
-
-shape -- sensitivity got better, spec went down a lot for overall worse
-
-part -- pretty good actually
-
-consider splitting position into "posture" and the right/left/up/down stuff!
-
-consider removing examples when they aren't helpful? 
-
-# Oct 11
-
-```{r}
-library(assertthat)
-# with examples
-
-v_codes <- read_csv(here("data/test/tagged_by_hand.csv")) %>% rename_with( ~str_c(.x,"_v"))
-
-test_that("validation gold",
-          {expect_equal(names(llm_codes), 
-                        c("gpt_out", "body", "position","shape","abstract",
-                          "part", "posture"))
-          v_codes %>% select(-gpt_out_v)%>% walk(~walk(.,~expect_in(.,c(0,1))))
-            })
-  
-  
-  
-llm_codes <- read_csv(here("data/test/outsample_3.csv")) %>% select(-"...1") %>% 
-  mutate(body=ifelse(body=="1. body", "body", body),
-         position=ifelse(position=="1. position", "position", position),
-         shape=ifelse(shape=="1. shape", "shape", shape),
-         posture=ifelse(posture=="1. posture", "posture", posture),
-         abstract=ifelse(abstract!="abstract", "not abstract", "abstract"),
-         part=ifelse(part!="part", "whole", "part")) %>% 
-  mutate(part=ifelse(part!="part", "not part", "part")) %>% #remove this line later!
-  mutate(across(!starts_with("gpt"), ~ifelse(str_detect(.x, "not"), 0,1))) 
-
-
-
-test_that("llm validation",
-          {expect_equal(names(llm_codes), 
-                        c("gpt_out", "body", "position","shape","abstract",
-                          "part", "posture"))
-            llm_codes %>% select(-gpt_out)%>% walk(~walk(.,~expect_in(.,c(0,1))))
-            })
-
-
-both <- v_codes %>% bind_cols(llm_codes)
-
-both %>% filter(gpt_out_v !=gpt_out)
-
-agreement <- both %>%
-   select(-gpt_out) %>% 
-  mutate(body_v_mod=str_c(body_v, "_", body),
-         position_v_mod=str_c(position_v, "_", position),
-         shape_v_mod=str_c(shape_v, "_", shape),
-         abstract_v_mod=str_c(abstract_v, "_", abstract),
-         part_v_mod=str_c(part_v, "_", part),
-         posture_v_mod=str_c(posture_v, "_", posture)) 
-
-agreement_table <- agreement %>%   
-  select(body_v_mod, position_v_mod, shape_v_mod,abstract_v_mod, part_v_mod, posture_v_mod) %>% 
-  pivot_longer(everything()) %>% 
-  group_by(name,value) %>% 
-  tally() %>% 
-  pivot_wider(names_from=value, values_from=n, values_fill=0 ) %>% 
-  mutate(pct_match=(`0_0`+`1_1`)/(`0_0`+`0_1`+`1_0`+`1_1`),
-         sens=(`1_1`/(`1_1`+`1_0`)),
-         spec=(`0_0`)/(`0_1`+`0_0`))
-
-
-
-agreement %>% filter(abstract_v_mod %in% c("0_1","1_0")) %>% 
-  select(gpt_out_v, starts_with("abstract"))%>% View()
-
-agreement %>% filter(body_v_mod %in% c("0_1","1_0")) %>%  
-  select(gpt_out_v, starts_with("body")) %>% View()
-
-agreement %>% filter(shape_v_mod %in% c("0_1","1_0")) %>% 
-  select(gpt_out_v, starts_with("shape")) %>% View()
-
-agreement %>% filter(part_v_mod %in% c("0_1","1_0")) %>% 
-  select(gpt_out_v, starts_with("part")) %>% View()
-
-agreement %>% filter(position_v_mod %in% c("0_1","1_0")) %>% 
-  select(gpt_out_v, starts_with("position")) %>% View()
-
-agreement %>% filter(posture_v_mod %in% c("0_1","1_0")) %>%
-  select(gpt_out_v, starts_with("posture")) %>% View()
-
-
-
-```
-
-Why does gpt insist on inconsistent return values! 
-
-And what to do with ones where it doesn't return a binary:
-* especially with abstract!
-* and part/whole
-
-
-is "dynamic" / "action" a tag we'd want? 
-
--- "looks like" versus "doing" 
-
--- what are we actually trying to get at???
--- possibly talk w/ Mike / Noah / Judith / Robert *before* running the whole thing! (but maybe after a sample?)
-
-
-By type: (match, sensitivity, specificity)
-* body -- prompt w/o real examples: .91, .86, .97 
-
-* position -- prompt w/o real examples:  .81, .93, .73 (assigns too much to position?)
-
-* shape -- prompt w/o real examples: .95, .61, .98 (overly generous w/ "shape")
-
-* posture -- prompt w/o real examples: .67, .88, .53 (insuffient at identifying "posture") but also this is a poorly defined category
-
-* abstract -- w/ examples : .9, .6, .99 (misses too many "abstract" things)
-
-* part -- w/ examples: .9, .96, .8 (assigns too much to part?)
-
-Should I hand tag "abstract"??
-
-Why is it struggling with body -- that's almost closed class! Ditto for shape -- like it's pretty good, but closed class would also do well!
-
-Posture -- I'm not good enough at having this be well defined! 
-Position and posture need to be either better defined or something
-
-Part -- probably about at ceiling given that it's out of context?
-
-
-
-# TODO notes
-
-May want to clean up gpt-isms like replacing ' with / *sigh*
-
-What tag classes to use?
-
-Get a human-human ceiling of agreement!
-
-# Chunking agreement TODO
-
+# Old stuff
+## Chunking agreement TODO
+<!--
 ```{r}
 V <- read_csv(here("data/test/outsample_V.csv")) |> 
   mutate(rownum=row_number()) |> 
@@ -458,7 +290,7 @@ https://github.com/mjpost/sacrebleu
 
 run `sacrebleu --i=pre_charf_model.txt --metric=chrf --chrf-word-order 2  --chrf-whitespace  pre_charf_correct.txt`
 
-not sure what settings actually make sense
+not sure what settings actually make sense -->
 
 
 

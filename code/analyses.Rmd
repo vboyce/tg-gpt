@@ -29,18 +29,305 @@ ParseJSONColumn <- function(x) {
 
 ```
 
+```{r files}
+
+chunks <- read_csv(here("data/test/done/4p_all.csv"))
+utts <- read_csv(here("data/test/done/4p_all_concat.csv"))
+sbert_chunks <- read_rds(here("data/test/post_sbert/4p_all.RData")) |> as_tibble()
+sbert_utts <- read_rds(here("data/test/post_sbert/4p_all_concat.RData")) |> as_tibble()
+
+performance <- read_rds(here("raw_chats/rotate_results.rds")) |> 
+  select(gameId,target,targetNum, repNum, trialNum, numPlayers, realCorrect) |> unique() |> 
+  filter(numPlayers==4)
+```
+
+
 # Repeat s-bert analyses
 
-# Look at number of chunks over time
+TODO did we lose repNum??
 
-* not dealing with 0s in a reasonable way! 
+```{r}
+## for running similarity stuff
+### helper funcs
+get_sim_matrix = function(df, F_mat, method = 'cosine') {
+  feats = F_mat[df$feature_ind,]
+  if(method == 'cor') {
+    return(cor(t(feats), method = 'pearson'))
+  } else if (method == 'euclidean') {
+    return(as.matrix(dist(feats, method = 'euclidean')))
+  } else if (method == 'cosine') {
+    return(as.matrix(lsa::cosine(t(feats))))
+  } else {
+    stop(paste0('unknown method', method))
+  }
+}
+
+# note this does de-duplicated version
+flatten_sim_matrix <- function(cormat, ids) {
+  ut <- upper.tri(cormat)
+  data.frame(
+    dim1 = ids[row(cormat)[ut]],
+    dim2 = ids[col(cormat)[ut]],
+    sim  = as.numeric(cormat[ut])
+  ) %>%
+    mutate(dim1 = as.character(dim1),
+           dim2 = as.character(dim2))
+}
+
+make_within_df <- function(M_mat, F_mat, method) {
+  M_mat %>%
+    do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = method),
+                          .$repNum)) %>%
+    mutate(rep1 = as.numeric(dim1),
+           rep2 = as.numeric(dim2))
+}
+
+make_across_df <- function(M_mat, F_mat, method) {
+  M_mat %>%
+    do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = method),
+                          as.character(.$combinedId)))
+}
+
+### funcs
+do_diverge <- function(concat){
+  F_mat <- concat %>% select(starts_with("V")) %>% as.matrix() #Features
+  M_mat <- concat %>% select(-starts_with("V")) %>% mutate(feature_ind=row_number())
+
+  game_divergence <- M_mat %>%
+    filter(role=="speaker") %>%
+    group_by(tangram,repNum, condition) %>%
+    mutate(combinedId=str_c(gameId,repNum,sep="_")) %>%
+    make_across_df(F_mat, 'cosine') %>%
+    separate(dim1, into=c("gameId_1","repNum_1"), convert=T, sep="_") %>%
+    separate(dim2, into=c("gameId_2","repNum_2"), convert=T, sep="_") %>%
+    filter(gameId_1!=gameId_2) %>%
+    mutate(sim = ifelse(is.nan(sim), NA, sim)) %>%
+    ungroup()
+
+  return(game_divergence)
+}
+
+do_converge <- function(concat){
+  F_mat <- concat %>% select(starts_with("V")) %>% as.matrix() #Features
+  M_mat <- concat %>% select(-starts_with("V")) %>% mutate(feature_ind=row_number())
+
+  tangram_change <- M_mat %>%
+    filter(role=="speaker") %>%
+    group_by(tangram, gameId, condition) %>%
+    mutate(combinedId=str_c(repNum,playerId,sep="_")) %>%
+    make_across_df(F_mat, 'cosine') %>%
+    separate(dim1, into=c("repNum_1","p1"), convert=T, sep="_") %>%
+    separate(dim2, into=c("repNum_2","p2"), convert=T, sep="_") %>%
+    mutate(sim = ifelse(is.nan(sim), NA, sim)) %>%
+    filter(!is.na(repNum_1)) %>%
+    mutate(later=ifelse(repNum_1>repNum_2,repNum_1, repNum_2),
+           earlier=ifelse(repNum_1>repNum_2,repNum_2, repNum_1),
+           samespeaker=ifelse(p1==p2,"same_speaker","diff_speaker"))
+
+  return(tangram_change)
+}
+
+do_diff_tangrams <- function(concat){
+  
+  F_mat <- concat %>% select(starts_with("V")) %>% as.matrix() #Features
+  M_mat <- concat %>% select(-starts_with("V")) %>% mutate(feature_ind=row_number())
+  
+  
+  tangram_distinctive <- M_mat %>%
+    filter(role=="speaker") %>%
+    group_by(gameId,repNum, condition) %>%
+    mutate(combinedId=tangram) %>%
+    make_across_df(F_mat, 'cosine') %>%
+    rename(tangram1=dim1,tangram2=dim2) %>%
+    mutate(sim = ifelse(is.nan(sim), NA, sim)) %>%
+    filter(tangram1!=tangram2) %>%
+    ungroup() 
+  
+  return(tangram_distinctive)
+}
+
+```
+
+```{r}
+utted <- utts |> left_join(performance) |> rename(condition=numPlayers, tangram=target) |> bind_cols(sbert_utts) |> filter(role=="speaker")
+
+div <-  do_diverge(utted)
+
+conv <- do_converge(utted)
+
+distinctive <- do_diff_tangrams(utted)
+
+```
 
 ```{r}
 
-post |> group_by(gameId, repNum, role) |> tally() |> ggplot(aes(x=repNum, y=n))+geom_smooth(method="glm")+geom_jitter(width=0.2, height=.2)+facet_grid(.~role)
+ggplot(div |> filter(repNum_1==repNum_2), aes(x=repNum_1, y=sim))+
+  geom_point(alpha=.01)+geom_smooth(method="lm")
+
+
+ggplot(conv |> filter(later==5), aes(x=earlier, y=sim))+
+  geom_point(alpha=.1)+geom_smooth(method="lm")
+
+ggplot(distinctive, aes(x=repNum, y=sim))+
+  geom_point(alpha=.01)+geom_smooth(method="lm")
+```
+
+# Look at number of chunks over time
+as a function of condition & performance 
+
+```{r}
+
+count_chunks <- chunks |> filter(role=="speaker") |> 
+  group_by(gameId, trialNum, target, numPlayers) |> 
+  tally() |> full_join(performance) |> 
+  mutate(n=ifelse(is.na(n),0,n))
+
+ggplot(count_chunks, aes(x=repNum, y=n))+geom_jitter(height=0, width=.2, alpha=.1)+geom_smooth(method="lm")
+
+count_chunks_listener <- chunks |> filter(role=="listener") |> 
+  group_by(gameId, trialNum, target, numPlayers) |> 
+  tally() |> full_join(performance) |> 
+  mutate(n=ifelse(is.na(n),0,n))
+
+ggplot(count_chunks_listener, aes(x=repNum, y=n))+geom_jitter(height=0, width=.2, alpha=.1)+geom_smooth(method="lm")
+
 ```
 
 # Look at number of chunks of each type over time 
+(and as funct of condition & performance)
+
+
+This imposes a category hierarchy where abstract > posture > body > shape > position.
+
+What is actually in "other"?
+
+```{r}
+performance_aggregate <- performance |> distinct(gameId, target, repNum,realCorrect) |> group_by(repNum)|> tally() |> rename(denom=n)
+
+chunks_grouped<- chunks |> left_join(performance) |>
+  mutate(type=case_when(
+    abstract==1 ~ "abstract",
+    regex_posture==1 ~ "posture",
+    regex_body==1 ~ "body",
+    regex_shape==1 ~ "shape",
+    regex_position==1~"position",
+    T ~ "other"
+  ),
+  type=factor(type, levels=c("abstract", "posture", "body", "shape", "position", "other"))) |> group_by(repNum,type) |> tally() |> 
+  left_join(performance_aggregate) |> mutate(per_trial=n/denom)
+
+
+
+ggplot(chunks_grouped, aes(x=repNum, y=per_trial, fill=fct_rev(type)))+geom_area()+scale_fill_brewer(type="qual")
+```
+## Tie to performance
+
+TODO I bet different tangrams look different!
+
+```{r}
+performance_aggregate <- performance |> mutate(allCorrect=realCorrect==3) |> 
+  distinct(gameId, target, repNum,allCorrect) |> group_by(repNum, allCorrect)|> tally() |> rename(denom=n)
+
+chunks_grouped<- chunks |> left_join(performance) |> 
+  mutate(type=case_when(
+    abstract==1 ~ "abstract",
+    regex_posture==1 ~ "posture",
+    regex_body==1 ~ "body",
+    regex_shape==1 ~ "shape",
+    regex_position==1~"position",
+    T ~ "other"
+  ),
+  type=factor(type, levels=c("abstract", "posture", "body", "shape", "position", "other"))) |> 
+  mutate(allCorrect=realCorrect==3) |> 
+  group_by(repNum,type, allCorrect) |> tally() |> left_join(performance_aggregate) |> 
+  mutate(per_trial=n/denom) |> filter(!is.na(allCorrect)) |> mutate(allCorrect=ifelse(allCorrect,"all correct", "some wrong"))
+
+
+ggplot(chunks_grouped, aes(x=repNum, y=per_trial, fill=fct_rev(type)))+geom_area()+scale_fill_brewer(type="qual")+facet_wrap(~allCorrect)
+```
+## Per tangram
+
+TODO I bet different tangrams look different!
+
+```{r}
+performance_aggregate <- performance |> 
+  distinct(gameId, target, repNum) |> group_by(repNum, target)|> tally() |> rename(denom=n)
+
+chunks_grouped<- chunks |> left_join(performance) |> 
+  mutate(type=case_when(
+    abstract==1 ~ "abstract",
+    regex_posture==1 ~ "posture",
+    regex_body==1 ~ "body",
+    regex_shape==1 ~ "shape",
+    regex_position==1~"position",
+    T ~ "other"
+  ),
+  type=factor(type, levels=c("abstract", "posture", "body", "shape", "position", "other"))) |> 
+  group_by(repNum,type, target) |> tally() |> left_join(performance_aggregate) |> 
+  mutate(per_trial=n/denom) |> 
+  mutate(target=str_sub(target,21,-5))
+
+
+ggplot(chunks_grouped, aes(x=repNum, y=per_trial, fill=fct_rev(type)))+geom_area()+scale_fill_brewer(type="qual")+facet_wrap(~target)
+```
+# Chunk -to- chunk SBERT
+
+```{r}
+chunks_converge <- function(singleton){
+  F_mat <- singleton %>% select(starts_with("V")) %>% as.matrix() #Features
+  M_mat <- singleton %>% select(-starts_with("V")) %>% mutate(feature_ind=row_number())
+
+  text <- singleton |> select(gameId, chunk, chunk_id, role)
+
+  tangram_change <- M_mat %>%
+    group_by(tangram, gameId, condition) %>%
+    mutate(combinedId=str_c(repNum,chunk_id, sep="_")) %>%
+    make_across_df(F_mat, 'cosine') %>%
+    separate(dim1, into=c("repNum_1", "chunk_id1")) |> 
+    separate(dim2, into=c("repNum_2", "chunk_id2")) |> 
+    mutate(sim = ifelse(is.nan(sim), NA, sim)) |> 
+        mutate(later=ifelse(repNum_1>repNum_2,repNum_1, repNum_2),
+           earlier=ifelse(repNum_1>repNum_2,repNum_2, repNum_1),
+           later_chunk=ifelse(later==repNum_1, chunk_id1, chunk_id2) |> as.numeric(),
+           earlier_chunk=ifelse(earlier==repNum_1, chunk_id1, chunk_id2) |> as.numeric()) |> 
+    filter(later==5) |> filter(earlier!=5) |> 
+    select(-repNum_1, -chunk_id1, -repNum_2, -chunk_id2) |> 
+    left_join(text, by=c("gameId", "later_chunk"="chunk_id")) |> rename(later_text=chunk, later_role=role) |> 
+    left_join(text, by=c("gameId", "earlier_chunk"="chunk_id")) |> rename(earlier_text=chunk, earlier_role=role)
+
+  return(tangram_change)
+}
+
+```
+
+Fix rechunking problem in a better way!!!!
+
+```{r}
+play_chunk <- chunks |> left_join(performance) |> rename(condition=numPlayers, tangram=target) |> 
+  bind_cols(sbert_chunks) |> arrange(chunk_id) |> mutate(chunk_id=row_number())
+  
+
+foo <- chunks_converge(play_chunk) |> filter(later_role=="speaker")
+
+blah <- foo |> group_by(gameId, later_chunk) |> mutate(a=lag(cummax(sim))) |> filter(is.na(a)| sim>a) |> filter(sim>.5)
+```
+
+want to watch evolution by looking at things that are most similar so far with a min threshold of .5 
+cut also pick some cutoff, but that will introduce arbitrariness (or pick several)
+
+also want to know how many were from listeners!
+```{r}
+
+ggplot(blah, aes(x=earlier, y=sim, group=later_chunk))+geom_point(aes(color=earlier_role))
+
+blah |> filter(sim>.9) |> group_by(gameId, later_chunk) |> filter(row_number()==1) |> ggplot(aes(x=earlier, y=sim, group=later_chunk))+geom_jitter(aes(color=earlier_role), width=.2, height=0)
+
+blah |> filter(sim>.8) |> group_by(gameId, later_chunk) |> filter(row_number()==1) |> ggplot(aes(x=earlier, y=sim, group=later_chunk))+geom_jitter(aes(color=earlier_role), width=.2, height=0)
+
+blah |> filter(sim>.7) |> group_by(gameId, later_chunk) |> filter(row_number()==1) |> ggplot(aes(x=earlier, y=sim, group=later_chunk))+geom_jitter(aes(color=earlier_role), width=.2, height=0)
+
+blah |> filter(sim>.6) |> group_by(gameId, later_chunk) |> filter(row_number()==1) |> ggplot(aes(x=earlier, y=sim, group=later_chunk))+geom_jitter(aes(color=earlier_role), width=.2, height=0)
+```
 
 # Type based something something
 
@@ -48,4 +335,8 @@ post |> group_by(gameId, repNum, role) |> tally() |> ggplot(aes(x=repNum, y=n))+
 
 # Where do end utterances originate?
 
-# Do any similarities predict stickiness?
+# Do any similarities predict stickiness
+
+# What are analyses we'd want? (TODO implement)
+* Where do end utterances originate? (sorta a reverse of prior)
+ * perhaps more unique chunks are more likely to stick? (is this independent of type?)
