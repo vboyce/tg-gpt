@@ -1,7 +1,33 @@
 ---
 title: "Language analyses"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
+# Goal and Method
+
+We have *lots* of language data from tangrams experiments. My goal here is to quantitatively take a finer grained look at the language used to get some sort of grasp on how language changes over the course of a game, with a focus on what description elements stay or go. 
+
+## Method
+
+This sample is the 4-player rotate games (~ 20 games total)
+
+They were "chunked" to extract each descriptive ~phrase. This gets rid of game talk, hedges (most of them), and separates long-multi part descriptions into their parts. 
+
+This was done with gpt-4 using the prompt: 
+"Here's a partial transcript of people describing images. Extract verbatim a list of the descriptive phrases that are used. \
+If there are no descriptive phrases used, return an empty list. \n\n \
+As an example, if the transcript was 'It looks like a magician, and, uhh, I think he's got a rabbit.', the response would be ['a magician','he's got a rabbit'].\n\n \
+As an example, if the transcript was 'big triangle arm facing left head on the right', the response would be ['big triangle arm', 'facing left', 'head on the right'].\n\n \
+Return just a list of the descriptive phrases. Here's the text:\n\n"
+
+Chunks were checked and corrected to ensure they were substrings (modulo spelling normalization). Chunks were added/removed/split when I noticed there were problems. 
+
+Chunks were hand-tagged (twice + adjudication) for being "abstract". 
+Chunks for regex-tagged for "body", "posture", "position", and "shape". 
+Each chunk could have 0 or more labels.
+
+TODO: are there more canonical (not ad-hoc) classes for posture shape etc I could use? 
 
 ```{r set-up, include=F}
 knitr::opts_chunk$set(echo = FALSE, warning=F, message=F)
@@ -44,7 +70,7 @@ performance <- read_rds(here("raw_chats/rotate_results.rds")) |>
 
 # Repeat s-bert analyses
 
-TODO did we lose repNum??
+Here, we take advantage of having cleaner descriptions (w/o hedges, filler) to rerun the content analyses done previously. 
 
 ```{r}
 ## for running similarity stuff
@@ -162,18 +188,26 @@ distinctive <- do_diff_tangrams(utted)
 ```{r}
 
 ggplot(div |> filter(repNum_1==repNum_2), aes(x=repNum_1, y=sim))+
-  geom_point(alpha=.01)+geom_smooth(method="lm")
+  geom_smooth(method="lm")+
+   geom_point(data=div |> group_by(repNum_1, tangram, condition) |> summarize(sim=mean(sim)),position = position_dodge(width=.4), alpha=.3)+
+  labs(y="Cosine sim", x="block", title="Divergence of different games")
 
 
 ggplot(conv |> filter(later==5), aes(x=earlier, y=sim))+
-  geom_point(alpha=.1)+geom_smooth(method="lm")
+  geom_smooth(method="lm")+
+     geom_point(data=conv |> group_by(earlier, gameId, condition) |> summarize(sim=mean(sim)),position = position_dodge(width=.4), alpha=.3)+
+  coord_cartesian(ylim=c(.4,1))+
+  labs(y="Cosine sim", x="block", title="Convergence to last block")
 
 ggplot(distinctive, aes(x=repNum, y=sim))+
-  geom_point(alpha=.01)+geom_smooth(method="lm")
+  geom_smooth(method="lm")+
+       geom_point(data=distinctive |> group_by(repNum, gameId, condition) |> summarize(sim=mean(sim)),position = position_dodge(width=.4), alpha=.3)+
+  labs(y="Cosine sim", x="block", title="Distinctiveness of tangrams within games")
 ```
 
-# Look at number of chunks over time
-as a function of condition & performance 
+We see the trifecta of expected effects, yay!
+
+# Number of chunks over time
 
 ```{r}
 
@@ -182,24 +216,67 @@ count_chunks <- chunks |> filter(role=="speaker") |>
   tally() |> full_join(performance) |> 
   mutate(n=ifelse(is.na(n),0,n))
 
-ggplot(count_chunks, aes(x=repNum, y=n))+geom_jitter(height=0, width=.2, alpha=.1)+geom_smooth(method="lm")
+ggplot(count_chunks, aes(x=repNum, y=n))+
+  geom_jitter(height=0, width=.2, alpha=.1)+
+  geom_smooth(method="lm")+
+  labs(y="N", x="Block", title="Chunks from speaker / trial")
 
 count_chunks_listener <- chunks |> filter(role=="listener") |> 
   group_by(gameId, trialNum, target, numPlayers) |> 
   tally() |> full_join(performance) |> 
   mutate(n=ifelse(is.na(n),0,n))
 
-ggplot(count_chunks_listener, aes(x=repNum, y=n))+geom_jitter(height=0, width=.2, alpha=.1)+geom_smooth(method="lm")
+ggplot(count_chunks_listener, aes(x=repNum, y=n))+
+  geom_jitter(height=0, width=.2, alpha=.1)+
+  geom_smooth(method="lm")+
+    labs(y="N", x="Block", title="Chunks from listeners / trial")
+
+
+```
+
+The number of chunks declines over time!
+
+TODO: could also look at chunk lengths, could try to tie this to performance, but mostly people get things right...
+
+# Chunk type examination
+TODO: What is actually in "other"?
+
+* commonly includes clothing terms (robe, dress)
+* some talk about lines / horizontal / vertical
+* some very generic about whether it looks like a person or not
+* how tricky it is
+* how big or small it is
+
+```{r}
+# chunks |> left_join(performance) |>
+#   mutate(type=case_when(
+#     abstract==1 ~ "abstract",
+#     regex_posture==1 ~ "posture",
+#     regex_body==1 ~ "body",
+#     regex_shape==1 ~ "shape",
+#     regex_position==1~"position",
+#     T ~ "other"
+#   ),
+#   type=factor(type, levels=c("abstract", "posture", "body", "shape", "position", "other"))) |> filter(type=="other") |> View()
+
+```
+
+What label combinations are common?
+
+```{r}
+chunks |> 
+  rename(position=regex_position, body=regex_body,
+         posture=regex_posture, shape=regex_shape) |> 
+  group_by(abstract, position, body, posture, shape) |>
+  tally() |> 
+  arrange(desc(n)) |> head(10)
+  
 
 ```
 
 # Look at number of chunks of each type over time 
-(and as funct of condition & performance)
 
-
-This imposes a category hierarchy where abstract > posture > body > shape > position.
-
-What is actually in "other"?
+This imposes a category hierarchy where abstract > posture > body > shape > position for tie-breaking things with multiple labels. 
 
 ```{r}
 performance_aggregate <- performance |> distinct(gameId, target, repNum,realCorrect) |> group_by(repNum)|> tally() |> rename(denom=n)
@@ -218,11 +295,13 @@ chunks_grouped<- chunks |> left_join(performance) |>
 
 
 
-ggplot(chunks_grouped, aes(x=repNum, y=per_trial, fill=fct_rev(type)))+geom_area()+scale_fill_brewer(type="qual")
+ggplot(chunks_grouped, aes(x=repNum, y=per_trial, fill=fct_rev(type)))+geom_area()+scale_fill_brewer(type="qual")+
+  labs(fill="Type", x="block", y="chunks/trial")
 ```
+
 ## Tie to performance
 
-TODO I bet different tangrams look different!
+Try splitting it up by whether everyone got it right or at least someone got it wrong.
 
 ```{r}
 performance_aggregate <- performance |> mutate(allCorrect=realCorrect==3) |> 
@@ -243,11 +322,12 @@ chunks_grouped<- chunks |> left_join(performance) |>
   mutate(per_trial=n/denom) |> filter(!is.na(allCorrect)) |> mutate(allCorrect=ifelse(allCorrect,"all correct", "some wrong"))
 
 
-ggplot(chunks_grouped, aes(x=repNum, y=per_trial, fill=fct_rev(type)))+geom_area()+scale_fill_brewer(type="qual")+facet_wrap(~allCorrect)
+ggplot(chunks_grouped, aes(x=repNum, y=per_trial, fill=fct_rev(type)))+geom_area()+scale_fill_brewer(type="qual")+facet_wrap(~allCorrect)+labs(fill="Type", x="block", y="chunks/trial")
 ```
-## Per tangram
 
-TODO I bet different tangrams look different!
+We find that descriptions that someone gets wrong tend to be longer -- not sure how to entangle causality here. Could try lagging? (note that this is low-feedback and rotate, so people don't have a great sense of what worked or not)
+
+## Per tangram
 
 ```{r}
 performance_aggregate <- performance |> 
@@ -268,9 +348,14 @@ chunks_grouped<- chunks |> left_join(performance) |>
   mutate(target=str_sub(target,21,-5))
 
 
-ggplot(chunks_grouped, aes(x=repNum, y=per_trial, fill=fct_rev(type)))+geom_area()+scale_fill_brewer(type="qual")+facet_wrap(~target)
+ggplot(chunks_grouped, aes(x=repNum, y=per_trial, fill=fct_rev(type)))+geom_area()+scale_fill_brewer(type="qual")+facet_wrap(~target)+labs(fill="Type", x="block", y="chunks/trial")
 ```
+
+Tangrams vary a lot in how fast the chunks decrease and what types of descriptions are used. 
+
 # Chunk -to- chunk SBERT
+
+A lot of the analyses we care about want some form of chunk -to- chunk similarity so we can look at what stays or drops by comparing to end. (or distinctiveness, etc)
 
 ```{r}
 chunks_converge <- function(singleton){
@@ -298,45 +383,219 @@ chunks_converge <- function(singleton){
   return(tangram_change)
 }
 
+chunks_distinctive <- function(singleton){
+  F_mat <- singleton %>% select(starts_with("V")) %>% as.matrix() #Features
+  M_mat <- singleton %>% select(-starts_with("V")) %>% mutate(feature_ind=row_number()) |> 
+      mutate(target=str_sub(tangram,21,-5))
+
+  tangram_change <- M_mat %>%
+    group_by(repNum, gameId, condition) %>%
+    mutate(combinedId=str_c(target,chunk_id, sep="_")) %>%
+    make_across_df(F_mat, 'cosine') |> 
+    separate(dim1, into=c("tangram_1", "chunk_id1")) |> 
+    separate(dim2, into=c("tangram_2", "chunk_id2")) |> 
+    mutate(sim = ifelse(is.nan(sim), NA, sim)) |> 
+       filter(tangram_1!=tangram_2)
+
+  return(tangram_change)
+}
 ```
 
-Fix rechunking problem in a better way!!!!
+
+## When do "conventions" emerge? 
+
+We could look at the emergence of "conventions" by specifying what conventions are (ex. last round chunks) and then looking for when a chunk of at least YY similarity occurs. The big question is what cutoff to use for similarity!
 
 ```{r}
 play_chunk <- chunks |> left_join(performance) |> rename(condition=numPlayers, tangram=target) |> 
   bind_cols(sbert_chunks) |> arrange(chunk_id) |> mutate(chunk_id=row_number())
   
 
-foo <- chunks_converge(play_chunk) |> filter(later_role=="speaker")
+conv_chunks <- chunks_converge(play_chunk) |> filter(later_role=="speaker")
 
-blah <- foo |> group_by(gameId, later_chunk) |> mutate(a=lag(cummax(sim))) |> filter(is.na(a)| sim>a) |> filter(sim>.5)
+blah <- conv_chunks |> group_by(gameId, later_chunk) |> mutate(a=lag(cummax(sim))) |> filter(is.na(a)| sim>a) |> filter(sim>.5)
 ```
 
 want to watch evolution by looking at things that are most similar so far with a min threshold of .5 
 cut also pick some cutoff, but that will introduce arbitrariness (or pick several)
 
 also want to know how many were from listeners!
+
 ```{r}
 
-ggplot(blah, aes(x=earlier, y=sim, group=later_chunk))+geom_point(aes(color=earlier_role))
 
-blah |> filter(sim>.9) |> group_by(gameId, later_chunk) |> filter(row_number()==1) |> ggplot(aes(x=earlier, y=sim, group=later_chunk))+geom_jitter(aes(color=earlier_role), width=.2, height=0)
+blah |> filter(sim>.9) |> 
+  group_by(gameId, later_chunk) |> 
+  filter(row_number()==1) |>
+  ggplot(aes(x=earlier, y=sim, group=later_chunk))+
+  geom_jitter(aes(color=earlier_role), width=.2, height=0)+
+  labs(x="block", y="sim", title="first time with sim > .9")
 
-blah |> filter(sim>.8) |> group_by(gameId, later_chunk) |> filter(row_number()==1) |> ggplot(aes(x=earlier, y=sim, group=later_chunk))+geom_jitter(aes(color=earlier_role), width=.2, height=0)
+blah |> filter(sim>.8) |> 
+  group_by(gameId, later_chunk) |> 
+  filter(row_number()==1) |> 
+  ggplot(aes(x=earlier, y=sim, group=later_chunk))+
+  geom_jitter(aes(color=earlier_role), width=.2, height=0)+
+  labs(x="block", y="sim", title="first time with sim > .8")
 
-blah |> filter(sim>.7) |> group_by(gameId, later_chunk) |> filter(row_number()==1) |> ggplot(aes(x=earlier, y=sim, group=later_chunk))+geom_jitter(aes(color=earlier_role), width=.2, height=0)
+blah |> filter(sim>.7) |> 
+  group_by(gameId, later_chunk) |> 
+  filter(row_number()==1) |> 
+  ggplot(aes(x=earlier, y=sim, group=later_chunk))+
+  geom_jitter(aes(color=earlier_role), width=.2, height=0)+
+  labs(x="block", y="sim", title="first time with sim > .7")
 
-blah |> filter(sim>.6) |> group_by(gameId, later_chunk) |> filter(row_number()==1) |> ggplot(aes(x=earlier, y=sim, group=later_chunk))+geom_jitter(aes(color=earlier_role), width=.2, height=0)
+blah |> filter(sim>.6) |> 
+  group_by(gameId, later_chunk) |> 
+  filter(row_number()==1) |> 
+  ggplot(aes(x=earlier, y=sim, group=later_chunk))+
+  geom_jitter(aes(color=earlier_role), width=.2, height=0)+
+  labs(x="block", y="sim", title="first time with sim > .6")
+```
+What are we really looking at here? 
+
+* interested in how often it's listener v speaker
+
+* might be interested in condition based comparisons
+
+* could link to type and try to say something there / or link to distinctiveness? 
+
+## What types of labels are most like the end?
+
+```{r}
+labeled <- conv_chunks |> left_join(play_chunk, by=c("tangram", "gameId","condition", "earlier_chunk"="chunk_id")) |> 
+   mutate(type=case_when(
+    abstract==1 ~ "abstract",
+    regex_posture==1 ~ "posture",
+    regex_body==1 ~ "body",
+    regex_shape==1 ~ "shape",
+    regex_position==1~"position",
+    T ~ "other"
+  ),
+  type=factor(type, levels=c("abstract", "posture", "body", "shape", "position", "other")))
+
+labeled_by_type <- labeled |> 
+  group_by(earlier_chunk, type, repNum, gameId) |> 
+  summarize(max_sim=max(sim))
+
+ggplot(labeled_by_type, aes(x=repNum, y=max_sim, color=type))+#geom_point()+
+  stat_summary(fun.data="mean_cl_boot",position=position_dodge(width=.5), geom="pointrange")+
+    stat_summary(fun.data="mean_cl_boot",position=position_dodge(width=.5), geom="line")+
+  scale_color_brewer(type="qual")+
+  labs(title="How similar to closest end label?", x="block", y="Cos sim")
 ```
 
-# Type based something something
+# Ordering
+
+I think the way to look at this is what position it's in, without looking at what the n is because that's too much. Could separate only from with buddies. 
+```{r, fig.width=8, fig.height=8}
+bar <- chunks |> filter(role=="speaker") |> 
+      mutate(repNum=trialNum%/%12) |> 
+  group_by(repNum, gameId, target) |> 
+  mutate(type=case_when(
+    abstract==1 ~ "abstract",
+    regex_posture==1 ~ "posture",
+    regex_body==1 ~ "body",
+    regex_shape==1 ~ "shape",
+    regex_position==1~"position",
+    T ~ "other"
+  ),
+  type=factor(type, levels=c("abstract", "posture", "body", "shape", "position", "other"))) |> 
+  mutate(pos=row_number(),
+         n=n())
+
+#bar |> ggplot(aes(x=n))+geom_histogram(bins=10)
+
+bar |> 
+  mutate(repNum=trialNum%/%12) |> 
+  mutate(total=ifelse(n>5, "6+", as.character(n))) |> 
+  mutate(pos=ifelse(pos>5, "6+", as.character(pos))) |> 
+  group_by(repNum, pos, type) |> 
+  tally() |> 
+  ggplot(aes(x=repNum, y=n, fill=as.factor(pos)))+geom_col(position="dodge")+
+  scale_fill_viridis(discrete=T)+
+  labs(title="Prop of chunks by position within utterance",
+         fill="position", x="block", y="count")+facet_wrap(~type)+
+  theme(legend.position = "bottom")
+  
+```
+Still not a good visual, but we see that for abstract, it's increasingly 1st and decreasingly later. (not distinguishing first and only)
+
+Should somehow take into account how long it's generally part of. 
+
+```{r, fig.width=8, fig.height=8}
+bar |> 
+  mutate(repNum=trialNum%/%12) |> 
+  mutate(total=ifelse(n>5, "6+", as.character(n))) |> 
+  mutate(pos=ifelse(pos>5, "6+", as.character(pos))) |> 
+  group_by(repNum, total, type) |> 
+  tally() |> 
+  ggplot(aes(x=repNum, y=n, fill=as.factor(total)))+geom_col(position="dodge")+
+  scale_fill_viridis(discrete=T)+
+  labs(title="Prop of chunks by how many chunks are in the utt",
+         fill="position", x="block", y="count")+facet_wrap(~type)+
+  theme(legend.position = "bottom")
+
+```
+Basically the environments where different type chunks are found are different -- some are more likely to be one-of-many in a description, and others more one-of-few or singletons. 
+
+And this probably interacts with the decrease in number of chunks over time. 
+
+## distinctiveness
+
+this includes both speaker and listener chunks
+
+```{r}
+
+distinct_chunks <- chunks_distinctive(play_chunk)
+
+#ggplot(foo, aes(x=repNum, y=sim))+  stat_summary(aes(group=gameId),fun.data="mean_cl_boot",alpha=.5, geom="point")+geom_smooth(method="lm")
+
+```
+
+want to give each thing a mean distinctiveness rating and then see if that has predictive value?
+
+```{r}
+conv_chunks_best <- conv_chunks |> 
+  ungroup() |> 
+  select(chunk_id=earlier_chunk, sim, gameId, condition, repNum=earlier) |>
+  group_by(chunk_id, gameId, condition, repNum) |> 
+  summarise(maxsim=max(sim),
+         repNum=as.numeric(repNum),
+         chunk_id=as.numeric(chunk_id))
+
+doubled <- distinct_chunks |> 
+  select(-tangram_1, -tangram_2, -chunk_id2) |> 
+  rename(chunk_id=chunk_id1) |> 
+  bind_rows(distinct_chunks |> select(-tangram_1, -tangram_2, -chunk_id1) |> rename(chunk_id=chunk_id2)) |> 
+  mutate(chunk_id=as.numeric(chunk_id)) |> 
+  group_by(repNum, gameId, condition, chunk_id) |> 
+  summarize(sim=mean(sim)) |> 
+  left_join(conv_chunks_best) |> 
+  filter(repNum %in% c(0,1,2,3,4))
+  
+ggplot(doubled, aes(x=sim, y=maxsim))+geom_point(alpha=.1)+facet_wrap(~repNum)+geom_smooth(method="lm")
+
+```
+well, if I force a straight line, it has non-zero predictive value in the unexpected direction -- things that are more similar descriptions of other tangrams are also more similar to an end description. So we're just getting "not in a silly corner of sbert space" not anything useful.
+
 
 # What labels are stickiest?
 
-# Where do end utterances originate?
+# Does distinctiveness predict?
+* less similar to other descriptions in same round? (less similar to descriptions of other tangrams? of other games?)
+
+* could consider a tSNE
 
 # Do any similarities predict stickiness
 
 # What are analyses we'd want? (TODO implement)
-* Where do end utterances originate? (sorta a reverse of prior)
  * perhaps more unique chunks are more likely to stick? (is this independent of type?)
+
+ * is there a way to look at drop-out *rate*
+
+# TODO notes for Veronica
+
+* did we lose repNum somewhere in the sbert process?
+
+* Fix rechunking problem in a better way!!!! (when I split up chunks manually and chunk numbers got messed up)

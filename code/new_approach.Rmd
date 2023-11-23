@@ -154,17 +154,18 @@ prep_tag <- function(file){
 #     write_csv(here(done_loc,file))
 # }
 
-detect_body <- str_c("\\b(face|head|back|shoulder|shoulders",
+detect_body <- str_c("\\b(face|head|heads|back|shoulder|shoulders",
                  "|arm|arms|leg|legs|foot|feet|body|knee|knees|",
-                 "toe|toes|hand|hands|body|butt|heel|heels|ear|ears|nose|neck)\\b")
+                 "toe|toes|hand|hands|body|butt|heel|heels|ear|ears|nose|neck|chest|hair)\\b")
 
-detect_shape <- str_c("squar|triangle|triangular|diamond|shape|
-                      trapez|angle|degree")
+detect_shape <- str_c("squar|triangle|triangular|diamond|shape|",
+"trapez|angle|degree|parallel|rhomb|box|cube")
 
 detect_position <- str_c("right|left|above|below|under|over|top|bottom|behind|side|beneath")
 
 detect_posture <- str_c("kick|crouch|squat|kneel|knelt|stood|",
-                        "stand|sit|sat|lying|walk|facing|fall|looking")
+                        "stand|sit|sat|lying|walk|facing|fall|looking|",
+"lean|seat|laying")
 
 
 do_tag <- function(file) {
